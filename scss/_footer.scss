@@ -1,0 +1,38 @@
+.footer {
+    height: 60px;  
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ededed;
+
+    &__derechos {
+        color: rgba(0, 0, 0, .6);
+
+        &--text {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+
+    &__redes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 24px;
+        width: 4rem;
+
+        &--link {
+            @include flex-center(row);
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+            color: rgba(0, 0, 0, 0.7);
+
+            &:hover {
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tienda de ropa para mujeres">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="icon" href="./imgs/VALogo.png" type="image/x-icon">
+        <script defer src="./js/tienda.js"></script>
+        <script defer src="./js/header.js"></script>
+        <title>TIENDA - VIA AVANTI</title>
+    </head>
+    <body>
+        <div class="headerTop">
+            <div class="headerTop__texto">
+                <p class="headerTop__texto--text">ENVIO GRATIS A PARTIR DE LOS $2500 - SOLO PARA CABA</p>
+            </div>
+            <nav class="headerTop__redes">
+                <a class="headerTop__redes--link" href="https://www.instagram.com/viaavanti8"><i class='bx bxl-instagram-alt'></i></a>
+                <a class="headerTop__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
+            </nav>
+        </div>
+        <header class="header">
+            <a class="header__logo" href="./index.html">
+                <img class="header__logo--img" src="./imgs/VALogo.png" alt="LOGO VIA AVANTI">
+                <h1 class="header__logo--title">VIA AVANTI</h1>
+            </a>
+
+            <nav class="header__navbar">
+                <ul class="navbar__menu">
+                    <li class="menu__item">
+                        <a href="./index.html" class="menu__item__link">INICIO<div class="menu__item__link--linea"></div></a>
+                    </li>
+                    <li class="menu__item tiendaButton"> 
+                        <a href="./tienda.html" class="menu__item__link active">TIENDA<div class="menu__item__link--linea"></div></a>
+                        <div id="mydropdown" class="menu__item__dropdown">
+                            <i class='dropdown--arrow bx bx-chevron-right'></i>
+                            <ul class="menu__item__submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link first" href="./tienda.html#pantalones">PANTALONES</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link" href="./tienda.html#remeras">REMERAS</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link last" href="./tienda.html#sweaters">SWEATERS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./contacto.html" class="menu__item__link">AYUDA<div class="menu__item__link--linea"></div></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__cart">
+                <a class="header__cart__link" href="./cart.html">
+                    CARRITO <i class='bx bxs-shopping-bag'></i>
+                    <div class="header__cart__link--linea"></div>
+                </a>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="main__tienda">
+                <aside class="tienda__filtros">
+                    <h2 class="filtros--title">FILTROS</h2>
+
+                    <h4 class="filtros--subtitle">CATEGORIA</h4>
+                    <div class="filtros__input">
+                        <h5>PANTALONES</h5>
+                        <input class="filtros__input--input" type="checkbox" name="categoria" id="pantalones">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>REMERAS</h5>
+                        <input class="filtros__input--input" type="checkbox" name="categoria" id="remeras">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>SWEATERS</h5>
+                        <input class="filtros__input--input" type="checkbox" name="categoria" id="sweaters">
+                    </div>
+
+                    <h4 class="filtros--subtitle">COLOR</h4>
+                    <div class="filtros__input">
+                        <h5>CORAL</h5>
+                        <input class="filtros__input--input" type="checkbox" name="color" id="coral">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>ORQUÍDEA</h5>
+                        <input class="filtros__input--input" type="checkbox" name="color" id="orquidea">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>BEIGE</h5>
+                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>FUCSIA</h5>
+                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>CAMEL</h5>
+                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>NEGRO</h5>
+                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
+                    </div>
+
+                    <h4 class="filtros--subtitle">TALLE</h4>
+                    <div class="filtros__input">
+                        <h5>SMALL</h5>
+                        <input class="filtros__input--input" type="checkbox" name="talle" id="small">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>MEDIUM</h5>
+                        <input class="filtros__input--input" type="checkbox" name="talle" id="medium">
+                    </div>
+                    <div class="filtros__input">
+                        <h5>LARGE</h5>
+                        <input class="filtros__input--input" type="checkbox" name="talle" id="large">
+                    </div>          
+                </aside>
+                <div class="tienda__productos">
+                    <ul id="productosUl" class="productos__lista">
+                        <li class="lista__item">
+                            <a class="item__link descuento" href="./producto/sweater-popis.html">
+                                <img class="item__link--img fimg" src="./imgs/popis/popis1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="item__link--img simg" src="./imgs/popis/popis2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="item__link--title">SWEATER POPIS</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio descuento">$2600</span>
+                                    <span class="link__precio--precio">$2340</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="lista__item">
+                            <a class="item__link" href="./producto/pantalon-chicago.html">
+                                <img class="item__link--img fimg" src="./imgs/chicago/chicago1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="item__link--img simg" src="./imgs/chicago/chicago2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="item__link--title">PANTALON CHICAGO</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$3280</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="lista__item">
+                            <a class="item__link" href="./producto/remera-female.html">
+                                <img class="item__link--img fimg" src="./imgs/female/female1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="item__link--img simg" src="./imgs/female/female2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="item__link--title">REMERA FEMALE</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$1690</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="lista__item">
+                            <a class="item__link" href="./producto/babucha-leonardo.html">
+                                <img class="item__link--img fimg" src="./imgs/leonardo/leonardo1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="item__link--img simg" src="./imgs/leonardo/leonardo2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="item__link--title">BABUCHA LEONARDO</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$3021</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="lista__item">
+                            <a class="item__link descuento" href="./producto/sweater-mari.html">
+                                <img class="item__link--img fimg" src="./imgs/mari/mari1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="item__link--img simg" src="./imgs/mari/mari2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="item__link--title">SWEATER MARI</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio descuento">$3290</span>
+                                    <span class="link__precio--precio">$2960</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="lista__item">
+                            <a class="item__link" href="./producto/remera-rembrandt.html">
+                                <img class="item__link--img fimg" src="./imgs/rembrandt/rembrandt1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="item__link--img simg" src="./imgs/rembrandt/rembrandt2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="item__link--title">REMERA REMBRANDT</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$2070</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="productos__bottom">
+                        <div class="bottom--linea"></div>
+                        <button class="bottom--boton show" id="cargarMas">CARGAR MAS<i class='bx bx-chevron-down'></i></button>
+                        <div class="bottom--linea"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__derechos">
+                <p class="footer__derechos--text">Copyright © 2021 – VIA AVANTI. Todos los derechos reservados.</p>
+            </div>
+            <nav class="footer__redes">
+                <a class="footer__redes--link" href="https://www.instagram.com/viaavanti8"><i class='bx bxl-instagram-alt'></i></a>
+                <a class="footer__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
+            </nav>
+        </footer>
+    </body>
+</html>

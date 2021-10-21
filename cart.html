@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Via avanti carrito">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="icon" href="./imgs/VALogo.png" type="image/x-icon">
+        <script defer src="./js/cart.js"></script>
+        <script defer src="./js/header.js"></script>
+        <title>CARRITO - VIA AVANTI</title>
+    </head>
+    <body>
+        <div class="headerTop">
+            <div class="headerTop__texto">
+                <p class="headerTop__texto--text">ENVIO GRATIS A PARTIR DE LOS $2500 - SOLO PARA CABA</p>
+            </div>
+            <nav class="headerTop__redes">
+                <a class="headerTop__redes--link" href="https://www.instagram.com/viaavanti8"><i class='bx bxl-instagram-alt'></i></a>
+                <a class="headerTop__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
+            </nav>
+        </div>
+        <header class="header">
+            <a class="header__logo" href="./index.html">
+                <img class="header__logo--img" src="./imgs/VALogo.png" alt="LOGO VIA AVANTI">
+                <h1 class="header__logo--title">VIA AVANTI</h1>
+            </a>
+
+            <nav class="header__navbar">
+                <ul class="navbar__menu">
+                    <li class="menu__item">
+                        <a href="./index.html" class="menu__item__link">INICIO<div class="menu__item__link--linea"></div></a>
+                    </li>
+                    <li class="menu__item tiendaButton"> 
+                        <a href="./tienda.html" class="menu__item__link">TIENDA<div class="menu__item__link--linea"></div></a>
+                        <div id="mydropdown" class="menu__item__dropdown">
+                            <i class='dropdown--arrow bx bx-chevron-right'></i>
+                            <ul class="menu__item__submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link first" href="./tienda.html#pantalones">PANTALONES</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link" href="./tienda.html#remeras">REMERAS</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link last" href="./tienda.html#sweaters">SWEATERS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./contacto.html" class="menu__item__link">AYUDA<div class="menu__item__link--linea"></div></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__cart">
+                <a class="header__cart__link active" href="./cart.html">
+                    CARRITO <i class='bx bxs-shopping-bag'></i>
+                    <div class="header__cart__link--linea"></div>
+                </a>
+            </div>
+        </header>
+
+        <main class="main">
+            <h2 class="main--title">CARRITO</h2>
+
+            <section id="section" class="main__content cart">
+                <table class="content__table">
+                    <thead class="table__head">
+                        <tr class="head__row">
+                            <th class="head__row--tag productoName">Producto</th>
+                            <th class="head__row--tag productoPrice">Precio Unitario</th>
+                            <th class="head__row--tag productoCantidad">Cantidad</th>
+                            <th class="head__row--tag productoSubtotal">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table__body">
+                        <tr class="body__row">
+                            <th class="row__item">
+                                <div class="item__productoInfo">
+                                    <i class='bx bxs-x-circle'></i>
+                                    <a class="productoInfo__link" href="./producto/sweater-popis.html">
+                                        <img class="productoInfo__link--img" src="./imgs/popis/popis1.jpg" alt="SWEATER POPIS">
+                                        <span class="productoInfo__link--title">SWEATER POPIS</span>
+                                    </a>   
+                                </div>       
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--precio" data-precio>$2340</span>
+                            </th>
+                            <th class="row__item">
+                                <div class="item__unidades">
+                                    <button onclick=(restarUnidad(event)) class="item__unidades--boton" id="restarButton3" disabled></button>
+                                    <h4 class="item__unidades--cantidad" data-unidades id="unidades">1</h4>
+                                    <button onclick=(sumarUnidad(event)) class="item__unidades--boton sumar" id="sumarButton3"></button>
+                                </div>
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--subtotal" data-subtotal>$2340</span>
+                            </th>
+                        </tr>
+                        <tr class="body__row">
+                            <th class="row__item">
+                                <div class="item__productoInfo">
+                                    <i class='bx bxs-x-circle'></i>
+                                    <a class="productoInfo__link" href="./producto/pantalon-chicago.html">
+                                        <img class="productoInfo__link--img" src="./imgs/chicago/chicago1.jpg" alt="PANTALON CHICAGO">
+                                        <span class="productoInfo__link--title">PANTALON CHICAGO</span>
+                                    </a>   
+                                </div>       
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--precio" data-precio>$3280</span>
+                            </th>
+                            <th class="row__item">
+                                <div class="item__unidades">
+                                    <button onclick=(restarUnidad(event)) class="item__unidades--boton" id="restarButton3" disabled></button>
+                                    <h4 class="item__unidades--cantidad" data-unidades id="unidades">1</h4>
+                                    <button onclick=(sumarUnidad(event)) class="item__unidades--boton sumar" id="sumarButton3"></button>
+                                </div>
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--subtotal" data-subtotal>$3280</span>
+                            </th>
+                        </tr>
+                        <tr class="body__row">
+                            <th class="row__item">
+                                <div class="item__productoInfo">
+                                    <i class='bx bxs-x-circle'></i>
+                                    <a class="productoInfo__link" href="./producto/sweater-mari.html">
+                                        <img class="productoInfo__link--img" src="./imgs/mari/mari1.jpg" alt="SWEATER MARI">
+                                        <span class="productoInfo__link--title">SWEATER MARI</span>
+                                    </a>   
+                                </div>       
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--precio" data-precio>$2960</span>
+                            </th>
+                            <th class="row__item">
+                                <div class="item__unidades">
+                                    <button onclick=(restarUnidad(event)) class="item__unidades--boton" id="restarButton3" disabled></button>
+                                    <h4 class="item__unidades--cantidad" data-unidades id="unidades">1</h4>
+                                    <button onclick=(sumarUnidad(event)) class="item__unidades--boton sumar" id="sumarButton3"></button>
+                                </div>
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--subtotal" data-subtotal>$2960</span>
+                            </th>
+                        </tr>
+                        <tr class="body__row">
+                            <th class="row__item">
+                                <div class="item__productoInfo">
+                                    <i class='bx bxs-x-circle'></i>
+                                    <a class="productoInfo__link" href="./producto/remera-female.html">
+                                        <img class="productoInfo__link--img" src="./imgs/female/female1.jpg" alt="REMERA FEMALE">
+                                        <span class="productoInfo__link--title">REMERA FEMALE</span>
+                                    </a>   
+                                </div>       
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--precio" data-precio>$1690</span>
+                            </th>
+                            <th class="row__item">
+                                <div class="item__unidades">
+                                    <button onclick=(restarUnidad(event)) class="item__unidades--boton" id="restarButton3" disabled></button>
+                                    <h4 class="item__unidades--cantidad" data-unidades id="unidades">1</h4>
+                                    <button onclick=(sumarUnidad(event)) class="item__unidades--boton sumar" id="sumarButton3"></button>
+                                </div>
+                            </th>
+                            <th class="row__item">
+                                <span class="row__item--subtotal" data-subtotal>$1690</span>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="content__resumen">
+                    <h3 class="resumen--title">RESUMEN DE COMPRA</h4>
+                    <div class="resumen__bottom">
+                        <div class="resumen__precios">
+                            <table class="precios__table">
+                                <tbody class="table__body">
+                                    <tr class="body__row">
+                                        <th class="body__row--title">Subtotal</th>
+                                        <td class="body__row--content" id="subtotal"></td>
+                                    </tr>
+                                    <tr class="body__row">
+                                        <th class="body__row--title">Envío</th>
+                                        <td class="body__row--content">$300</td>
+                                    </tr>
+                                    <tr class="body__row">
+                                        <th class="body__row--title">Total</th>
+                                        <td class="body__row--content" id="total"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="resumen--boton">COMPRAR</button>
+                    </div>       
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__derechos">
+                <p class="footer__derechos--text">Copyright © 2021 – VIA AVANTI. Todos los derechos reservados.</p>
+            </div>
+            <nav class="footer__redes">
+                <a class="footer__redes--link" href="https://www.instagram.com/viaavanti8"><i class='bx bxl-instagram-alt'></i></a>
+                <a class="footer__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
+            </nav>
+        </footer>
+    </body>
+</html>

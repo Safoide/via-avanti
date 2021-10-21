@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tienda de ropa para mujeres">
+        <meta name="keywords" content="tienda de ropa, tienda, ropa, ropa de mujer, via avanti, viaavanti, ropa para mujer">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="icon" href="./imgs/VALogo.png" type="image/x-icon">
+        <script defer src="./js/header.js"></script>
+        <title>VIA AVANTI</title>
+    </head>
+    <body>
+        <div class="headerTop">
+            <div class="headerTop__texto">
+                <p class="headerTop__texto--text">ENVIO GRATIS A PARTIR DE LOS $2500 - SOLO PARA CABA</p>
+            </div>
+            <nav class="headerTop__redes">
+                <a class="headerTop__redes--link" href="https://www.instagram.com/viaavanti8"><i class='bx bxl-instagram-alt'></i></a>
+                <a class="headerTop__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
+            </nav>
+        </div>
+        <header class="header">
+            <a class="header__logo" href="./index.html">
+                <img class="header__logo--img" src="./imgs/VALogo.png" alt="LOGO VIA AVANTI">
+                <h1 class="header__logo--title">VIA AVANTI</h1>
+            </a>
+
+            <nav class="header__navbar">
+                <ul class="navbar__menu">
+                    <li class="menu__item">
+                        <a href="./index.html" class="menu__item__link active">INICIO<div class="menu__item__link--linea"></div></a>
+                    </li>
+                    <li class="menu__item tiendaButton"> 
+                        <a href="./tienda.html" class="menu__item__link">TIENDA<div class="menu__item__link--linea"></div></a>
+                        <div id="mydropdown" class="menu__item__dropdown">
+                            <i class='dropdown--arrow bx bx-chevron-right'></i>
+                            <ul class="menu__item__submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link first" href="./tienda.html#pantalones">PANTALONES</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link" href="./tienda.html#remeras">REMERAS</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__item--link last" href="./tienda.html#sweaters">SWEATERS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./contacto.html" class="menu__item__link">AYUDA<div class="menu__item__link--linea"></div></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__cart">
+                <a class="header__cart__link" href="./cart.html">
+                    CARRITO <i class='bx bxs-shopping-bag'></i>
+                    <div class="header__cart__link--linea"></div>
+                </a>
+            </div>
+        </header>
+
+        <main class="main">
+            <div id="myCarousel" class="main__carousel carousel-fade carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+                <div id="carouselInner" class="carousel__inner carousel-inner">
+                    <div class="inner__item carousel-item active">
+                        <img src="./imgs/carousel1.jpg" alt="CAROUSEL DE IMAGENES"/>
+                    </div>
+
+                    <div class="inner__item carousel-item">
+                        <img src="./imgs/carousel2.jpg" alt="CAROUSEL DE IMAGENES"/>
+                    </div>
+
+                    <div class="inner__item carousel-item">
+                        <img src="./imgs/carousel3.jpg" alt="CAROUSEL DE IMAGENES"/>
+                    </div>
+
+                    <div class="inner__caption carousel-caption">
+                        <p id="carouselText" class="inner__caption--text animate__animated animate__backInDown">Vibramos en distintas frecuencias, <strong>compartimos un mismo ideal</strong>, ser nosotras mismas.</p>
+                        <a class="inner__caption--link btn btn-lg" href="./tienda.html">TIENDA</a>
+                    </div>
+                </div>
+            </div>
+            <section class="main__content">
+                <h2 class="content--title">DESTACADOS</h2>
+                <article class="content__article">
+                    <ul class="article__menu">
+                        <li class="menu__item">
+                            <a class="menu__item__link" href="./producto/sweater-popis.html">
+                                <img class="menu__item__link--img fimg" src="./imgs/popis/popis1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="menu__item__link--img simg" src="./imgs/popis/popis2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="menu__item__link--title">SWEATER POPIS</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio descuento">$2600</span>
+                                    <span class="link__precio--precio">$2340</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item__link" href="./producto/pantalon-chicago.html">
+                                <img class="menu__item__link--img fimg" src="./imgs/chicago/chicago1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="menu__item__link--img simg" src="./imgs/chicago/chicago2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="menu__item__link--title">PANTALON CHICAGO</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$3280</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item__link" href="./producto/remera-rembrandt.html">
+                                <img class="menu__item__link--img fimg" src="./imgs/rembrandt/rembrandt1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="menu__item__link--img simg" src="./imgs/rembrandt/rembrandt2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="menu__item__link--title">REMERA REMBRANDT</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$2070</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item__link" href="./producto/babucha-leonardo.html">
+                                <img class="menu__item__link--img fimg" src="./imgs/leonardo/leonardo1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="menu__item__link--img simg" src="./imgs/leonardo/leonardo2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="menu__item__link--title">BABUCHA LEONARDO</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$3021</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item__link" href="./producto/sweater-mari.html">
+                                <img class="menu__item__link--img fimg" src="./imgs/mari/mari1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="menu__item__link--img simg" src="./imgs/mari/mari2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="menu__item__link--title">SWEATER MARI</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio descuento">$3290</span>
+                                    <span class="link__precio--precio">$2960</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item__link" href="./producto/remera-female.html">
+                                <img class="menu__item__link--img fimg" src="./imgs/female/female1.jpg" alt="FOTO DEL PRODUCTO">
+                                <img class="menu__item__link--img simg" src="./imgs/female/female2.jpg" alt="FOTO DEL PRODUCTO">
+                                <h3 class="menu__item__link--title">REMERA FEMALE</h3>
+                                <div class="link__precio">
+                                    <span class="link__precio--precio">$1690</span>
+                                    <p class="link__precio--iva">- IVA Incluido</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__derechos">
+                <p class="footer__derechos--text">Copyright © 2021 – VIA AVANTI. Todos los derechos reservados.</p>
+            </div>
+            <nav class="footer__redes">
+                <a class="footer__redes--link" href="https://www.instagram.com/viaavanti8"><i class='bx bxl-instagram-alt'></i></a>
+                <a class="footer__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
+            </nav>
+        </footer>
+
+        <script src="./js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
