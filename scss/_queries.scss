@@ -144,6 +144,10 @@
     }
 
     .header {
+        &__burguer {
+            display: flex;
+        }
+
         &__logo {
             max-width: 12rem;
             margin-left: 15px;
@@ -154,7 +158,7 @@
         }
 
         &__navbar {
-            width: 15rem;
+            display: none;
         }
     }
 
@@ -228,6 +232,10 @@
     }
 
     .header {
+        &__burguer {
+            display: flex;
+        }
+
         &__logo {
             width: 11rem;
             margin-left: 15px;
@@ -240,7 +248,7 @@
         }
 
         &__navbar {
-            width: 13rem;
+            display: none;
         }
     }
 
@@ -319,6 +327,10 @@
     }
 
     .header {
+        &__burguer {
+            display: flex;
+        }
+
         &__logo {
             max-width: 10rem;
             margin-left: 0;
@@ -336,12 +348,7 @@
         }
 
         &__navbar {
-            max-width: 12rem;
-
-            .navbar__menu .menu__item.tiendaButton .menu__item__dropdown {
-                width: 20px;
-                height: 30px;
-            }
+            display: none;
         }
     }
 
