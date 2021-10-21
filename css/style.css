@@ -176,6 +176,7 @@ hr {
               display: none;
               flex-direction: column;
               position: absolute;
+              right: 0;
               top: 90%; }
               .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown .menu__item__submenu .submenu__item {
                 padding: 0; }
@@ -190,11 +191,9 @@ hr {
                   align-items: center;
                   padding: 5px; }
                   .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown .menu__item__submenu .submenu__item--link.first {
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px; }
+                    border-radius: 5px 5px 0 0; }
                   .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown .menu__item__submenu .submenu__item--link.last {
-                    border-bottom-left-radius: 5px;
-                    border-bottom-right-radius: 5px; }
+                    border-radius: 0 0 5px 5px; }
                   .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown .menu__item__submenu .submenu__item--link:hover {
                     background-color: #DBDBDB;
                     color: black; }
