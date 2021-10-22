@@ -61,12 +61,6 @@
         i {
             transition: $transition-4s;  
         }
-
-        &.active {
-            i {
-                transform: rotate(90deg);
-            }
-        }
     }
  
     &__logo {
@@ -313,16 +307,18 @@
 }
 
 .burguerMenu {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
+    background-color: #EBEBEB;
     transition: $transition-4s;
     animation: burguerMenuDissapears forwards;
     animation-duration: 0.4s;
+    pointer-events: none;
+    position: sticky;
+    top: 80px;
+    z-index: 99;
+
 
     &.active {
+        pointer-events: all;
         display: block;
         animation: burguerMenuAppears forwards;
         animation-duration: 0.4s;
@@ -334,18 +330,21 @@
 
     &__nav {
         display: none;
-        
+        pointer-events: none;
+
         .nav__lista {
             list-style-type: none;
             padding: 15px 0;
             margin: 0;
             @include flex-center(column);
+            pointer-events: none;
+
 
             .lista__item {
-                width: 100%;
-                height: 100%;
                 display: inline-block;
                 text-align: center;
+                width: 100%;
+                pointer-events: none;
 
                 &--link {
                     display: inline-block;
@@ -354,10 +353,10 @@
                     text-decoration: none;
                     font-size: 1rem;
                     font-weight: 600;
-                    width: 100%;
-                    height: 100%;
                     padding: 10px 0;
                     transition: $transition-4s;
+                    width: 100%;
+                    pointer-events: all;
 
                     &:hover {
                         background-color: #DBDBDB;
@@ -376,13 +375,13 @@
     }
 
     to {
-        height: 162px;
+        height: 165px;
     }
 }
 
 @keyframes burguerMenuDissapears {
     from {
-        height: 162px;
+        height: 165px;
     }
 
     to {

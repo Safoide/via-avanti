@@ -82,8 +82,6 @@ hr {
     display: none; }
     .header__burguer i {
       transition: all 0.4s ease 0s; }
-    .header__burguer.active i {
-      transform: rotate(90deg); }
   .header__logo {
     max-width: 220px;
     height: 80px;
@@ -266,22 +264,24 @@ hr {
         opacity: 1; }
 
 .burguerMenu {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
+  background-color: #EBEBEB;
   transition: all 0.4s ease 0s;
   animation: burguerMenuDissapears forwards;
-  animation-duration: 0.4s; }
+  animation-duration: 0.4s;
+  pointer-events: none;
+  position: sticky;
+  top: 80px;
+  z-index: 99; }
   .burguerMenu.active {
+    pointer-events: all;
     display: block;
     animation: burguerMenuAppears forwards;
     animation-duration: 0.4s; }
     .burguerMenu.active .burguerMenu__nav {
       display: block; }
   .burguerMenu__nav {
-    display: none; }
+    display: none;
+    pointer-events: none; }
     .burguerMenu__nav .nav__lista {
       list-style-type: none;
       padding: 15px 0;
@@ -289,12 +289,13 @@ hr {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      pointer-events: none; }
       .burguerMenu__nav .nav__lista .lista__item {
-        width: 100%;
-        height: 100%;
         display: inline-block;
-        text-align: center; }
+        text-align: center;
+        width: 100%;
+        pointer-events: none; }
         .burguerMenu__nav .nav__lista .lista__item--link {
           display: inline-block;
           color: #000;
@@ -302,10 +303,10 @@ hr {
           text-decoration: none;
           font-size: 1rem;
           font-weight: 600;
-          width: 100%;
-          height: 100%;
           padding: 10px 0;
-          transition: all 0.4s ease 0s; }
+          transition: all 0.4s ease 0s;
+          width: 100%;
+          pointer-events: all; }
           .burguerMenu__nav .nav__lista .lista__item--link:hover {
             background-color: #DBDBDB;
             opacity: 1; }
@@ -315,11 +316,11 @@ hr {
     height: 0px;
     display: none; }
   to {
-    height: 162px; } }
+    height: 165px; } }
 
 @keyframes burguerMenuDissapears {
   from {
-    height: 162px; }
+    height: 165px; }
   to {
     height: 0;
     display: none; } }
@@ -1235,8 +1236,7 @@ hr {
   .header__burguer {
     display: flex; }
   .header__logo {
-    max-width: 12rem;
-    margin-left: 15px; }
+    max-width: 12rem; }
     .header__logo--title {
       font-size: 15px; }
   .header__navbar {
@@ -1284,7 +1284,6 @@ hr {
     display: flex; }
   .header__logo {
     width: 11rem;
-    margin-left: 15px;
     padding-left: 0;
     padding-right: 0; }
     .header__logo--title {
@@ -1336,8 +1335,7 @@ hr {
   .header__burguer {
     display: flex; }
   .header__logo {
-    max-width: 10rem;
-    margin-left: 0; }
+    max-width: 10rem; }
     .header__logo--img {
       width: 64px;
       height: 64px;
