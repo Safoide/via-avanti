@@ -13,16 +13,16 @@
             }
 
             &.active > img {
-                animation-name: zoomin;
+                animation: infinite alternate zoomin;
                 animation-duration: 8s;
             }
 
             @keyframes zoomin {
-                from {
+                0% {
                     transform: scale(1);
                 }
 
-                to {
+                100% {
                     transform: scale(1.1);
                 }
             }

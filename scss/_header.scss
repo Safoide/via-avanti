@@ -55,11 +55,16 @@
         @include flex-center(row);
         color: #fff;
         font-size: 2rem;
-        transition: $transition-4s;
         display: none;
 
-        i {
-            transition: $transition-4s;  
+        &:not(.active) i {
+            animation: changeIcon2 backwards;
+            animation-duration: .4s;
+        }
+
+        &.active i {
+            animation: changeIcon forwards;
+            animation-duration: .4s;
         }
     }
  
@@ -387,5 +392,33 @@
     to {
         height: 0;
         display: none;
+    }
+}
+
+@keyframes changeIcon2 {
+    0% {
+        transform: scale(1);
+    }  
+
+    50% {
+        transform: scale(.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes changeIcon {
+    0% {
+        transform: scale(1);
+    }  
+
+    50% {
+        transform: scale(.3);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
