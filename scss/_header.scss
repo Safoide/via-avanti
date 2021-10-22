@@ -4,6 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #fff;
+    z-index: 99;
 
     &__texto {
 
@@ -78,16 +80,14 @@
         text-decoration: none;
         color: white;
         cursor: pointer;
+        gap: 10px;
 
         &--img {
             width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            margin-right: 10px;
         }
 
         &--title {
-            font-size: 19px;
+            font-size: 1.15rem;
             font-weight: normal;
         }
     }
@@ -319,7 +319,7 @@
     pointer-events: none;
     position: sticky;
     top: 80px;
-    z-index: 99;
+    z-index: 98;
 
 
     &.active {
@@ -330,6 +330,10 @@
 
         .burguerMenu__nav {
             display: block;
+
+            .nav__lista {
+                animation: moveList .4s forwards;
+            }
         }
     }
 
@@ -343,6 +347,7 @@
             margin: 0;
             @include flex-center(column);
             pointer-events: none;
+            transition: $transition-4s;
 
 
             .lista__item {
@@ -371,6 +376,16 @@
             }
         }
     }  
+}
+
+@keyframes moveList {
+    from {
+        transform: translateY(-200px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes burguerMenuAppears {

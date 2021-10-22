@@ -91,10 +91,6 @@
     .header {
         &__navbar {
             width: 18rem;
-
-            .navbar__menu {
-                align-items: center;
-            }
         }
     }
 
@@ -149,8 +145,6 @@
         }
 
         &__logo {
-            max-width: 12rem;
-
             &--title {
                 font-size: 15px;
             }
@@ -235,16 +229,6 @@
             display: flex;
         }
 
-        &__logo {
-            width: 11rem;
-            padding-left: 0;
-            padding-right: 0;
-
-            &--title {
-                font-size: 15px;
-            }
-        }
-
         &__navbar {
             display: none;
         }
@@ -327,21 +311,6 @@
     .header {
         &__burguer {
             display: flex;
-        }
-
-        &__logo {
-            max-width: 10rem;
-
-            &--img {
-                width: 64px;
-                height: 64px;
-                margin: 0 3px 0 0;
-            }
-
-            &--title {
-                font-size: 11px;
-                width: 50px;
-            }
         }
 
         &__navbar {

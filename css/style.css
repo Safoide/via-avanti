@@ -33,7 +33,9 @@ hr {
   height: 35px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  background-color: #fff;
+  z-index: 99; }
   .headerTop__texto--text {
     margin: 0;
     font-size: 13px;
@@ -94,14 +96,12 @@ hr {
     text-align: center;
     text-decoration: none;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    gap: 10px; }
     .header__logo--img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      margin-right: 10px; }
+      width: 64px; }
     .header__logo--title {
-      font-size: 19px;
+      font-size: 1.15rem;
       font-weight: normal; }
   .header__navbar {
     height: 65%;
@@ -274,7 +274,7 @@ hr {
   pointer-events: none;
   position: sticky;
   top: 80px;
-  z-index: 99; }
+  z-index: 98; }
   .burguerMenu.active {
     pointer-events: all;
     display: block;
@@ -282,6 +282,8 @@ hr {
     animation-duration: 0.4s; }
     .burguerMenu.active .burguerMenu__nav {
       display: block; }
+      .burguerMenu.active .burguerMenu__nav .nav__lista {
+        animation: moveList .4s forwards; }
   .burguerMenu__nav {
     display: none;
     pointer-events: none; }
@@ -293,7 +295,8 @@ hr {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      pointer-events: none; }
+      pointer-events: none;
+      transition: all 0.4s ease 0s; }
       .burguerMenu__nav .nav__lista .lista__item {
         display: inline-block;
         text-align: center;
@@ -313,6 +316,12 @@ hr {
           .burguerMenu__nav .nav__lista .lista__item--link:hover {
             background-color: #DBDBDB;
             opacity: 1; }
+
+@keyframes moveList {
+  from {
+    transform: translateY(-200px); }
+  to {
+    transform: translateY(0); } }
 
 @keyframes burguerMenuAppears {
   from {
@@ -1227,8 +1236,6 @@ hr {
     font-size: 12px; }
   .header__navbar {
     width: 18rem; }
-    .header__navbar .navbar__menu {
-      align-items: center; }
   .main__content {
     justify-content: flex-start; }
     .main__content.cart {
@@ -1254,10 +1261,8 @@ hr {
     font-size: 11px; }
   .header__burguer {
     display: flex; }
-  .header__logo {
-    max-width: 12rem; }
-    .header__logo--title {
-      font-size: 15px; }
+  .header__logo--title {
+    font-size: 15px; }
   .header__navbar {
     display: none; }
   .main {
@@ -1301,12 +1306,6 @@ hr {
     font-size: 10px; }
   .header__burguer {
     display: flex; }
-  .header__logo {
-    width: 11rem;
-    padding-left: 0;
-    padding-right: 0; }
-    .header__logo--title {
-      font-size: 15px; }
   .header__navbar {
     display: none; }
   .main {
@@ -1353,15 +1352,6 @@ hr {
     font-size: 9px; }
   .header__burguer {
     display: flex; }
-  .header__logo {
-    max-width: 10rem; }
-    .header__logo--img {
-      width: 64px;
-      height: 64px;
-      margin: 0 3px 0 0; }
-    .header__logo--title {
-      font-size: 11px;
-      width: 50px; }
   .header__navbar {
     display: none; }
   .main {
