@@ -101,12 +101,25 @@ function recargarColor(event) {
     let fileSrc = coloresSrc[target][targetId];
     const imgEl = document.getElementById('productImg');
 
+    imgsEl.forEach(img => {
+        img.classList.remove('active');
+
+        if(img.getAttribute('src') == fileSrc)
+            img.classList.add('active');
+    })
+
     imgEl.src = fileSrc;
 }
 
 function recargarFoto(event) {
-    let targetSrc = event.target.src;
+    let target = event.target;
     const imgEl = document.getElementById('productImg');
 
-    imgEl.src = targetSrc;
+    imgsEl.forEach(img => {
+        img.classList.remove('active');
+    })
+
+    target.classList.add('active');
+
+    imgEl.src = target.src;
 }

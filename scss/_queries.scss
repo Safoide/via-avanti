@@ -22,6 +22,10 @@
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
+    body {
+        font-size: 15px;
+    }
+
     .main {
         &__content {
             justify-content: flex-start;
@@ -47,6 +51,10 @@
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1280px) {
+    body {
+        font-size: 14px;
+    }
+
     .header {
         &__navbar {
             width: 23rem;
@@ -85,7 +93,7 @@
 @media only screen and (min-width: 769px) and (max-width: 900px) {
 
     body {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .header {
@@ -136,7 +144,7 @@
 
 @media only screen and (min-width: 631px) and (max-width: 768px) {
     body {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .header {
@@ -157,10 +165,6 @@
 
     .main {
         justify-content: flex-start;
-
-        &__carousel .carousel__inner .inner__caption .inner__caption--text {
-            margin-bottom: 13rem;
-        }
 
         &__content {
             padding: 40px;
@@ -221,7 +225,7 @@
 
 @media only screen and (min-width: 520px) and (max-width: 630px) {
     body {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .header {
@@ -236,10 +240,6 @@
 
     .main {
         justify-content: flex-start;
-
-        &__carousel .carousel__inner .inner__caption .inner__caption--text {
-            margin-bottom: 11rem;
-        }
 
         &__content {
             padding: 40px 40px 40px 40px;
@@ -301,11 +301,7 @@
 
 @media only screen and (max-width: 519px) {
     body {
-        font-size: 9px;
-    }
-
-    .headerTop .headerTop__texto .headerTop__texto--text {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .header {
@@ -321,9 +317,6 @@
     .main {
         justify-content: flex-start;
 
-        &__carousel .carousel__inner .inner__caption .inner__caption--text {
-            margin-bottom: 9rem;
-        }
 
         &__content {
             padding: 40px 90px;
@@ -389,9 +382,5 @@
         &.contacto .main__content {
             padding: 0 5px;
         }
-    }
-
-    .footer .footer__derechos .footer__derechos--text {
-        font-size: 9px;
     }
 }

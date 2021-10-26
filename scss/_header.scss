@@ -4,15 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #fff;
+    background-color: #EDEDED;
     z-index: 99;
 
     &__texto {
 
         &--text {
             margin: 0;
-            font-size: 13px;
-            font-weight: 500;
+            font-size: .8em;
             color: #00000099;
         }
     }
@@ -21,8 +20,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 24px;
-        width: 4rem;
+        font-size: 1.5em;
+        gap: 1vw;
 
         &--link {
             @include flex-center(row);
@@ -341,11 +340,13 @@
     &__nav {
         display: none;
         pointer-events: none;
+        height: 100%;
 
         .nav__lista {
             list-style-type: none;
             padding: 15px 0;
             margin: 0;
+            height: 100%;
             @include flex-center(column);
             pointer-events: none;
             transition: $transition-4s;

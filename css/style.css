@@ -34,19 +34,18 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #fff;
+  background-color: #EDEDED;
   z-index: 99; }
   .headerTop__texto--text {
     margin: 0;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: .8em;
     color: #00000099; }
   .headerTop__redes {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 24px;
-    width: 4rem; }
+    font-size: 1.5em;
+    gap: 1vw; }
     .headerTop__redes--link {
       display: flex;
       flex-direction: row;
@@ -287,11 +286,13 @@ hr {
         animation: moveList .4s forwards; }
   .burguerMenu__nav {
     display: none;
-    pointer-events: none; }
+    pointer-events: none;
+    height: 100%; }
     .burguerMenu__nav .nav__lista {
       list-style-type: none;
       padding: 15px 0;
       margin: 0;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -412,7 +413,7 @@ hr {
       bottom: 1rem;
       z-index: 10; }
       .main__carousel .carousel__inner .inner__caption--text {
-        font-size: 30px;
+        font-size: 2em;
         font-weight: 200;
         color: #FFF;
         background-color: rgba(0, 0, 0, 0.2);
@@ -561,7 +562,7 @@ hr {
           max-height: 100%;
           opacity: 0.5;
           transition: all 0.2s ease 0s; }
-          .main__producto .producto__imgs .imgs__restoImgs--img:hover {
+          .main__producto .producto__imgs .imgs__restoImgs--img:hover, .main__producto .producto__imgs .imgs__restoImgs--img.active {
             opacity: 1; }
     .main__producto .producto__info {
       padding: 0 20px;
@@ -1203,6 +1204,8 @@ hr {
       grid-template-rows: repeat(2, 1fr); } }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  body {
+    font-size: 15px; }
   .main__content {
     justify-content: flex-start; }
     .main__content.cart {
@@ -1216,6 +1219,8 @@ hr {
       grid-template-columns: repeat(3, 1fr); } }
 
 @media only screen and (min-width: 901px) and (max-width: 1280px) {
+  body {
+    font-size: 14px; }
   .header__navbar {
     width: 23rem; }
   .main__content {
@@ -1234,7 +1239,7 @@ hr {
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
   body {
-    font-size: 12px; }
+    font-size: 13px; }
   .header__navbar {
     width: 18rem; }
   .main__content {
@@ -1259,7 +1264,7 @@ hr {
 
 @media only screen and (min-width: 631px) and (max-width: 768px) {
   body {
-    font-size: 11px; }
+    font-size: 12px; }
   .header__burguer {
     display: flex; }
   .header__logo--title {
@@ -1268,8 +1273,6 @@ hr {
     display: none; }
   .main {
     justify-content: flex-start; }
-    .main__carousel .carousel__inner .inner__caption .inner__caption--text {
-      margin-bottom: 13rem; }
     .main__content {
       padding: 40px;
       justify-content: flex-start; }
@@ -1304,15 +1307,13 @@ hr {
 
 @media only screen and (min-width: 520px) and (max-width: 630px) {
   body {
-    font-size: 10px; }
+    font-size: 11px; }
   .header__burguer {
     display: flex; }
   .header__navbar {
     display: none; }
   .main {
     justify-content: flex-start; }
-    .main__carousel .carousel__inner .inner__caption .inner__caption--text {
-      margin-bottom: 11rem; }
     .main__content {
       padding: 40px 40px 40px 40px;
       justify-content: flex-start; }
@@ -1348,17 +1349,13 @@ hr {
 
 @media only screen and (max-width: 519px) {
   body {
-    font-size: 9px; }
-  .headerTop .headerTop__texto .headerTop__texto--text {
-    font-size: 9px; }
+    font-size: 10px; }
   .header__burguer {
     display: flex; }
   .header__navbar {
     display: none; }
   .main {
     justify-content: flex-start; }
-    .main__carousel .carousel__inner .inner__caption .inner__caption--text {
-      margin-bottom: 9rem; }
     .main__content {
       padding: 40px 90px;
       justify-content: flex-start; }
@@ -1394,6 +1391,4 @@ hr {
       .main__tienda .tienda__productos .productos__lista {
         grid-template-columns: repeat(1, 1fr); }
     .main.contacto .main__content {
-      padding: 0 5px; }
-  .footer .footer__derechos .footer__derechos--text {
-    font-size: 9px; } }
+      padding: 0 5px; } }
