@@ -50,11 +50,11 @@ function sumarUnidad(e) {
 
 
     sibling.innerText = unidades;
-    recargarBoton(target, sibling, unidades);
+    recargarBoton(sibling, unidades);
     recargarTotal();
 }
 
-function recargarBoton(target, sibling, unidades) {
+function recargarBoton(sibling, unidades) {
     if(unidades < 10) {
         sibling.nextElementSibling.disabled = false;
     }
@@ -73,6 +73,6 @@ function recargarTotal() {
         totalNuevo += totalesNuevos[i];
     }
 
-    subtotalEl.innerText = `SUBTOTAL: $${totalNuevo}`;
-    totalEl.innerText = `TOTAL: $${totalNuevo+envio}`;
+    subtotalEl.innerText = `$${totalNuevo}`;
+    totalEl.innerText = `$${totalNuevo+envio}`;
 }

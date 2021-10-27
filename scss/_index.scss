@@ -33,11 +33,11 @@
             z-index: 10;
 
             &--text {
-                font-size: 2em;
+                font-size: 1.88em;
                 font-weight: 200;
                 color: #FFF;
                 background-color: rgba(0, 0, 0, 0.2);
-                margin-bottom: 30vh;
+                margin-bottom: 25vh;
                 transition: $transition-4s;
 
                 strong {
@@ -51,7 +51,8 @@
                 margin-bottom: 10px;
                 font-weight: 600;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     background-color: #FFF;
                 }
             }
@@ -92,7 +93,8 @@
         width: 10rem;
         transition: $transition-4s;
 
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 1;
         }
     }
@@ -124,13 +126,7 @@
                 height: 100%;
                 width: 100%;
                 padding: 0;
-                background-color: rgb(236, 236, 236);
                 box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
-                transition: $transition-4s;
-
-                &:hover {
-                    background-color: rgb(211, 211, 211);
-                }
 
                 &__link {
                     width: 100%;
@@ -141,6 +137,8 @@
                     align-items: center;
                     text-decoration: none;
                     position: relative;
+                    background-color: rgb(236, 236, 236);
+                    transition: $transition-4s;
 
                     &--img {
                         width: 100%;
@@ -202,7 +200,10 @@
                         }
                     }
 
-                    &:hover {
+                    &:hover,
+                    &:focus {
+                        background-color: rgb(211, 211, 211);
+
                         .fimg {
                             opacity: 0;
                         }
