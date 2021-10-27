@@ -99,27 +99,19 @@ function recargarColor(event) {
     let target = event.srcElement.dataset['colores'];
     let targetId = event.target.id;
     let fileSrc = coloresSrc[target][targetId];
-    const imgEl = document.getElementById('productImg');
 
     imgsEl.forEach(img => {
-        img.classList.remove('active');
-
         if(img.getAttribute('src') == fileSrc)
-            img.classList.add('active');
+            img.click();
     })
-
-    imgEl.src = fileSrc;
 }
 
 function recargarFoto(event) {
     let target = event.target;
-    const imgEl = document.getElementById('productImg');
 
     imgsEl.forEach(img => {
         img.classList.remove('active');
     })
 
     target.classList.add('active');
-
-    imgEl.src = target.src;
 }

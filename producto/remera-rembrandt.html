@@ -7,6 +7,7 @@
         <meta name="description" content="VIA AVANTI Compra tu Remera Rembrandt">
         <meta name="keywords" content="remera, rembrandt, remera rembrandt, ropa, ropa de mujer, via avanti, viaavanti, ropa para mujer">
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link href="../css/style.css" rel="stylesheet">
         <link rel="icon" href="../imgs/VALogo.png" type="image/x-icon">
         <script defer src="../js/producto.js"></script>
@@ -90,15 +91,29 @@
         <main class="main">
             <section class="main__producto">
                 <article class="producto__imgs">
-                    <div class="imgs__imgGrande">
-                        <img class="imgs__imgGrande--img" src="../imgs/rembrandt/rembrandt1.jpg" alt="Foto del Producto" id="productImg">
+                    <div id="producto" class="imgs__imgGrande carousel slide" data-bs-ride="false" data-bs-interval="false">
+                        <div class="carousel-item active">
+                            <img class="imgs__imgGrande--img" src="../imgs/rembrandt/rembrandt1.jpg" alt="Foto del Producto">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="imgs__imgGrande--img" src="../imgs/rembrandt/rembrandt2.jpg" alt="Foto del Producto">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="imgs__imgGrande--img" src="../imgs/rembrandt/rembrandt3.jpg" alt="Foto del Producto">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="imgs__imgGrande--img" src="../imgs/rembrandt/rembrandt4.jpg" alt="Foto del Producto">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="imgs__imgGrande--img" src="../imgs/rembrandt/rembrandt5.jpg" alt="Foto del Producto">
+                        </div>
                     </div>
                     <div class="imgs__restoImgs">
-                        <img class="imgs__restoImgs--img active" data-imgs src="../imgs/rembrandt/rembrandt1.jpg" alt="Otras fotos del producto">
-                        <img class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt2.jpg" alt="Otras fotos del producto">
-                        <img class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt3.jpg" alt="Otras fotos del producto">
-                        <img class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt4.jpg" alt="Otras fotos del producto">
-                        <img class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt5.jpg" alt="Otras fotos del producto">
+                        <img data-bs-target="#producto" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="imgs__restoImgs--img active" data-imgs src="../imgs/rembrandt/rembrandt1.jpg" alt="Otras fotos del producto">
+                        <img data-bs-target="#producto" data-bs-slide-to="1" aria-label="Slide 2" class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt2.jpg" alt="Otras fotos del producto">
+                        <img data-bs-target="#producto" data-bs-slide-to="2" aria-label="Slide 3" class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt3.jpg" alt="Otras fotos del producto">
+                        <img data-bs-target="#producto" data-bs-slide-to="3" aria-label="Slide 4" class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt4.jpg" alt="Otras fotos del producto">
+                        <img data-bs-target="#producto" data-bs-slide-to="4" aria-label="Slide 5" class="imgs__restoImgs--img" data-imgs src="../imgs/rembrandt/rembrandt5.jpg" alt="Otras fotos del producto">
                     </div>
                 </article>
                 <div class="producto__info">
@@ -115,7 +130,7 @@
                     <p class="info--descripcion">Remera de crepe de punto manga corta con elástico en puños y ruedo. Composición: 95% rayón, 5% spandexn</p>
                     
                     <form class="info__opciones">
-                        <h2>COLOR</h2>
+                        <h3 class="opciones--title">COLOR</h3>
                         <div class="opciones__colores">
                             <div class="colores__color camel">
                                 <input class="color--input" data-colores="rembrandt" id="camel" value="camel" name="color" type="radio" checked>
@@ -126,7 +141,7 @@
                             <div class="colores__color grismelange">
                                 <input class="color--input" data-colores="rembrandt" id="grismelange" value="grismelange" name="color" type="radio">
                                 <div class="color__name">
-                                    <h3 class="color__name--name">GRIS MELANGE</h3>
+                                    <h3 class="color__name--name">MELANGE</h3>
                                 </div>
                             </div>
                             <div class="colores__color negro">
@@ -136,7 +151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2>TALLE</h2>
+                        <h3 class="opciones--title">TALLE</h3>
                         <div class="opciones__talles">
                             <div class="talles__talle">
                                 <input class="talle--input" id="small" value="small" name="talle" type="radio">
@@ -182,5 +197,7 @@
                 <a class="footer__redes--link" href="https://www.facebook.com/viaavantiok"><i class='bx bxl-facebook-circle'></i></a>  
             </nav>
         </footer>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

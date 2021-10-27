@@ -32,7 +32,7 @@
             color: rgba(0, 0, 0, 0.7);
 
             &:hover {
-                color: rgb(0, 0, 0);
+                color: #000;
             }
         }
     }
@@ -258,7 +258,6 @@
             padding: .5rem .5rem;
             letter-spacing: 1px;
             font-weight: 600;
-            font-size: .75rem;
             transition: $transition-4s;
             pointer-events: all;
             cursor: pointer;
@@ -289,16 +288,16 @@
         &--unidades {
             position: absolute;
             background-color: #0f700d;
-            height: 15px;
-            width: 15px;
+            height: 18px;
+            width: 18px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             right: 0;
-            top: 20%;
+            top: 19%;
             font-weight: 700;
-            font-size: 10px;
+            font-size: 12px;
             opacity: 0;
             margin: 0;
             transition: $transition-4s;
