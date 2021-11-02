@@ -43,6 +43,10 @@
         &__tienda {
             padding: 10px 10px;
 
+            .tienda__productos {
+                font-size: 14px;
+            }
+
             .tienda__productos .productos__lista {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -78,6 +82,10 @@
 
         &__tienda {
             padding: 10px 10px;
+
+            .tienda__productos {
+                font-size: 13px;
+            }
 
             .tienda__productos .productos__lista {
                 grid-template-columns: repeat(3, 1fr);
@@ -129,6 +137,10 @@
 
         &__tienda {
             padding: 10px 10px;
+
+            .tienda__productos {
+                font-size: 12px;
+            }
 
             .tienda__productos .productos__lista {
                 grid-template-columns: repeat(3, 1fr);
@@ -193,6 +205,10 @@
 
         &__tienda {
             padding: 10px 10px;
+
+            .tienda__productos {
+                font-size: 12px;
+            }
 
             .tienda__productos .productos__lista {
                 grid-template-columns: repeat(2, 1fr);
@@ -283,6 +299,10 @@
 
         &__tienda {
             padding: 10px 10px;
+
+            .tienda__productos {
+                font-size: 11px;
+            }
 
             .tienda__productos .productos__lista {
                 grid-template-columns: repeat(2, 1fr);
@@ -385,6 +405,10 @@
 
         &__tienda {
             padding: 10px 10px;
+
+            .tienda__productos {
+                font-size: 12px;
+            }
 
             .tienda__productos .productos__lista {
                 grid-template-columns: repeat(1, 1fr);

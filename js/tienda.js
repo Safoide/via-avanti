@@ -5,6 +5,7 @@ const imagenesSrc = {
         'principal': './imgs/popis/popis1.jpg',
         'secundaria': './imgs/popis/popis2.jpg',
         'nombre': 'SWEATER POPIS',
+        'preciodescuento': '2600',
         'precio': '2340'
     },
     'pantalon-chicago': {
@@ -17,6 +18,7 @@ const imagenesSrc = {
         'principal': './imgs/mari/mari1.jpg',
         'secundaria': './imgs/mari/mari2.jpg',
         'nombre': 'SWEATER MARI',
+        'preciodescuento': '3290',
         'precio': '2960'
     },
     'babucha-leonardo': {
@@ -52,19 +54,38 @@ function cargarMas() {
     for(let i = 0; i < 8; i++) {
         var producto = productos[Math.floor(Math.random()*productos.length)];
 
-        productosEl.innerHTML += `
-            <li class="lista__item">
-                <a class="item__link" href="./producto/${producto}.html">
-                    <img class="item__link--img fimg" src="${imagenesSrc[producto]['principal']}" alt="FOTO DEL PRODUCTO">
-                    <img class="item__link--img simg" src="${imagenesSrc[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                    <h3 class="item__link--title">${imagenesSrc[producto]['nombre']}</h3>
-                    <div class="link__precio">
-                        <span class="link__precio--precio">$${imagenesSrc[producto]['precio']}</span>
-                        <p class="link__precio--iva">- IVA Incluido</p>
-                    </div>
-                </a>
-            </li>
-        `;
+        if (producto == 'sweater-popis' || producto == 'sweater-mari') {
+            productosEl.innerHTML += `
+                <li class="lista__item">
+                    <a class="item__link descuento" href="./producto/${producto}.html">
+                        <img class="item__link--img fimg" src="${imagenesSrc[producto]['principal']}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${imagenesSrc[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${imagenesSrc[producto]['nombre']}</h3>
+                        <div class="link__precio">
+                            <span class="link__precio--precio descuento">$${imagenesSrc[producto]['preciodescuento']}</span>
+                            <span class="link__precio--precio">$${imagenesSrc[producto]['precio']}</span>
+                            <p class="link__precio--iva">- IVA Incluido</p>
+                        </div>
+                    </a>
+                </li>
+            `;
+        } else {
+            productosEl.innerHTML += `
+                <li class="lista__item">
+                    <a class="item__link" href="./producto/${producto}.html">
+                        <img class="item__link--img fimg" src="${imagenesSrc[producto]['principal']}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${imagenesSrc[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${imagenesSrc[producto]['nombre']}</h3>
+                        <div class="link__precio">
+                            <span class="link__precio--precio">$${imagenesSrc[producto]['precio']}</span>
+                            <p class="link__precio--iva">- IVA Incluido</p>
+                        </div>
+                    </a>
+                </li>
+            `;
+        }
+
+        
     }
 
     if(clicks >= 5) {

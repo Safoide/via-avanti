@@ -496,7 +496,9 @@ hr {
               .main__content .content__article .article__menu .menu__item__link--img.simg {
                 opacity: 0;
                 position: absolute;
-                transition: all 0.4s ease 0s; }
+                transition: all 0.4s ease 0s;
+                left: 0;
+                top: 0; }
             .main__content .content__article .article__menu .menu__item__link--title {
               color: black;
               font-size: 18.7px;
@@ -909,7 +911,6 @@ hr {
     display: flex;
     padding: 10px 50px;
     width: 100%;
-    min-height: 100%;
     justify-content: space-between; }
     .main__tienda .tienda__filtros {
       max-height: 500px;
@@ -920,7 +921,6 @@ hr {
       align-items: center;
       padding: 10px 10px;
       border-radius: 10px;
-      background-color: #e6e6e6;
       position: sticky;
       top: 90px; }
       .main__tienda .tienda__filtros .filtros--title,
@@ -948,7 +948,8 @@ hr {
       padding: 0 10px;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      font-size: 16px; }
       .main__tienda .tienda__productos .productos__lista {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -976,21 +977,24 @@ hr {
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover .fimg {
                 opacity: 0; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover .simg {
-                opacity: 1; }
+                position: absolute;
+                opacity: 1;
+                left: 0;
+                top: 0; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link.descuento::after {
               content: 'OFERTA';
               background-color: green;
-              width: 100%;
+              padding: 0 10px;
               height: 30px;
               position: absolute;
-              top: 0;
-              left: 0;
+              top: 10px;
+              left: 10px;
               z-index: 80;
               display: flex;
               flex-direction: row;
               justify-content: center;
               align-items: center;
-              font-size: 1rem;
+              font-size: 1em;
               font-weight: 700;
               color: white; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img {
@@ -1222,6 +1226,8 @@ hr {
       grid-template-rows: repeat(2, 1fr); }
   .main__tienda {
     padding: 10px 10px; }
+    .main__tienda .tienda__productos {
+      font-size: 14px; }
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(3, 1fr); } }
 
@@ -1239,6 +1245,8 @@ hr {
       grid-template-rows: repeat(2, 1fr); }
   .main__tienda {
     padding: 10px 10px; }
+    .main__tienda .tienda__productos {
+      font-size: 13px; }
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(3, 1fr); }
   .main.contacto .main__content {
@@ -1264,6 +1272,8 @@ hr {
       grid-template-rows: repeat(3, 1fr); }
   .main__tienda {
     padding: 10px 10px; }
+    .main__tienda .tienda__productos {
+      font-size: 12px; }
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(3, 1fr); }
   .main.contacto .main__content {
@@ -1297,6 +1307,8 @@ hr {
         grid-template-rows: repeat(3, 1fr); }
     .main__tienda {
       padding: 10px 10px; }
+      .main__tienda .tienda__productos {
+        font-size: 12px; }
       .main__tienda .tienda__productos .productos__lista {
         grid-template-columns: repeat(2, 1fr); }
     .main__producto {
@@ -1347,6 +1359,8 @@ hr {
         padding: 0; }
     .main__tienda {
       padding: 10px 10px; }
+      .main__tienda .tienda__productos {
+        font-size: 11px; }
       .main__tienda .tienda__productos .productos__lista {
         grid-template-columns: repeat(2, 1fr); }
     .main.contacto .main__content {
@@ -1401,6 +1415,8 @@ hr {
       padding: 0; }
   .main__tienda {
     padding: 10px 10px; }
+    .main__tienda .tienda__productos {
+      font-size: 12px; }
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(1, 1fr); }
   .main.contacto .main__content {

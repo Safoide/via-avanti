@@ -2,7 +2,6 @@
     display: flex;
     padding: 10px 50px;
     width: 100%;
-    min-height: 100%;
     justify-content: space-between;
 
     .tienda__filtros {
@@ -14,7 +13,6 @@
         align-items: center;
         padding: 10px 10px;
         border-radius: 10px;
-        background-color: rgba(230, 230, 230, 1);
         position: sticky;
         top: 90px;
 
@@ -55,6 +53,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 16px;
 
         .productos__lista {
             display: grid;
@@ -89,21 +88,24 @@
                         }
 
                         .simg {
+                            position: absolute;
                             opacity: 1;
+                            left: 0;
+                            top: 0;
                         }
                     }
 
                     &.descuento::after {
                         content: 'OFERTA';
                         background-color: green;
-                        width: 100%;
+                        padding: 0 10px;
                         height: 30px;
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        top: 10px;
+                        left: 10px;
                         z-index: 80;
                         @include flex-center(row);
-                        font-size: 1rem;
+                        font-size: 1em;
                         font-weight: 700;
                         color: white;
                     }
