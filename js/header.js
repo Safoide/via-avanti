@@ -1,10 +1,12 @@
 const dropdownEl = document.getElementById('mydropdown');
+const burguerDropdownEl = document.getElementById('burguerDropdown');
 const burguerEl = document.getElementById('burguerToggle');
 const burguerMenu = document.getElementById('burguerMenu');
 const burguerElDiv = document.getElementById('burguerToggleDiv');
 let active = false;
 
 dropdownEl.addEventListener('click', toggleActive);
+burguerDropdownEl.addEventListener('click', toggleActive1);
 document.addEventListener('click', documentClick);
 burguerEl.addEventListener('click', burguerToggleActive);
 
@@ -12,11 +14,18 @@ function toggleActive() {
     dropdownEl.classList.toggle('active');
 }
 
+function toggleActive1(e) {
+    e.target.classList.toggle('active');
+    const burguerSubmenuEl = document.getElementById('burguerSubmenu');
+
+    burguerSubmenuEl.classList.toggle('active');
+}
+
 function documentClick(e) {
     if(e.target.id != 'mydropdown')
         dropdownEl.classList.remove('active');
 
-    if(e.target.id != 'burguerToggle' && e.target.id != 'burguerMenu') {
+    if(e.target.id != 'burguerToggle' && e.target.id != 'burguerMenu' && e.target.id != 'burguerDropdown') {
         burguerMenu.classList.remove('active');
         burguerElDiv.classList.remove('active');
 

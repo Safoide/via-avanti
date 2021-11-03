@@ -316,57 +316,121 @@
 
 .burguerMenu {
     background-color: #EBEBEB;
-    transition: $transition-4s;
-    animation: burguerMenuDissapears forwards;
-    animation-duration: 0.4s;
-    pointer-events: none;
+    pointer-events: all;
+    z-index: 98;
+    transform: scale(1, 0);
+    transform-origin: top;
     position: sticky;
     top: 80px;
-    z-index: 98;
-
+    max-height: 0;
+    transition: $transition-4s;
 
     &.active {
-        pointer-events: all;
-        display: block;
-        animation: burguerMenuAppears forwards;
-        animation-duration: 0.4s;
+        transform: scale(1, 1);
+        max-height: 276px;
 
-        .burguerMenu__nav {
-            display: block;
-
-            .nav__lista {
-                animation: moveList .4s forwards;
-            }
+        .nav__lista {
+            animation: moveList .4s forwards;
         }
     }
 
-    &__nav {
-        display: none;
-        pointer-events: none;
+    .nav__lista {
+        list-style-type: none;
+        padding: 15px 0;
+        margin: 0;
         height: 100%;
+        @include flex-center(column);
+        pointer-events: none;
+        transition: $transition-4s;
 
-        .nav__lista {
-            list-style-type: none;
-            padding: 15px 0;
-            margin: 0;
-            height: 100%;
-            @include flex-center(column);
+        .lista__item {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
             pointer-events: none;
-            transition: $transition-4s;
 
-
-            .lista__item {
+            &--link {
                 display: inline-block;
-                text-align: center;
+                color: #000;
+                opacity: .7;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 10px 0;
+                transition: $transition-4s;
                 width: 100%;
-                pointer-events: none;
+                pointer-events: all;
 
+                &:hover,
+                &:focus {
+                    background-color: #DBDBDB;
+                    opacity: 1;
+                }
+            }
+
+            &.dropdown {
+                display: flex;
+                align-items: center;
+
+                .lista__item--link span {
+                    margin-left: 45px;
+                }
+
+                .dropdown--arrow {
+                    min-width: 44px;
+                    height: 44px;
+                    font-size: 24px;
+                    color: #000;
+                    opacity: .7;
+                    @include flex-center(row);
+                    pointer-events: all;
+                    transition: $transition-4s;
+
+                    &::before {
+                        transition: $transition-4s;
+                    }
+
+                    &.active::before {
+                        transform: rotate(90deg);
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background-color: #DBDBDB;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .lista__submenu {
+            @include flex-center(column);
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            transform: scale(1, 0);
+            max-height: 0;
+            background-color: #f5f4f4;
+            transition: $transition-4s;
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+                max-height: 114px;
+                transform: scale(1, 1);
+            }
+
+            .submenu__item {
+                width: 100%;
+                text-align: center;
+                
                 &--link {
                     display: inline-block;
                     color: #000;
                     opacity: .7;
                     text-decoration: none;
-                    font-size: 1rem;
+                    font-size: .75rem;
                     font-weight: 600;
                     padding: 10px 0;
                     transition: $transition-4s;
@@ -381,7 +445,7 @@
                 }
             }
         }
-    }  
+    }
 }
 
 @keyframes moveList {
@@ -391,28 +455,6 @@
 
     to {
         transform: translateY(0);
-    }
-}
-
-@keyframes burguerMenuAppears {
-    from {
-        height: 0px;
-        display: none;
-    }
-
-    to {
-        height: 165px;
-    }
-}
-
-@keyframes burguerMenuDissapears {
-    from {
-        height: 165px;
-    }
-
-    to {
-        height: 0;
-        display: none;
     }
 }
 
