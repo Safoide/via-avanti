@@ -68,35 +68,40 @@
     text-align: center;
     width: 100%;
     max-width: 100vw;
+    gap: 15px;
 
     &.error {
         align-items: center;
-    }
+
+        .content--emote {
+            font-size: 100px;
+        }
+
+        .content--title {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
     
-    .content--emote {
-        font-size: 100px;
+        .content--linkHome {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 15px 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            opacity: .7;
+            background-color: #000;
+            width: 10rem;
+            transition: $transition-4s;
+    
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+        }
     }
 
     .content--title {
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-
-    .content--linkHome {
-        color: #FFF;
-        text-decoration: none;
         font-weight: 600;
-        padding: 15px 10px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        opacity: .7;
-        background-color: #000;
-        width: 10rem;
-        transition: $transition-4s;
-
-        &:hover,
-        &:focus {
-            opacity: 1;
-        }
     }
 
     .content__article {
@@ -106,6 +111,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 16px;
 
         .article__menu {
             display: grid;
@@ -142,8 +148,8 @@
 
                     &--img {
                         width: 100%;
-                        height: 80%;
-                        max-height: 80%;
+                        height: 85%;
+                        max-height: 85%;
                         
                         &.fimg {
                             transition: all 0.3s ease 0s;
@@ -160,7 +166,7 @@
 
                     &--title {
                         color: black;
-                        font-size: 18.7px;
+                        font-size: 1.2em;
                         font-weight: bold;
                     }
                     
@@ -169,36 +175,24 @@
                         align-items: center;
                         gap: 5px;
                         margin: 0 0 10px 0;
+                        font-size: 1em;
             
                         &--precio {
                             display: inline-block;
-                            font-size: 15px;
                             font-weight: 600;
-                            color: black;
+                            color: #000;
                             margin: 0;
             
                             &.descuento {
                                 color: rgb(189, 189, 189);
-                                position: relative;
-            
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 2px;
-                                    left: 0;
-                                    top: 46%;
-                                    background-color: rgb(189, 189, 189);
-                                    z-index: 60;
-                                }
+                                text-decoration: line-through;
                             }
                         }
             
                         &--iva {
-                            color: black;
+                            color: #000;
                             margin: 0;
                             font-weight: 500;
-                            font-size: 15px;
                         }
                     }
 

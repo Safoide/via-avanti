@@ -11,12 +11,11 @@ body {
     grid-template-rows: auto auto auto 1fr auto;
 }
 
-@for $i from 1 through 5 {
-    h#{$i} {
-        margin: 0;
-    }
-}
-
-hr {
+hr,
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 0;
 }

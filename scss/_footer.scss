@@ -6,13 +6,11 @@
     align-items: center;
     background-color: #ededed;
 
-    &__derechos {
-
-        &--text {
-            margin: 0;
-            font-size: .8em;
-            color: #00000099;
-        }
+    &__derechos .footer__derechos--text {
+        margin: 0;
+        font-size: .8em;
+        color: #00000099;
+        font-weight: 600;
     }
 
     &__redes {

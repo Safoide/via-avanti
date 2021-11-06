@@ -13,6 +13,7 @@
             margin: 0;
             font-size: .8em;
             color: #00000099;
+            font-weight: 600;
         }
     }
 
@@ -90,6 +91,7 @@
         &--title {
             font-size: 1.25em;
             font-weight: 500;
+            line-height: 1;
         }
     }
 
@@ -323,14 +325,15 @@
     position: sticky;
     top: 80px;
     max-height: 0;
-    transition: $transition-4s;
+    transition: max-height .4s ease 0s, transform 2s ease 0s;
 
     &.active {
         transform: scale(1, 1);
         max-height: 276px;
+        transition: max-height .4s ease 0s, transform .2s ease 0s;
 
         .nav__lista {
-            animation: moveList .4s forwards;
+            animation: moveList .3s forwards;
         }
     }
 
@@ -342,6 +345,7 @@
         @include flex-center(column);
         pointer-events: none;
         transition: $transition-4s;
+        animation: moveList2 .6s forwards;
 
         .lista__item {
             display: inline-block;
@@ -455,6 +459,16 @@
 
     to {
         transform: translateY(0);
+    }
+}
+
+@keyframes moveList2 {    
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-200px);
     }
 }
 
