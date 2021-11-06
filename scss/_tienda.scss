@@ -72,47 +72,35 @@
 
                 .item__link {
                     text-decoration: none;
-                    color:rgb(0, 0, 0);
                     height: 100%;
                     width: 100%;
-                    display: inline-block;
-                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
                     background-color: rgb(236, 236, 236);
                     position: relative;
                     transition: $transition-4s;
-    
-                    &:hover {
-                        background-color: rgb(211, 211, 211);
-
-                        .fimg {
-                            opacity: 0;
-                        }
-
-                        .simg {
-                            position: absolute;
-                            opacity: 1;
-                            left: 0;
-                            top: 0;
-                        }
-                    }
 
                     &.descuento::after {
                         content: 'OFERTA';
-                        background-color: green;
+                        background-color: #008000;
                         padding: 0 10px;
                         height: 30px;
                         position: absolute;
                         top: 10px;
                         left: 10px;
-                        z-index: 80;
                         @include flex-center(row);
                         font-size: 1em;
                         font-weight: 700;
                         color: white;
+                        opacity: .7;
+                        transition: $transition-4s;
                     }
     
                     &--img {
                         width: 100%;
+                        height: 85%;
 
                         &.fimg {
                             transition: all 0.3s ease 0s;
@@ -122,12 +110,15 @@
                             opacity: 0;
                             position: absolute;
                             left: 0;
-                            transition: all 0.4s ease 0s;
+                            top: 0;
+                            transition: $transition-4s;
                         }
                     }
 
                     &--title {
                         font-size: 1.2em;
+                        color: #000;
+                        font-weight: bold;
                     }
 
                     .link__precio {
@@ -135,37 +126,41 @@
                         align-items: center;
                         gap: 5px;
                         margin: 0 0 10px 0;
-                        justify-content: center;
+                        font-size: 1em;
+
             
                         &--precio {
                             display: inline-block;
-                            font-size: 1em;
                             font-weight: 600;
-                            color: black;
+                            color: #000;
                             margin: 0;
             
                             &.descuento {
                                 color: rgb(189, 189, 189);
-                                position: relative;
-            
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 2px;
-                                    left: 0;
-                                    top: 46%;
-                                    background-color: rgb(189, 189, 189);
-                                    z-index: 60;
-                                }
+                                text-decoration: line-through;
                             }
                         }
             
                         &--iva {
-                            color: black;
+                            color: #000;
                             margin: 0;
                             font-weight: 500;
-                            font-size: 1em;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgb(211, 211, 211);
+
+                        .item__link--img.fimg {
+                            opacity: 0;
+                        }
+
+                        .item__link--img.simg {
+                            opacity: 1;
+                        }
+
+                        &.descuento::after {
+                            opacity: 1;
                         }
                     }
                 }

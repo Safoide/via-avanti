@@ -532,16 +532,15 @@ h5 {
             transition: all 0.4s ease 0s; }
             .main__content .content__article .article__menu .menu__item__link--img {
               width: 100%;
-              height: 85%;
-              max-height: 85%; }
+              height: 85%; }
               .main__content .content__article .article__menu .menu__item__link--img.fimg {
                 transition: all 0.3s ease 0s; }
               .main__content .content__article .article__menu .menu__item__link--img.simg {
                 opacity: 0;
                 position: absolute;
-                transition: all 0.4s ease 0s;
                 left: 0;
-                top: 0; }
+                top: 0;
+                transition: all 0.4s ease 0s; }
             .main__content .content__article .article__menu .menu__item__link--title {
               color: black;
               font-size: 1.2em;
@@ -605,25 +604,30 @@ h5 {
         align-items: center;
         font-size: 12px;
         margin-bottom: 10px;
-        gap: 5px; }
+        gap: 10px; }
         .main__producto .producto__info .info__nav .nav--link {
           text-decoration: none;
-          color: #777777; }
+          color: #777777;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          transition: all .3s ease 0s; }
           .main__producto .producto__info .info__nav .nav--link::after {
             border-top: 1px solid currentColor;
             border-left: 1px solid currentColor;
             content: "";
             width: 5px;
             height: 5px;
-            display: inline-block;
-            transform: rotate(135deg);
-            left: auto;
-            position: relative;
-            top: -1px;
-            margin: 0 10px; }
+            transform: rotate(135deg); }
         .main__producto .producto__info .info__nav .nav--producto {
           margin: 0;
-          color: #777777; }
+          color: #777777;
+          transition: all .3s ease 0s; }
+        .main__producto .producto__info .info__nav .nav--link:hover,
+        .main__producto .producto__info .info__nav .nav--producto:hover {
+          color: #000; }
       .main__producto .producto__info .info--title {
         font-size: 26px; }
       .main__producto .producto__info .info__precio {
@@ -634,29 +638,17 @@ h5 {
         .main__producto .producto__info .info__precio--precio {
           display: inline-block;
           font-size: 16px;
+          color: #000;
           font-weight: 600;
           margin: 0; }
           .main__producto .producto__info .info__precio--precio.descuento {
             color: #bdbdbd;
-            position: relative; }
-            .main__producto .producto__info .info__precio--precio.descuento::after {
-              content: '';
-              position: absolute;
-              width: 100%;
-              height: 2px;
-              left: 0;
-              top: 46%;
-              background-color: #bdbdbd;
-              z-index: 60; }
-        .main__producto .producto__info .info__precio--descuento {
-          display: inline-block;
-          font-size: 16px;
-          font-weight: 600;
-          margin: 0; }
+            text-decoration: line-through; }
         .main__producto .producto__info .info__precio--iva {
           margin: 0;
           font-weight: 500;
-          font-size: 16px; }
+          font-size: 16px;
+          color: #000; }
       .main__producto .producto__info .info--descripcion {
         margin: 20px 0;
         font-weight: 500;
@@ -998,79 +990,73 @@ h5 {
           box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15); }
           .main__tienda .tienda__productos .productos__lista .lista__item .item__link {
             text-decoration: none;
-            color: black;
             height: 100%;
             width: 100%;
-            display: inline-block;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             background-color: #ececec;
             position: relative;
             transition: all 0.4s ease 0s; }
-            .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover {
-              background-color: lightgray; }
-              .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover .fimg {
-                opacity: 0; }
-              .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover .simg {
-                position: absolute;
-                opacity: 1;
-                left: 0;
-                top: 0; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link.descuento::after {
               content: 'OFERTA';
-              background-color: green;
+              background-color: #008000;
               padding: 0 10px;
               height: 30px;
               position: absolute;
               top: 10px;
               left: 10px;
-              z-index: 80;
               display: flex;
               flex-direction: row;
               justify-content: center;
               align-items: center;
               font-size: 1em;
               font-weight: 700;
-              color: white; }
+              color: white;
+              opacity: .7;
+              transition: all 0.4s ease 0s; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img {
-              width: 100%; }
+              width: 100%;
+              height: 85%; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img.fimg {
                 transition: all 0.3s ease 0s; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img.simg {
                 opacity: 0;
                 position: absolute;
                 left: 0;
+                top: 0;
                 transition: all 0.4s ease 0s; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link--title {
-              font-size: 1.2em; }
+              font-size: 1.2em;
+              color: #000;
+              font-weight: bold; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio {
               display: flex;
               align-items: center;
               gap: 5px;
               margin: 0 0 10px 0;
-              justify-content: center; }
+              font-size: 1em; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio--precio {
                 display: inline-block;
-                font-size: 1em;
                 font-weight: 600;
-                color: black;
+                color: #000;
                 margin: 0; }
                 .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio--precio.descuento {
                   color: #bdbdbd;
-                  position: relative; }
-                  .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio--precio.descuento::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    left: 0;
-                    top: 46%;
-                    background-color: #bdbdbd;
-                    z-index: 60; }
+                  text-decoration: line-through; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio--iva {
-                color: black;
+                color: #000;
                 margin: 0;
-                font-weight: 500;
-                font-size: 1em; }
+                font-weight: 500; }
+            .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover {
+              background-color: lightgray; }
+              .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover .item__link--img.fimg {
+                opacity: 0; }
+              .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover .item__link--img.simg {
+                opacity: 1; }
+              .main__tienda .tienda__productos .productos__lista .lista__item .item__link:hover.descuento::after {
+                opacity: 1; }
       .main__tienda .tienda__productos .productos__bottom {
         display: flex;
         flex-direction: row;
