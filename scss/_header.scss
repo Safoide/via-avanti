@@ -96,7 +96,7 @@
     }
 
     &__navbar {
-        height: 65%;
+        height: 60%;
         width: 30rem;
         display: flex;
         align-items: center;
@@ -115,20 +115,25 @@
             .menu__item {
                 padding: 0;
                 border: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 41px;
 
                 &__link {
                     display: inline-block;
                     text-decoration: none;
                     color: #cacaca;
                     width: 100%;
+                    height: 100%;
                     letter-spacing: 1px;
                     font-weight: 600;
                     cursor: pointer;
-                    max-width: 100%;
                     text-align: center;
                     transition: $transition-4s;
                     padding: .5rem .5rem;
                     position: relative;
+                    line-height: 1.5;
 
                     &.active,
                     &:hover,
@@ -176,7 +181,7 @@
 
                     .menu__item__dropdown {
                         width: 30px;
-                        height: 40px;
+                        height: 30px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -193,7 +198,6 @@
                             justify-content: center;
                             align-items: center;
                             pointer-events: none;
-                            margin-bottom: 4px;
                             font-size: 20px;
                         }
 
@@ -392,7 +396,7 @@
 
                 .dropdown--arrow {
                     min-width: 44px;
-                    height: 44px;
+                    height: 100%;
                     font-size: 24px;
                     color: #000;
                     opacity: .7;
