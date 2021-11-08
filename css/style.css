@@ -122,28 +122,35 @@ h5 {
           text-align: center;
           transition: all 0.4s ease 0s;
           padding: .5rem .5rem;
-          margin-top: 3px; }
+          position: relative; }
           .header__navbar .navbar__menu .menu__item__link.active, .header__navbar .navbar__menu .menu__item__link:hover, .header__navbar .navbar__menu .menu__item__link:focus {
             color: #fff; }
-          .header__navbar .navbar__menu .menu__item__link--linea::after {
-            content: '';
-            width: 20px;
+          .header__navbar .navbar__menu .menu__item__link--linea {
             height: 3px;
             background-color: #1e73be;
-            display: block;
             opacity: 0;
-            transition: all 0.4s ease 0s; }
-          .header__navbar .navbar__menu .menu__item__link.active .menu__item__link--linea::after,
-          .header__navbar .navbar__menu .menu__item__link:hover .menu__item__link--linea::after,
-          .header__navbar .navbar__menu .menu__item__link:focus .menu__item__link--linea::after {
+            position: absolute;
+            transition: all 0.4s ease 0s;
+            left: .5rem;
+            right: 70%; }
+          .header__navbar .navbar__menu .menu__item__link.active .menu__item__link--linea,
+          .header__navbar .navbar__menu .menu__item__link:hover .menu__item__link--linea,
+          .header__navbar .navbar__menu .menu__item__link:focus .menu__item__link--linea {
             opacity: 1;
-            width: 100%; }
+            right: .5rem; }
         .header__navbar .navbar__menu .menu__item.tiendaButton {
           display: flex;
           align-items: center; }
           .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__link {
             width: 90%;
             padding-right: 0; }
+            .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__link--linea {
+              left: .7rem; }
+            .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__link.active .menu__item__link--linea,
+            .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__link:hover .menu__item__link--linea,
+            .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__link:focus .menu__item__link--linea {
+              opacity: 1;
+              right: 0; }
           .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown {
             width: 30px;
             height: 40px;
@@ -218,22 +225,22 @@ h5 {
       transition: all 0.4s ease 0s;
       pointer-events: all;
       cursor: pointer;
-      margin-top: 3px; }
-      .header__cart__link--linea::after {
-        content: '';
-        width: 20px;
+      position: relative; }
+      .header__cart__link--linea {
         height: 3px;
         background-color: #1e73be;
-        display: block;
         opacity: 0;
-        transition: all 0.4s ease 0s; }
+        position: absolute;
+        transition: all 0.4s ease 0s;
+        left: .5rem;
+        right: 70%; }
       .header__cart__link.active, .header__cart__link:hover, .header__cart__link:focus {
         color: white; }
-      .header__cart__link.active .header__cart__link--linea::after,
-      .header__cart__link:hover .header__cart__link--linea::after,
-      .header__cart__link:focus .header__cart__link--linea::after {
+      .header__cart__link.active .header__cart__link--linea,
+      .header__cart__link:hover .header__cart__link--linea,
+      .header__cart__link:focus .header__cart__link--linea {
         opacity: 1;
-        width: 100%; }
+        right: .5rem; }
     .header__cart--unidades {
       position: absolute;
       background-color: #0f700d;
@@ -340,6 +347,7 @@ h5 {
       transition: all 0.4s ease 0s;
       opacity: 0; }
       .burguerMenu .nav__lista .lista__submenu.active {
+        transition: all .4s ease 0s, opacity .25s ease-in-out .15s;
         opacity: 1;
         max-height: 114px;
         transform: scale(1, 1); }
@@ -532,7 +540,7 @@ h5 {
             transition: all 0.4s ease 0s; }
             .main__content .content__article .article__menu .menu__item__link--img {
               width: 100%;
-              height: 85%; }
+              height: 80%; }
               .main__content .content__article .article__menu .menu__item__link--img.fimg {
                 transition: all 0.3s ease 0s; }
               .main__content .content__article .article__menu .menu__item__link--img.simg {

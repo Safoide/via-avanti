@@ -128,8 +128,7 @@
                     text-align: center;
                     transition: $transition-4s;
                     padding: .5rem .5rem;
-                    margin-top: 3px;
-
+                    position: relative;
 
                     &.active,
                     &:hover,
@@ -137,21 +136,21 @@
                         color: #fff;
                     }
 
-                    &--linea::after {
-                        content: '';
-                        width: 20px;
+                    &--linea {
                         height: 3px;
                         background-color: #1e73be;
-                        display: block;
                         opacity: 0;
+                        position: absolute;
                         transition: $transition-4s;
+                        left: .5rem;
+                        right: 70%;
                     }
 
-                    &.active .menu__item__link--linea::after,
-                    &:hover .menu__item__link--linea::after,
-                    &:focus .menu__item__link--linea::after {
+                    &.active .menu__item__link--linea,
+                    &:hover .menu__item__link--linea,
+                    &:focus .menu__item__link--linea {
                         opacity: 1;
-                        width: 100%;
+                        right: .5rem;
                     }
                 }
 
@@ -162,6 +161,17 @@
                     .menu__item__link {
                         width: 90%;
                         padding-right: 0;
+
+                        &--linea {
+                            left: .7rem;
+                        }
+
+                        &.active .menu__item__link--linea,
+                        &:hover .menu__item__link--linea,
+                        &:focus .menu__item__link--linea {
+                            opacity: 1;
+                            right: 0;
+                        }
                     }
 
                     .menu__item__dropdown {
@@ -265,16 +275,16 @@
             transition: $transition-4s;
             pointer-events: all;
             cursor: pointer;
-            margin-top: 3px;
+            position: relative;
 
-            &--linea::after {
-                content: '';
-                width: 20px;
+            &--linea {
                 height: 3px;
                 background-color: #1e73be;
-                display: block;
                 opacity: 0;
+                position: absolute;
                 transition: $transition-4s;
+                left: .5rem;
+                right: 70%;
             }
 
             &.active,
@@ -283,11 +293,11 @@
                 color: rgb(255, 255, 255);
             }
 
-            &.active .header__cart__link--linea::after,
-            &:hover .header__cart__link--linea::after,
-            &:focus .header__cart__link--linea::after {
+            &.active .header__cart__link--linea,
+            &:hover .header__cart__link--linea,
+            &:focus .header__cart__link--linea {
                 opacity: 1;
-                width: 100%;
+                right: .5rem;
             }
         }
 
@@ -420,6 +430,7 @@
             opacity: 0;
 
             &.active {
+                transition: all .4s ease 0s, opacity .25s ease-in-out .15s;
                 opacity: 1;
                 max-height: 114px;
                 transform: scale(1, 1);
