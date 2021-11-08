@@ -857,10 +857,11 @@ h5 {
     justify-content: center; }
     .main.contacto .main__content {
       align-items: flex-start;
-      width: 70%; }
+      width: 70%;
+      font-size: 16px; }
       .main.contacto .main__content .content--title {
         margin: 15px 0;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-weight: 400;
         color: #2b2b2b;
         width: 100%;
@@ -896,7 +897,8 @@ h5 {
             .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .comentario--label {
               color: #252525;
               font-weight: 700;
-              margin-bottom: 4px; }
+              margin-bottom: 4px;
+              font-size: 16px; }
               .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .nombre--label strong,
               .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .email--label strong,
               .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .comentario--label strong,
@@ -1316,7 +1318,8 @@ h5 {
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(3, 1fr); }
   .main.contacto .main__content {
-    padding: 0; }
+    padding: 0;
+    font-size: 15px; }
     .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
     .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
       max-width: 80%; } }
@@ -1348,7 +1351,8 @@ h5 {
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(2, 1fr); }
   .main.contacto .main__content {
-    padding: 0; }
+    padding: 0;
+    font-size: 14px; }
     .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
     .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
       max-width: 85%; } }
@@ -1396,7 +1400,8 @@ h5 {
         padding: 0; }
     .main.contacto .main__content {
       padding: 0;
-      width: 90%; }
+      width: 90%;
+      font-size: 13px; }
       .main.contacto .main__content .content__formulario {
         max-width: 100%; }
         .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
@@ -1448,7 +1453,8 @@ h5 {
         grid-template-columns: repeat(1, 1fr); }
     .main.contacto .main__content {
       padding: 20px;
-      width: 100%; }
+      width: 100%;
+      font-size: 13px; }
       .main.contacto .main__content .content__formulario {
         max-width: 100%; }
         .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
@@ -1495,7 +1501,8 @@ h5 {
         grid-template-columns: repeat(1, 1fr); }
   .main.contacto .main__content {
     padding: 20px;
-    width: 100%; }
+    width: 100%;
+    font-size: 12px; }
     .main.contacto .main__content .content__formulario {
       max-width: 100%; }
       .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
