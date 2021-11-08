@@ -85,7 +85,7 @@ h5 {
     align-items: center;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: #fff;
     cursor: pointer;
     gap: 10px; }
     .header__logo--img {
@@ -169,14 +169,11 @@ h5 {
             position: relative; }
             .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown .dropdown--arrow {
               color: #cacaca;
-              text-decoration: none;
               font-weight: 600;
               transition: all 0.4s ease 0s;
-              display: flex;
-              justify-content: center;
-              align-items: center;
               pointer-events: none;
-              font-size: 20px; }
+              font-size: 20px;
+              margin-bottom: 3px; }
             .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown:hover .dropdown--arrow,
             .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown.active .dropdown--arrow,
             .header__navbar .navbar__menu .menu__item.tiendaButton .menu__item__dropdown:focus .dropdown--arrow {
@@ -263,7 +260,7 @@ h5 {
       opacity: 0;
       margin: 0;
       transition: all 0.4s ease 0s;
-      color: white; }
+      color: #fff; }
       .header__cart--unidades.show {
         opacity: 1; }
 
@@ -691,7 +688,7 @@ h5 {
             display: inline-block;
             visibility: visible;
             transition: all 0.4s ease 0s;
-            border: 2px solid white; }
+            border: 2px solid #fff; }
           .main__producto .producto__info .opciones__colores .colores__color.crudo .color--input::after,
           .main__producto .producto__info .opciones__colores .colores__color.beige .color--input::after {
             border: 1px solid black; }
@@ -761,14 +758,15 @@ h5 {
             left: 0;
             opacity: 0;
             margin: 0; }
-            .main__producto .producto__info .opciones__talles .talles__talle .talle--input:checked + label {
-              color: white; }
+            .main__producto .producto__info .opciones__talles .talles__talle .talle--input:checked + .talle--letra {
+              color: #fff; }
           .main__producto .producto__info .opciones__talles .talles__talle .talle--letra {
             width: 25px;
             height: 25px;
             border-radius: 50%;
             font-weight: 700;
             font-size: 14px;
+            transition: all .2s ease 0s;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -844,7 +842,7 @@ h5 {
           border-radius: 10px;
           background-color: #0f700d;
           opacity: .5;
-          color: white;
+          color: #fff;
           transition: all 0.4s ease 0s;
           font-size: 16px;
           font-weight: 600;
@@ -858,17 +856,20 @@ h5 {
   .main.contacto {
     justify-content: center; }
     .main.contacto .main__content {
-      align-items: center; }
+      align-items: flex-start;
+      width: 70%; }
       .main.contacto .main__content .content--title {
-        margin-bottom: 15px; }
+        margin: 15px 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #2b2b2b;
+        width: 100%;
+        text-align: left; }
       .main.contacto .main__content .content__formulario {
-        border: 1px solid black;
-        border-radius: 10px;
         height: 28rem;
-        width: 45rem;
+        width: 100%;
         max-width: 90%;
         display: flex;
-        align-items: center;
         flex-direction: column; }
         .main.contacto .main__content .content__formulario .formulario__inputs {
           margin-top: 25px;
@@ -876,49 +877,81 @@ h5 {
           width: 100%;
           display: flex;
           flex-direction: column;
-          align-items: center;
           justify-content: space-between; }
-          .main.contacto .main__content .content__formulario .formulario__inputs--input {
-            width: 60%;
-            padding: 10px 10px;
-            border: 1px solid black;
-            border-radius: 10px;
-            transition: all 0.4s ease 0s;
-            outline: none; }
-          .main.contacto .main__content .content__formulario .formulario__inputs--select {
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 5px 10px;
-            outline: none;
-            transition: all 0.3s ease 0s; }
-          .main.contacto .main__content .content__formulario .formulario__inputs__noticias {
+          .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
+          .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email,
+          .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px;
-            width: 60%;
-            text-transform: uppercase;
-            gap: 10px; }
-            .main.contacto .main__content .content__formulario .formulario__inputs__noticias label {
-              max-width: 88%; }
-            .main.contacto .main__content .content__formulario .formulario__inputs__noticias--input {
-              margin: 0;
-              width: 13px;
-              height: 13px; }
-          .main.contacto .main__content .content__formulario .formulario__inputs--textarea {
-            width: 70%;
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 5px 10px;
-            transition: all 0.4s ease 0s;
-            outline: none; }
-          .main.contacto .main__content .content__formulario .formulario__inputs--input:hover, .main.contacto .main__content .content__formulario .formulario__inputs--select:hover, .main.contacto .main__content .content__formulario .formulario__inputs--textarea:hover {
-            border: 1px solid #00b7ff;
-            transform: scale(1.04); }
-          .main.contacto .main__content .content__formulario .formulario__inputs--input:focus, .main.contacto .main__content .content__formulario .formulario__inputs--textarea:focus {
-            border: 1px solid green;
-            transform: scale(1.1); }
+            flex-direction: column;
+            max-width: 60%;
+            text-align: left; }
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .nombre--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .email--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .comentario--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .nombre--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .email--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .comentario--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .nombre--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .email--label,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .comentario--label {
+              color: #252525;
+              font-weight: 700;
+              margin-bottom: 4px; }
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .nombre--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .email--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .comentario--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .nombre--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .email--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .comentario--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .nombre--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .email--label strong,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .comentario--label strong {
+                color: red;
+                font-weight: 500; }
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .nombre__inputs,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .nombre__inputs,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .nombre__inputs {
+              display: flex;
+              gap: 20px;
+              max-width: 100%; }
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .nombre__inputs .nombre__inputs--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .email--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .comentario--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .nombre__inputs .nombre__inputs--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .email--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .comentario--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .nombre__inputs .nombre__inputs--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .email--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .comentario--input {
+              width: 50%;
+              padding: 6px 10px;
+              height: 38px;
+              transition: all 0.4s ease 0s;
+              outline: none;
+              border-radius: 2px;
+              color: #333;
+              border: 1px solid #ccc;
+              line-height: 1.5; }
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .nombre__inputs .nombre__inputs--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .email--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .comentario--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .nombre__inputs .nombre__inputs--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .email--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .comentario--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .nombre__inputs .nombre__inputs--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .email--input:focus,
+              .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .comentario--input:focus {
+                border: 1px solid #999; }
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre .email--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email .email--input,
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .email--input {
+              width: 100%; }
+          .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario {
+            max-width: 100%; }
+            .main.contacto .main__content .content__formulario .formulario__inputs .inputs__comentario .comentario--input {
+              width: 100%;
+              height: 120px;
+              font-family: 'Popins', sans-serif; }
         .main.contacto .main__content .content__formulario .formulario__botones {
           margin-top: auto;
           margin-bottom: 15px;
@@ -927,21 +960,17 @@ h5 {
           justify-content: space-between; }
           .main.contacto .main__content .content__formulario .formulario__botones--boton {
             padding: 10px 10px;
-            border-radius: 5px;
             border: 0;
             font-size: .9rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: #FFF;
+            color: #333;
             transition: all 0.4s ease 0s;
-            opacity: .7; }
-            .main.contacto .main__content .content__formulario .formulario__botones--boton.borrar {
-              background-color: #F00; }
-            .main.contacto .main__content .content__formulario .formulario__botones--boton.enviar {
-              background-color: #008000; }
+            background-color: #EEE;
+            border: 1px solid #ddd; }
             .main.contacto .main__content .content__formulario .formulario__botones--boton:hover {
-              opacity: 1;
-              transform: scale(1.1); }
+              background-color: #ddd;
+              border: 1px solid #ccc; }
   .main__tienda {
     display: flex;
     padding: 10px 50px;
@@ -1027,7 +1056,7 @@ h5 {
               align-items: center;
               font-size: 1em;
               font-weight: 700;
-              color: white;
+              color: #fff;
               opacity: .7;
               transition: all 0.4s ease 0s; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img {
@@ -1287,7 +1316,10 @@ h5 {
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(3, 1fr); }
   .main.contacto .main__content {
-    padding: 0; } }
+    padding: 0; }
+    .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
+    .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
+      max-width: 80%; } }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
   body {
@@ -1316,7 +1348,10 @@ h5 {
     .main__tienda .tienda__productos .productos__lista {
       grid-template-columns: repeat(2, 1fr); }
   .main.contacto .main__content {
-    padding: 0; } }
+    padding: 0; }
+    .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
+    .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
+      max-width: 85%; } }
 
 @media only screen and (min-width: 631px) and (max-width: 768px) {
   body {
@@ -1360,7 +1395,13 @@ h5 {
         margin-top: 20px;
         padding: 0; }
     .main.contacto .main__content {
-      padding: 0; }
+      padding: 0;
+      width: 90%; }
+      .main.contacto .main__content .content__formulario {
+        max-width: 100%; }
+        .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
+        .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
+          max-width: 85%; }
   .footer .footer__derechos .footer__derechos--text {
     font-size: 12px; } }
 
@@ -1406,7 +1447,13 @@ h5 {
       .main__tienda .tienda__productos .productos__lista {
         grid-template-columns: repeat(1, 1fr); }
     .main.contacto .main__content {
-      padding: 0; }
+      padding: 20px;
+      width: 100%; }
+      .main.contacto .main__content .content__formulario {
+        max-width: 100%; }
+        .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
+        .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
+          max-width: 90%; }
   .footer .footer__derechos .footer__derechos--text {
     font-size: 11px; } }
 
@@ -1447,7 +1494,13 @@ h5 {
         gap: 15px;
         grid-template-columns: repeat(1, 1fr); }
   .main.contacto .main__content {
-    padding: 40px 10px; }
+    padding: 20px;
+    width: 100%; }
+    .main.contacto .main__content .content__formulario {
+      max-width: 100%; }
+      .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
+      .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
+        max-width: 90%; }
   .main__producto {
     flex-direction: column; }
     .main__producto .producto__imgs {
@@ -1461,6 +1514,4 @@ h5 {
     .main__tienda .tienda__productos {
       font-size: 12px; }
     .main__tienda .tienda__productos .productos__lista {
-      grid-template-columns: repeat(1, 1fr); }
-  .main.contacto .main__content {
-    padding: 0 5px; } }
+      grid-template-columns: repeat(1, 1fr); } }

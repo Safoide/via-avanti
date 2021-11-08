@@ -97,27 +97,28 @@
 
         <main class="main contacto">
             <section class="main__content">
-                <h3 class="content--title">LLENA EL FORMULARIO CON TUS DATOS Y EL MENSAJE QUE QUIERAS DEJARNOS</h3>
+                <h3 class="content--title">Envianos tu consulta o comentario.</h3>
 
                 <form class="content__formulario" id="contacto-form" action="" method="POST">
                     <div class="formulario__inputs">
-                        <input class="formulario__inputs--input" type="text" name="name" id="name" placeholder="Nombre" autofocus required>
-                        <input class="formulario__inputs--input" type="text" name="surname" id="surname" placeholder="Apellido" required>
-                        <input class="formulario__inputs--input" type="email" name="email" id="email" placeholder="Correo Electrónico" required>
-                        <select class="formulario__inputs--select" form="genero" id="genero">
-                            <option value="masculino">MASCULINO</option>
-                            <option value="femenino">FEMENINO</option>
-                            <option value="indefinido">NO DEFINIDO</option>
-                        </select>
-                        <div class="formulario__inputs__noticias">
-                            <label for="noticias">Deseas recibir mails con las ultimas ofertas?</label>
-                            <input class="formulario__inputs__noticias--input" type="checkbox" name="noticias" id="noticias">
+                        <div class="inputs__nombre">
+                            <label class="nombre--label" for="name">Nombre completo <strong>*</strong></label>
+                            <div class="nombre__inputs">
+                                <input class="nombre__inputs--input" type="text" name="name" id="name" placeholder="Nombre" autofocus required>
+                                <input class="nombre__inputs--input" type="text" name="surname" id="surname" placeholder="Apellido/s" required>
+                            </div>
                         </div>
-                        <textarea class="formulario__inputs--textarea" id="textarea" name="textarea" rows="5" cols="50" placeholder="Dejanos tu mensaje..." required></textarea>
+                        <div class="inputs__email">
+                            <label class="email--label" for="email">Correo electrónico <strong>*</strong></label>
+                            <input class="email--input" type="email" name="email" id="email" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="inputs__comentario">
+                            <label class="comentario--label" for="textarea">Comentario o mensaje <strong>*</strong></label>
+                            <textarea class="comentario--input" id="textarea" name="textarea" placeholder="Dejanos tu mensaje..." required></textarea>
+                        </div>
                     </div>
                     <div class="formulario__botones">
-                        <button class="formulario__botones--boton borrar" type="reset">Borrar Mensaje</button>
-                        <button class="formulario__botones--boton enviar" type="submit">Enviar Mensaje</button>
+                        <button class="formulario__botones--boton enviar" type="submit">Enviar Formulario</button>
                     </div>
                 </form>
             </section>
