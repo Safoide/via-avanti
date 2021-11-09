@@ -87,12 +87,8 @@
                     @include flex-center(row);
                     transition: $transition-4s;
                     position: absolute;
+                    pointer-events: none;
                     right: 0;
-
-                    &:hover {
-                        color: #000000;
-                        background: #d4d4d4;
-                    }
                 }
             }
         }
