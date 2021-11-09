@@ -99,61 +99,73 @@
         <main class="main">
             <section class="main__tienda">
                 <aside class="tienda__filtros">
-                    <h2 class="filtros--title">FILTROS</h2>
 
-                    <h4 class="filtros--subtitle">CATEGORIA</h4>
-                    <div class="filtros__input">
-                        <h5>PANTALONES</h5>
-                        <input class="filtros__input--input" type="checkbox" name="categoria" id="pantalones">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>REMERAS</h5>
-                        <input class="filtros__input--input" type="checkbox" name="categoria" id="remeras">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>SWEATERS</h5>
-                        <input class="filtros__input--input" type="checkbox" name="categoria" id="sweaters">
-                    </div>
-
-                    <h4 class="filtros--subtitle">COLOR</h4>
-                    <div class="filtros__input">
-                        <h5>CORAL</h5>
-                        <input class="filtros__input--input" type="checkbox" name="color" id="coral">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>ORQUÍDEA</h5>
-                        <input class="filtros__input--input" type="checkbox" name="color" id="orquidea">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>BEIGE</h5>
-                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>FUCSIA</h5>
-                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>CAMEL</h5>
-                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
-                    </div>
-                    <div class="filtros__input">
-                        <h5>NEGRO</h5>
-                        <input class="filtros__input--input" type="checkbox" name="color" id="celeste">
+                    <div class="filtros__categoria">
+                        <h4 class="filtros--subtitle">FILTRAR POR CATEGORIA</h4>
+                        <div class="categoria__input">
+                            <span class="input--title">Pantalones</span>
+                            <div class="input__input">
+                                <input class="input--input" type="checkbox" name="categoria" id="pantalones">
+                                <span class="input--count">2</span>
+                            </div>
+                        </div>
+                        <div class="categoria__input">
+                            <span class="input--title">Remeras</span>
+                            <div class="input__input">
+                                <input class="input--input" type="checkbox" name="categoria" id="remeras">
+                                <span class="input--count">2</span>
+                            </div>
+                        </div>
+                        <div class="categoria__input">
+                            <span class="input--title">Sweaters</span>
+                            <div class="input__input">
+                                <input class="input--input" type="checkbox" name="categoria" id="sweaters">
+                                <span class="input--count">2</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <h4 class="filtros--subtitle">TALLE</h4>
-                    <div class="filtros__input">
-                        <h5>SMALL</h5>
-                        <input class="filtros__input--input" type="checkbox" name="talle" id="small">
+                    <div class="filtros__color">
+                        <h4 class="filtros--subtitle">FILTRAR POR COLOR</h4>
+                        <select class="color__select">
+                            <option value>Cualquier Color</option>
+                            <option value="coral">Coral</option>
+                            <option value="orquidea">Orquidea</option>
+                            <option value="celeste">Celeste</option>
+                            <option value="beige">Beige</option>
+                            <option value="mostaza">Mostaza</option>
+                            <option value="camel">Camel</option>
+                            <option value="grismelange">Gris Melange</option>
+                            <option value="negro">Negro</option>
+                            <option value="crudo">Crudo</option>
+                            <option value="fucsia">Fucsia</option>
+                        </select>
                     </div>
-                    <div class="filtros__input">
-                        <h5>MEDIUM</h5>
-                        <input class="filtros__input--input" type="checkbox" name="talle" id="medium">
+
+                    <div class="filtros__talle">
+                        <h4 class="filtros--subtitle">FILTRAR POR TALLE</h4>
+                        <div class="talle__input">
+                            <span class="input--title">Small</span>
+                            <div class="input__input">
+                                <input class="input--input" type="checkbox" name="talle" id="small">
+                                <span class="input--count">6</span>
+                            </div>
+                        </div>
+                        <div class="talle__input">
+                            <span class="input--title">Medium</span>
+                            <div class="input__input">
+                                <input class="input--input" type="checkbox" name="talle" id="medium">
+                                <span class="input--count">6</span>
+                            </div>
+                        </div>
+                        <div class="talle__input">
+                            <span class="input--title">Large</span>
+                            <div class="input__input">
+                                <input class="input--input" type="checkbox" name="talle" id="large">
+                                <span class="input--count">6</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="filtros__input">
-                        <h5>LARGE</h5>
-                        <input class="filtros__input--input" type="checkbox" name="talle" id="large">
-                    </div>          
                 </aside>
                 <div class="tienda__productos">
                     <ul id="productosUl" class="productos__lista">

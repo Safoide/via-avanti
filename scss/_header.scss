@@ -61,12 +61,12 @@
         font-size: 32px;
         display: none;
 
-        &:not(.active) i {
+        .bx {
             animation: changeIcon2 backwards;
             animation-duration: .4s;
         }
 
-        &.active i {
+        &.active .bx {
             animation: changeIcon forwards;
             animation-duration: .4s;
         }
@@ -118,7 +118,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 41px;
+                height: 40px;
 
                 &__link {
                     display: inline-block;
@@ -135,12 +135,6 @@
                     position: relative;
                     line-height: 1.5;
 
-                    &.active,
-                    &:hover,
-                    &:focus {
-                        color: #fff;
-                    }
-
                     &--linea {
                         height: 3px;
                         background-color: #1e73be;
@@ -151,11 +145,15 @@
                         right: 70%;
                     }
 
-                    &.active .menu__item__link--linea,
-                    &:hover .menu__item__link--linea,
-                    &:focus .menu__item__link--linea {
-                        opacity: 1;
-                        right: .5rem;
+                    &.active,
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+
+                        .menu__item__link--linea {
+                            opacity: 1;
+                            right: .5rem;
+                        }
                     }
                 }
 
@@ -181,7 +179,7 @@
 
                     .menu__item__dropdown {
                         width: 30px;
-                        height: 30px;
+                        height: 40px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -216,7 +214,7 @@
                             flex-direction: column;
                             position: absolute;
                             right: -10px;
-                            top: 90%;
+                            top: 100%;
         
                             .submenu__item {
                                 padding: 0;
@@ -292,13 +290,11 @@
             &:hover,
             &:focus {
                 color: rgb(255, 255, 255);
-            }
 
-            &.active .header__cart__link--linea,
-            &:hover .header__cart__link--linea,
-            &:focus .header__cart__link--linea {
-                opacity: 1;
-                right: .5rem;
+                .header__cart__link--linea {
+                    opacity: 1;
+                    right: .5rem;
+                }
             }
         }
 
