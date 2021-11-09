@@ -1116,7 +1116,7 @@ h5 {
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link.descuento::after {
               content: 'OFERTA';
               background-color: #008000;
-              padding: 0 10px;
+              padding: 0 7px;
               height: 30px;
               position: absolute;
               top: 10px;
