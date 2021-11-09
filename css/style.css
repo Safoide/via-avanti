@@ -1009,8 +1009,10 @@ h5 {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        height: 31px;
         border-bottom: 1px solid #eaecee;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        position: relative; }
         .main__tienda .tienda__filtros .filtros__categoria .categoria__input .input--title,
         .main__tienda .tienda__filtros .filtros__color .color__input .input--title,
         .main__tienda .tienda__filtros .filtros__talle .talle__input .input--title {
@@ -1019,8 +1021,8 @@ h5 {
         .main__tienda .tienda__filtros .filtros__categoria .categoria__input .input__input,
         .main__tienda .tienda__filtros .filtros__color .color__input .input__input,
         .main__tienda .tienda__filtros .filtros__talle .talle__input .input__input {
-          position: relative;
-          width: 25px;
+          position: absolute;
+          width: 100%;
           height: 25px;
           display: flex;
           flex-direction: row;
@@ -1044,7 +1046,7 @@ h5 {
           .main__tienda .tienda__filtros .filtros__categoria .categoria__input .input__input .input--count,
           .main__tienda .tienda__filtros .filtros__color .color__input .input__input .input--count,
           .main__tienda .tienda__filtros .filtros__talle .talle__input .input__input .input--count {
-            width: 100%;
+            width: 25px;
             height: 100%;
             text-align: center;
             border-radius: 50%;
@@ -1054,7 +1056,9 @@ h5 {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            transition: all 0.4s ease 0s; }
+            transition: all 0.4s ease 0s;
+            position: absolute;
+            right: 0; }
             .main__tienda .tienda__filtros .filtros__categoria .categoria__input .input__input .input--count:hover,
             .main__tienda .tienda__filtros .filtros__color .color__input .input__input .input--count:hover,
             .main__tienda .tienda__filtros .filtros__talle .talle__input .input__input .input--count:hover {
@@ -1066,12 +1070,14 @@ h5 {
         display: block;
         border: 1px solid #c9c9c9;
         padding: 5px 10px;
-        background: #eaecee;
+        background: #f7f7f7;
         color: #999;
         transition: all 0.4s ease 0s; }
         .main__tienda .tienda__filtros .filtros__color .color__select:hover {
-          background-color: #d4d4d4;
+          background-color: #e0e0e0;
           color: #000; }
+        .main__tienda .tienda__filtros .filtros__color .color__select:focus {
+          outline: none; }
     .main__tienda .tienda__productos {
       width: 80%;
       padding: 10px 20px;
@@ -1339,10 +1345,9 @@ h5 {
       width: 70vw; }
     .main__content .content__article .article__menu {
       gap: 10px;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr); }
+      grid-template-columns: repeat(3, 1fr); }
   .main__tienda {
-    padding: 10px 10px; }
+    padding: 10px; }
     .main__tienda .tienda__productos {
       font-size: 15px; } }
 
@@ -1359,11 +1364,11 @@ h5 {
         gap: 15px;
         grid-template-columns: repeat(3, 1fr); }
   .main__tienda {
-    padding: 10px 10px; }
+    padding: 10px; }
     .main__tienda .tienda__productos {
       font-size: 14px; }
-    .main__tienda .tienda__productos .productos__lista {
-      grid-template-columns: repeat(3, 1fr); } }
+      .main__tienda .tienda__productos .productos__lista {
+        grid-template-columns: repeat(3, 1fr); } }
 
 @media only screen and (min-width: 901px) and (max-width: 1280px) {
   body {
@@ -1379,11 +1384,12 @@ h5 {
       .main__content .content__article .article__menu {
         grid-template-columns: repeat(3, 1fr); }
   .main__tienda {
-    padding: 10px 10px; }
+    padding: 10px; }
     .main__tienda .tienda__productos {
-      font-size: 13px; }
-    .main__tienda .tienda__productos .productos__lista {
-      grid-template-columns: repeat(3, 1fr); }
+      font-size: 13px;
+      padding: 10px; }
+      .main__tienda .tienda__productos .productos__lista {
+        grid-template-columns: repeat(3, 1fr); }
   .main.contacto .main__content {
     padding: 0;
     font-size: 15px; }
@@ -1412,11 +1418,11 @@ h5 {
         gap: 15px;
         grid-template-columns: repeat(2, 1fr); }
   .main__tienda {
-    padding: 10px 10px; }
+    padding: 10px; }
     .main__tienda .tienda__productos {
       font-size: 12px; }
-    .main__tienda .tienda__productos .productos__lista {
-      grid-template-columns: repeat(2, 1fr); }
+      .main__tienda .tienda__productos .productos__lista {
+        grid-template-columns: repeat(2, 1fr); }
   .main.contacto .main__content {
     padding: 0;
     font-size: 14px; }
@@ -1429,7 +1435,7 @@ h5 {
     font-size: 12px; }
   .header__burguer {
     display: flex; }
-  .header__logo--title {
+  .header__logo .header__logo--title {
     font-size: 15px; }
   .header__navbar {
     display: none; }
@@ -1452,11 +1458,12 @@ h5 {
           gap: 15px;
           grid-template-columns: repeat(2, 1fr); }
     .main__tienda {
-      padding: 10px 10px; }
+      padding: 10px; }
       .main__tienda .tienda__productos {
-        font-size: 12px; }
-      .main__tienda .tienda__productos .productos__lista {
-        grid-template-columns: repeat(2, 1fr); }
+        font-size: 12px;
+        padding: 10px; }
+        .main__tienda .tienda__productos .productos__lista {
+          grid-template-columns: repeat(2, 1fr); }
     .main__producto {
       flex-direction: column; }
       .main__producto .producto__imgs {
@@ -1474,7 +1481,7 @@ h5 {
         .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
         .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
           max-width: 85%; }
-  .footer .footer__derechos .footer__derechos--text {
+  .footer {
     font-size: 12px; } }
 
 @media only screen and (min-width: 520px) and (max-width: 630px) {
@@ -1492,7 +1499,7 @@ h5 {
       .main__content.cart {
         width: 90vw;
         flex-direction: column;
-        margin: 20px 0 20px 0;
+        margin: 20px 0;
         gap: 20px; }
         .main__content.cart .content__table {
           width: 100%; }
@@ -1512,12 +1519,12 @@ h5 {
         margin-top: 20px;
         padding: 0; }
     .main__tienda {
-      padding: 10px 10px; }
+      padding: 10px; }
       .main__tienda .tienda__productos {
         font-size: 12px;
         padding: 0 30px; }
-      .main__tienda .tienda__productos .productos__lista {
-        grid-template-columns: repeat(1, 1fr); }
+        .main__tienda .tienda__productos .productos__lista {
+          grid-template-columns: repeat(1, 1fr); }
     .main.contacto .main__content {
       padding: 20px;
       width: 100%;
@@ -1527,7 +1534,7 @@ h5 {
         .main.contacto .main__content .content__formulario .formulario__inputs .inputs__nombre,
         .main.contacto .main__content .content__formulario .formulario__inputs .inputs__email {
           max-width: 90%; }
-  .footer .footer__derechos .footer__derechos--text {
+  .footer {
     font-size: 11px; } }
 
 @media only screen and (max-width: 519px) {
@@ -1551,7 +1558,7 @@ h5 {
     .main__content.cart {
       width: 90vw;
       flex-direction: column;
-      margin: 20px 0 20px 0;
+      margin: 20px 0;
       gap: 20px; }
       .main__content.cart .content__table {
         width: 100%; }
@@ -1584,8 +1591,9 @@ h5 {
       margin-top: 20px;
       padding: 0; }
   .main__tienda {
-    padding: 10px 10px; }
+    padding: 10px; }
     .main__tienda .tienda__productos {
-      font-size: 12px; }
-    .main__tienda .tienda__productos .productos__lista {
-      grid-template-columns: repeat(1, 1fr); } }
+      font-size: 12px;
+      padding: 10px; }
+      .main__tienda .tienda__productos .productos__lista {
+        grid-template-columns: repeat(1, 1fr); } }

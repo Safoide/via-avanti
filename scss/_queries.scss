@@ -15,12 +15,11 @@
             .content__article .article__menu {
                 gap: 10px;
                 grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
             }
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 15px;
@@ -53,14 +52,14 @@
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 14px;
-            }
 
-            .tienda__productos .productos__lista {
-                grid-template-columns: repeat(3, 1fr);
+                .productos__lista {
+                    grid-template-columns: repeat(3, 1fr);
+                }
             }
         }
     }
@@ -78,7 +77,6 @@
     }
 
     .main {
-
         &__content {
             justify-content: flex-start;
 
@@ -96,14 +94,15 @@
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 13px;
-            }
+                padding: 10px;
 
-            .tienda__productos .productos__lista {
-                grid-template-columns: repeat(3, 1fr);
+                .productos__lista {
+                    grid-template-columns: repeat(3, 1fr);
+                }
             }
         }
 
@@ -111,11 +110,9 @@
             padding: 0;
             font-size: 15px;
 
-            .content__formulario .formulario__inputs {
-                .inputs__nombre,
-                .inputs__email {
-                    max-width: 80%;
-                }
+            .content__formulario .formulario__inputs .inputs__nombre,
+            .content__formulario .formulario__inputs .inputs__email {
+                max-width: 80%;
             }
         }
     }
@@ -134,7 +131,6 @@
     }
 
     .main {
-
         &__content {
             justify-content: flex-start;
 
@@ -163,26 +159,24 @@
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 12px;
-            }
 
-            .tienda__productos .productos__lista {
-                grid-template-columns: repeat(2, 1fr);
-            }
+                .productos__lista {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            } 
         }
 
         &.contacto .main__content {
             padding: 0;
             font-size: 14px;
 
-            .content__formulario .formulario__inputs {
-                .inputs__nombre,
-                .inputs__email {
-                    max-width: 85%;
-                }
+            .content__formulario .formulario__inputs .inputs__nombre,
+            .content__formulario .formulario__inputs .inputs__email {
+                max-width: 85%;
             }
         }
     }
@@ -199,10 +193,8 @@
             display: flex;
         }
 
-        &__logo {
-            &--title {
-                font-size: 15px;
-            }
+        &__logo .header__logo--title {
+            font-size: 15px;
         }
 
         &__navbar {
@@ -242,15 +234,16 @@
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 12px;
-            }
+                padding: 10px;
 
-            .tienda__productos .productos__lista {
-                grid-template-columns: repeat(2, 1fr);
-            }
+                .productos__lista {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            } 
         }
 
         &__producto {
@@ -275,17 +268,15 @@
             .content__formulario {
                 max-width: 100%;
 
-                .formulario__inputs {
-                    .inputs__nombre,
-                    .inputs__email {
-                        max-width: 85%;
-                    }
+                .formulario__inputs .inputs__nombre,
+                .formulario__inputs .inputs__email {
+                    max-width: 85%;
                 }
             }
         }
     }
 
-    .footer .footer__derechos .footer__derechos--text {
+    .footer {
         font-size: 12px;
     }
 }
@@ -315,7 +306,7 @@
             &.cart {
                 width: 90vw;
                 flex-direction: column;
-                margin: 20px 0 20px 0;
+                margin: 20px 0;
                 gap: 20px;
 
                 .content__table {
@@ -352,15 +343,15 @@
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 12px;
                 padding: 0 30px;
-            }
 
-            .tienda__productos .productos__lista {
-                grid-template-columns: repeat(1, 1fr);
+                .productos__lista {
+                    grid-template-columns: repeat(1, 1fr);
+                }
             }
         }
 
@@ -372,17 +363,15 @@
             .content__formulario {
                 max-width: 100%;
 
-                .formulario__inputs {
-                    .inputs__nombre,
-                    .inputs__email {
-                        max-width: 90%;
-                    }
+                .formulario__inputs .inputs__nombre,
+                .formulario__inputs .inputs__email {
+                    max-width: 90%;
                 }
             }
         }
     }
 
-    .footer .footer__derechos .footer__derechos--text {
+    .footer {
         font-size: 11px;
     }
 }
@@ -425,7 +414,7 @@
             &.cart {
                 width: 90vw;
                 flex-direction: column;
-                margin: 20px 0 20px 0;
+                margin: 20px 0;
                 gap: 20px;
 
                 .content__table {
@@ -433,6 +422,7 @@
 
                     .table__body .body__row .row__item .item__productoInfo .productoInfo__link {
                         flex-direction: column;
+
                         &--img {
                             height: 100px;
                         }
@@ -462,11 +452,9 @@
             .content__formulario {
                 max-width: 100%;
 
-                .formulario__inputs {
-                    .inputs__nombre,
-                    .inputs__email {
-                        max-width: 90%;
-                    }
+                .formulario__inputs .inputs__nombre,
+                .formulario__inputs .inputs__email {
+                    max-width: 90%;
                 }
             }
         }
@@ -486,14 +474,15 @@
         }
 
         &__tienda {
-            padding: 10px 10px;
+            padding: 10px;
 
             .tienda__productos {
                 font-size: 12px;
-            }
+                padding: 10px;
 
-            .tienda__productos .productos__lista {
-                grid-template-columns: repeat(1, 1fr);
+                .productos__lista {
+                    grid-template-columns: repeat(1, 1fr);
+                }
             }
         }
     }

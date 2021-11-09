@@ -46,8 +46,10 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            height: 31px;
             border-bottom: 1px solid #eaecee;
             padding-bottom: 5px;
+            position: relative;
 
             .input--title {
                 color: #1c1c1c;
@@ -55,8 +57,8 @@
             }
 
             .input__input {
-                position: relative;
-                width: 25px;
+                position: absolute;
+                width: 100%;
                 height: 25px;
                 @include flex-center(row);
 
@@ -76,7 +78,7 @@
                 }
 
                 .input--count {
-                    width: 100%;
+                    width: 25px;
                     height: 100%;
                     text-align: center;
                     border-radius: 50%;
@@ -84,6 +86,8 @@
                     color: #999;
                     @include flex-center(row);
                     transition: $transition-4s;
+                    position: absolute;
+                    right: 0;
 
                     &:hover {
                         color: #000000;
@@ -99,13 +103,17 @@
             display: block;
             border: 1px solid #c9c9c9;
             padding: 5px 10px;
-            background: #eaecee;
+            background: #f7f7f7;
             color: #999;
             transition: $transition-4s;
 
             &:hover {
-                background-color: #d4d4d4;
+                background-color: #e0e0e0;
                 color: #000;
+            }
+
+            &:focus {
+                outline: none;
             }
         }
     }
