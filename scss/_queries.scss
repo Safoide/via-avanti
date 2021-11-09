@@ -487,3 +487,9 @@
         }
     }
 }
+
+@media only screen and (max-height: 680px) {
+    .main .main__tienda .tienda__filtros {
+        position: static;
+    }
+}
