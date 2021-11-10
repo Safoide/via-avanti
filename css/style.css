@@ -1096,8 +1096,7 @@ h5 {
           height: 100%;
           width: 100%;
           padding: 0;
-          box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
-          min-height: 23rem; }
+          box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15); }
           .main__tienda .tienda__productos .productos__lista .lista__item .item__link {
             text-decoration: none;
             height: 100%;
