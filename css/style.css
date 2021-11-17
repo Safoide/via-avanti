@@ -969,6 +969,46 @@ h5 {
             .main.contacto .main__content .content__formulario .formulario__botones--boton:hover {
               background-color: #ddd;
               border: 1px solid #ccc; }
+    .main.contacto .main__formMessage {
+      position: absolute;
+      width: 500px;
+      height: 300px;
+      background-color: #EDEDED;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.45);
+      max-width: 80%;
+      transform: translateY(-200%);
+      display: none; }
+      .main.contacto .main__formMessage.active {
+        display: flex;
+        animation: formMessage_Appear .4s forwards; }
+      .main.contacto .main__formMessage .formMessage--title {
+        text-align: center; }
+      .main.contacto .main__formMessage .bx {
+        font-size: 40px;
+        color: green; }
+      .main.contacto .main__formMessage .formMessage--link {
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 5px;
+        background-color: #444444;
+        padding: .5rem .5rem;
+        opacity: .7;
+        transition: all .3s ease 0s; }
+        .main.contacto .main__formMessage .formMessage--link:hover {
+          opacity: 1; }
+
+@keyframes formMessage_Appear {
+  from {
+    transform: translateY(-200%); }
+  to {
+    transform: translateY(0%); } }
   .main__tienda {
     display: flex;
     padding: 10px 50px;

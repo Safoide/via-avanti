@@ -96,10 +96,15 @@
         </nav>
 
         <main class="main contacto">
+            <div class="main__formMessage" id="formMessage">
+                <i class='bx bxs-check-circle'></i>
+                <h3 class="formMessage--title">Mensaje enviado con exito,<br> en aproximadamente 15 minutos te responderemos!</h3>
+                <a href="./index.html" class="formMessage--link">VOLVER AL INICIO</a>
+            </div>
             <section class="main__content">
                 <h3 class="content--title">Envianos tu consulta o comentario.</h3>
 
-                <form class="content__formulario" id="contacto-form" action="" method="POST">
+                <form class="content__formulario" id="myForm" onsubmit="sumbitForm(event)">
                     <div class="formulario__inputs">
                         <div class="inputs__nombre">
                             <label class="nombre--label" for="name">Nombre completo <strong>*</strong></label>
@@ -133,5 +138,7 @@
                 <a class="footer__redes--link" href="https://www.facebook.com/viaavantiok" target="_blank"><i class='bx bxl-facebook-circle'></i></a>  
             </nav>
         </footer>
+
+        <script src="./js/contacto.js"></script>
     </body>
 </html>

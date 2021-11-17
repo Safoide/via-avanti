@@ -119,4 +119,57 @@
             }
         }
     }
+
+    .main__formMessage {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background-color: #EDEDED;
+        @include flex-center(column);
+        gap: 40px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, .45);
+        max-width: 80%;
+        transform: translateY(-200%);
+        display: none;
+
+        &.active {
+            display: flex;
+            animation: formMessage_Appear .4s forwards;
+        }
+
+        .formMessage--title {
+            text-align: center;
+        }
+
+        .bx {
+            font-size: 40px;
+            color: green;
+        }
+
+        .formMessage--link {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: rgb(68, 68, 68);
+            padding: .5rem .5rem;
+            opacity: .7;
+            transition: all .3s ease 0s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes formMessage_Appear {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }
