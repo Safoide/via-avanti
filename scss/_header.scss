@@ -301,13 +301,13 @@
         &--unidades {
             position: absolute;
             background-color: #0f700d;
-            height: 18px;
-            width: 18px;
+            height: 22px;
+            width: 22px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            right: 0;
+            right: -5px;
             top: 19%;
             font-weight: 700;
             font-size: 12px;
@@ -315,6 +315,7 @@
             margin: 0;
             transition: $transition-4s;
             color: #fff;
+            border: 2px solid #1a1a1a;
 
             &.show {
                 opacity: 1;
