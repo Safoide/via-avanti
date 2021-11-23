@@ -98,13 +98,16 @@
         <main class="main contacto">
             <div class="main__formMessage" id="formMessage">
                 <i class='bx bxs-check-circle'></i>
-                <h3 class="formMessage--title">Mensaje enviado con exito,<br> en aproximadamente 15 minutos te responderemos!</h3>
+                <h3 class="formMessage--title" id="formMessageText">
+                    Mensaje enviado con exito,<br>
+                    en aproximadamente 15 minutos te responderemos!
+                </h3>
                 <a href="./index.html" class="formMessage--link">VOLVER AL INICIO</a>
             </div>
             <section class="main__content">
                 <h3 class="content--title">Envianos tu consulta o comentario.</h3>
 
-                <form class="content__formulario" id="myForm" onsubmit="sumbitForm(event)">
+                <form class="content__formulario" id="form">
                     <div class="formulario__inputs">
                         <div class="inputs__nombre">
                             <label class="nombre--label" for="name">Nombre completo <strong>*</strong></label>

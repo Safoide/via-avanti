@@ -1,8 +1,7 @@
-let askName = prompt('Cual es tu nombre?');
-document.getElementById('name').value = askName;
+let formEl = document.getElementById('form');
+formEl.addEventListener('submit', sumbitForm);
 
-let askSurname = prompt('Cual es tu apellido?');
-document.getElementById('surname').value = askSurname;
+document.addEventListener('click', documentClick);
 
 const datos = [];
 
@@ -21,6 +20,13 @@ function sumbitForm(e) {
         message: messageVl
     });
 
+    let firstName = nameVl.split(' ')[0];
+
+    document.getElementById('formMessageText').innerHTML = `
+        ${firstName}, Mensaje enviado exitosamente,<br>
+        en aproximadamente 15 minutos te responderemos!
+    `;    
+
     document.getElementById('name').value = '';
     document.getElementById('surname').value = '';
     document.getElementById('email').value = '';
@@ -29,4 +35,11 @@ function sumbitForm(e) {
     document.getElementById('formMessage').classList.add('active');
 
     console.log(datos);
+}
+
+function documentClick(e) {
+
+    if(e.target.id != document.getElementById('formMessage').id) {
+        document.getElementById('formMessage').classList.remove('active');
+    }
 }

@@ -988,10 +988,12 @@ h5 {
         display: flex;
         animation: formMessage_Appear .4s forwards; }
       .main.contacto .main__formMessage .formMessage--title {
-        text-align: center; }
+        text-align: center;
+        pointer-events: none; }
       .main.contacto .main__formMessage .bx {
         font-size: 40px;
-        color: green; }
+        color: green;
+        pointer-events: none; }
       .main.contacto .main__formMessage .formMessage--link {
         color: white;
         font-weight: 500;

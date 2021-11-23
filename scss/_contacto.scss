@@ -140,11 +140,13 @@
 
         .formMessage--title {
             text-align: center;
+            pointer-events: none;
         }
 
         .bx {
             font-size: 40px;
             color: green;
+            pointer-events: none;
         }
 
         .formMessage--link {
