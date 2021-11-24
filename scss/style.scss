@@ -1,27 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-$border-black: 1px solid black;
-$transition-4s: all 0.4s ease 0s;
-
-$colors: (
-    "coral": #E4717A, 
-    "orquidea": #EDB4E6,
-    "celeste": #B4D2ED,
-    "beige": #F5F5DC,
-    "mostaza": #F4C272,
-    "camel": #C19A6B,
-    "grismelange": #87827D,
-    "negro": #000000,
-    "crudo": #F5F5DC,
-    "fucsia": #FF00FF
-);
-
-@mixin flex-center($direction) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-}
+@import "vars";
 
 @import "general";
 @import "header";

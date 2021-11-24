@@ -674,43 +674,62 @@ h5 {
           flex-direction: row;
           justify-content: center;
           align-items: center; }
-          .main__producto .producto__info .opciones__colores .colores__color .color--input::after {
+          .main__producto .producto__info .opciones__colores .colores__color .color--input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%; }
+          .main__producto .producto__info .opciones__colores .colores__color .color--label {
             width: 25px;
             height: 25px;
-            border-radius: 15px;
-            top: -5px;
-            left: -5px;
-            position: relative;
-            content: '';
-            display: inline-block;
-            visibility: visible;
+            border-radius: 50%;
             transition: all 0.4s ease 0s;
-            border: 2px solid #fff; }
-          .main__producto .producto__info .opciones__colores .colores__color.crudo .color--input::after,
-          .main__producto .producto__info .opciones__colores .colores__color.beige .color--input::after {
+            pointer-events: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px; }
+          .main__producto .producto__info .opciones__colores .colores__color.beige .color--label,
+          .main__producto .producto__info .opciones__colores .colores__color.crudo .color--label {
             border: 1px solid black; }
-          .main__producto .producto__info .opciones__colores .colores__color .color--input:checked::after {
-            border: 2px solid black; }
-          .main__producto .producto__info .opciones__colores .colores__color.coral .color--input::after {
-            background-color: #E4717A; }
-          .main__producto .producto__info .opciones__colores .colores__color.orquidea .color--input::after {
-            background-color: #EDB4E6; }
-          .main__producto .producto__info .opciones__colores .colores__color.celeste .color--input::after {
-            background-color: #B4D2ED; }
-          .main__producto .producto__info .opciones__colores .colores__color.beige .color--input::after {
-            background-color: #F5F5DC; }
-          .main__producto .producto__info .opciones__colores .colores__color.mostaza .color--input::after {
-            background-color: #F4C272; }
-          .main__producto .producto__info .opciones__colores .colores__color.camel .color--input::after {
-            background-color: #C19A6B; }
-          .main__producto .producto__info .opciones__colores .colores__color.grismelange .color--input::after {
-            background-color: #87827D; }
-          .main__producto .producto__info .opciones__colores .colores__color.negro .color--input::after {
-            background-color: #000000; }
-          .main__producto .producto__info .opciones__colores .colores__color.crudo .color--input::after {
-            background-color: #F5F5DC; }
-          .main__producto .producto__info .opciones__colores .colores__color.fucsia .color--input::after {
-            background-color: #FF00FF; }
+          .main__producto .producto__info .opciones__colores .colores__color .color--input:checked + .color--label {
+            color: #ffffff; }
+          .main__producto .producto__info .opciones__colores .colores__color.beige .color--input:checked + .color--label,
+          .main__producto .producto__info .opciones__colores .colores__color.crudo .color--input:checked + .color--label {
+            color: #000; }
+          .main__producto .producto__info .opciones__colores .colores__color.coral .color--label {
+            background-color: #E4717A;
+            color: #E4717A; }
+          .main__producto .producto__info .opciones__colores .colores__color.orquidea .color--label {
+            background-color: #EDB4E6;
+            color: #EDB4E6; }
+          .main__producto .producto__info .opciones__colores .colores__color.celeste .color--label {
+            background-color: #B4D2ED;
+            color: #B4D2ED; }
+          .main__producto .producto__info .opciones__colores .colores__color.beige .color--label {
+            background-color: #F5F5DC;
+            color: #F5F5DC; }
+          .main__producto .producto__info .opciones__colores .colores__color.mostaza .color--label {
+            background-color: #F4C272;
+            color: #F4C272; }
+          .main__producto .producto__info .opciones__colores .colores__color.camel .color--label {
+            background-color: #C19A6B;
+            color: #C19A6B; }
+          .main__producto .producto__info .opciones__colores .colores__color.grismelange .color--label {
+            background-color: #87827D;
+            color: #87827D; }
+          .main__producto .producto__info .opciones__colores .colores__color.negro .color--label {
+            background-color: #000000;
+            color: #000000; }
+          .main__producto .producto__info .opciones__colores .colores__color.crudo .color--label {
+            background-color: #F5F5DC;
+            color: #F5F5DC; }
+          .main__producto .producto__info .opciones__colores .colores__color.fucsia .color--label {
+            background-color: #FF00FF;
+            color: #FF00FF; }
           .main__producto .producto__info .opciones__colores .colores__color .color__name {
             position: absolute;
             z-index: 3;
