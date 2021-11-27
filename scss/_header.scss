@@ -44,13 +44,58 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #1a1a1a;
+    background-color: $header-light-background;
     position: sticky;
     top: 0;
     max-width: 100vw;
     height: 80px;
     z-index: 99;
     gap: 5px;
+    transition: background-color .4s ease 0s;
+
+    body.dark & {
+        background-color: $header-dark-background;
+
+        &__logo {
+            color: $header-dark-colorhvr;
+        }
+
+        &__navbar .navbar__menu .menu__item {
+            .menu__item__link {
+                color: $header-dark-color;
+
+                &.active,
+                &:hover,
+                &:focus {
+                    color: $header-dark-colorhvr;
+                }
+            }
+
+            .menu__item__dropdown {
+                .dropdown--arrow {
+                    color: $header-dark-color;
+                }
+
+                &:hover .dropdown--arrow,
+                &.active .dropdown--arrow,
+                &:focus .dropdown--arrow {
+                    color: $header-dark-colorhvr;
+                }
+            }
+        }
+
+        &__cart {
+            &__link {
+                color: $header-dark-color;
+
+                &:hover,
+                &:focus,
+                &.active {
+                    color: $header-dark-colorhvr;
+                }
+            }
+        }
+    }
 
     &__burguer {
         width: 40px;
@@ -80,7 +125,7 @@
         align-items: center;
         text-align: center;
         text-decoration: none;
-        color: #fff;
+        color: $header-light-colorhvr;
         cursor: pointer;
         gap: 10px;
 
@@ -123,7 +168,7 @@
                 &__link {
                     display: inline-block;
                     text-decoration: none;
-                    color: #cacaca;
+                    color: $header-light-color;
                     width: 100%;
                     height: 100%;
                     letter-spacing: 1px;
@@ -148,7 +193,7 @@
                     &.active,
                     &:hover,
                     &:focus {
-                        color: #fff;
+                        color: $header-light-colorhvr;
 
                         .menu__item__link--linea {
                             opacity: 1;
@@ -188,7 +233,7 @@
                         position: relative;
 
                         .dropdown--arrow {
-                            color: #cacaca;
+                            color: $header-light-color;
                             font-weight: 600;
                             transition: $transition-4s;
                             pointer-events: none;
@@ -199,7 +244,7 @@
                         &:hover .dropdown--arrow,
                         &.active .dropdown--arrow,
                         &:focus .dropdown--arrow {
-                            color: #fff;
+                            color: $header-light-colorhvr;
                             transform: rotate(90deg);
                         }
 
@@ -267,7 +312,7 @@
 
         &__link {
             text-decoration: none;
-            color: rgba(255, 255, 255, .75);
+            color: $header-light-color;
             padding: .5rem .5rem;
             letter-spacing: 1px;
             font-weight: 600;
@@ -289,7 +334,7 @@
             &.active,
             &:hover,
             &:focus {
-                color: rgb(255, 255, 255);
+                color: $header-light-colorhvr;
 
                 .header__cart__link--linea {
                     opacity: 1;

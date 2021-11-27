@@ -1,3 +1,13 @@
+const themeEl = document.getElementById('switch');
+
+if(localStorage.getItem('dark-mode') === 'true') {
+    document.body.classList.add('dark');
+    themeEl.classList.add('active');
+} else {
+    document.body.classList.remove('dark');
+    themeEl.classList.remove('active');
+}
+
 const dropdownEl = document.getElementById('mydropdown');
 const burguerDropdownEl = document.getElementById('burguerDropdown');
 const burguerEl = document.getElementById('burguerToggle');
@@ -9,6 +19,7 @@ dropdownEl.addEventListener('click', toggleActive);
 burguerDropdownEl.addEventListener('click', toggleActive1);
 document.addEventListener('click', documentClick);
 burguerEl.addEventListener('click', burguerToggleActive);
+themeEl.addEventListener('click', themeToggleActive);
 
 function toggleActive() {
     dropdownEl.classList.toggle('active');
@@ -54,4 +65,14 @@ function burguerToggleActive() {
     }, 200);
    
     burguerMenu.classList.toggle('active');
+}
+
+function themeToggleActive() {
+    themeEl.classList.toggle('active');
+    document.body.classList.toggle('dark');
+
+    if(document.body.classList.contains('dark'))
+        localStorage.setItem('dark-mode', 'true');
+    else
+        localStorage.setItem('dark-mode', 'false');
 }

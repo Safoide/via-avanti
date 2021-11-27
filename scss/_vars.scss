@@ -1,8 +1,30 @@
+/* DARK COLORES */
+
+$header-dark-background: #1a1a1a;
+$header-dark-color: #cacaca;
+$header-dark-colorhvr: #fff;
+
+$footer-dark-background: #1a1a1a;
+$footer-dark-color: #cacaca;
+$footer-dark-colorhvr: #fff;
+
+
+/* LIGHT COLORS */
+
+$header-light-background: #ededed;
+$header-light-color: #00000099;
+$header-light-colorhvr: #000;
+
+$footer-light-background: #ededed;
+$footer-light-color: #00000099;
+$footer-light-colorhvr: #000;
+
+
 $border-black: 1px solid black;
 $transition-4s: all 0.4s ease 0s;
 
 $colors: (
-    "coral": #E4717A, 
+    "coral": #E4717A,
     "orquidea": #EDB4E6,
     "celeste": #B4D2ED,
     "beige": #F5F5DC,
