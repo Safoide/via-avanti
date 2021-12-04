@@ -1,5 +1,7 @@
 const cargarMasEl = document.getElementById('cargarMas');
+
 let clicks = 0;
+
 const imagenesSrc = {
     'sweater-popis': {
         'principal': './imgs/popis/popis1.jpg',

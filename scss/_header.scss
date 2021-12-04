@@ -4,17 +4,31 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #EDEDED;
+    background-color: $main-light-background;
     z-index: 99;
 
-    &__texto {
+    body.dark & {
+        background-color: $main-dark-background;
 
-        &--text {
-            margin: 0;
-            font-size: .8em;
-            color: #00000099;
-            font-weight: 600;
+        &__texto .headerTop__texto--text {
+            color: #ffffff99;
         }
+
+        &__redes .headerTop__redes--link {
+            color: #ffffff99;
+
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        }
+    }
+
+    &__texto .headerTop__texto--text {
+        margin: 0;
+        font-size: .8em;
+        font-weight: 600;
+        color: #00000099;
     }
 
     &__redes {
@@ -30,7 +44,7 @@
             height: 25px;
             text-decoration: none;
             transition: all 0.3s ease 0s;
-            color: rgba(0, 0, 0, 0.7);
+            color: #00000099;
 
             &:hover,
             &:focus {
