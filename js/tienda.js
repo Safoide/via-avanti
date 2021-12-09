@@ -2,46 +2,52 @@ const cargarMasEl = document.getElementById('cargarMas');
 
 let clicks = 0;
 
-const imagenesSrc = {
-    'sweater-popis': {
+const productos = [
+    {
         'principal': './imgs/popis/popis1.jpg',
         'secundaria': './imgs/popis/popis2.jpg',
         'nombre': 'SWEATER POPIS',
         'preciodescuento': '2600',
-        'precio': '2340'
+        'precio': '2340',
+        'tag': 'sweater-popis'
     },
-    'pantalon-chicago': {
+    {
         'principal': './imgs/chicago/chicago1.jpg',
         'secundaria': './imgs/chicago/chicago2.jpg',
         'nombre': 'PANTALON CHICAGO',
-        'precio': '3280'
+        'precio': '3280',
+        'tag': 'pantalon-chicago'
     },
-    'sweater-mari': {
+    {
         'principal': './imgs/mari/mari1.jpg',
         'secundaria': './imgs/mari/mari2.jpg',
         'nombre': 'SWEATER MARI',
         'preciodescuento': '3290',
-        'precio': '2960'
+        'precio': '2960',
+        'tag': 'sweater-mari'
     },
-    'babucha-leonardo': {
+    {
         'principal': './imgs/leonardo/leonardo1.jpg',
         'secundaria': './imgs/leonardo/leonardo2.jpg',
         'nombre': 'BABUCHA LEONARDO',
-        'precio': '3021'
+        'precio': '3021',
+        'tag': 'babucha-leonardo'
     },
-    'remera-female': {
+    {
         'principal': './imgs/female/female1.jpg',
         'secundaria': './imgs/female/female2.jpg',
         'nombre': 'REMERA FEMALE',
-        'precio': '1690'
+        'precio': '1690',
+        'tag': 'remera-female'
     },
-    'remera-rembrandt': {
+    {
         'principal': './imgs/rembrandt/rembrandt1.jpg',
         'secundaria': './imgs/rembrandt/rembrandt2.jpg',
         'nombre': 'REMERA REMBRANDT',
-        'precio': '2070'
+        'precio': '2070',
+        'tag': 'remera-rembrandt'
     }
-};
+];
 
 cargarMasEl.addEventListener('click', function (err) {
     if (clicks < 5)
@@ -51,21 +57,24 @@ cargarMasEl.addEventListener('click', function (err) {
 function cargarMas() {
     clicks++;
     const productosEl = document.getElementById('productosUl');
-    var productos = ['sweater-popis', 'pantalon-chicago', 'sweater-mari', 'babucha-leonardo', 'remera-female', 'remera-rembrandt'];
     
     for(let i = 0; i < 8; i++) {
-        var producto = productos[Math.floor(Math.random()*productos.length)];
+        var producto = Math.random() * (5 - 0) + 0;
 
-        if (producto == 'sweater-popis' || producto == 'sweater-mari') {
+        producto = parseInt(producto);
+
+        console.log(producto);
+
+        if (productos[producto]['tag'] == 'sweater-popis' || productos[producto]['tag'] == 'sweater-mari') {
             productosEl.innerHTML += `
                 <li class="lista__item">
-                    <a class="item__link descuento" href="./producto/${producto}.html">
-                        <img class="item__link--img fimg" src="${imagenesSrc[producto]['principal']}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${imagenesSrc[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${imagenesSrc[producto]['nombre']}</h3>
+                    <a class="item__link descuento" href="./producto/${productos[producto]['tag']}.html">
+                        <img class="item__link--img fimg" src="${productos[producto]['principal']}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${productos[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${productos[producto]['nombre']}</h3>
                         <div class="link__precio">
-                            <span class="link__precio--precio descuento">$${imagenesSrc[producto]['preciodescuento']}</span>
-                            <span class="link__precio--precio">$${imagenesSrc[producto]['precio']}</span>
+                            <span class="link__precio--precio descuento">$${productos[producto]['preciodescuento']}</span>
+                            <span class="link__precio--precio">$${productos[producto]['precio']}</span>
                             <p class="link__precio--iva">- IVA Incluido</p>
                         </div>
                     </a>
@@ -74,12 +83,12 @@ function cargarMas() {
         } else {
             productosEl.innerHTML += `
                 <li class="lista__item">
-                    <a class="item__link" href="./producto/${producto}.html">
-                        <img class="item__link--img fimg" src="${imagenesSrc[producto]['principal']}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${imagenesSrc[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${imagenesSrc[producto]['nombre']}</h3>
+                    <a class="item__link" href="./producto/${productos[producto]['tag']}.html">
+                        <img class="item__link--img fimg" src="${productos[producto]['principal']}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${productos[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${productos[producto]['nombre']}</h3>
                         <div class="link__precio">
-                            <span class="link__precio--precio">$${imagenesSrc[producto]['precio']}</span>
+                            <span class="link__precio--precio">$${productos[producto]['precio']}</span>
                             <p class="link__precio--iva">- IVA Incluido</p>
                         </div>
                     </a>
