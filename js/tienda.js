@@ -49,6 +49,18 @@ const productos = [
     }
 ];
 
+function compare(a, b) {
+    if ( a.precio < b.precio ) {
+        return -1;
+    }
+    if ( a.precio > b.precio ) {
+        return 1;
+    }
+    return 0;
+}
+  
+productos.sort(compare);
+
 cargarMasEl.addEventListener('click', function (err) {
     if (clicks < 5)
         cargarMas();
@@ -58,23 +70,18 @@ function cargarMas() {
     clicks++;
     const productosEl = document.getElementById('productosUl');
     
-    for(let i = 0; i < 8; i++) {
-        var producto = Math.random() * (5 - 0) + 0;
+    for(let i = 0; i < 5; i++) {
 
-        producto = parseInt(producto);
-
-        console.log(producto);
-
-        if (productos[producto]['tag'] == 'sweater-popis' || productos[producto]['tag'] == 'sweater-mari') {
+        if (productos[i]['tag'] == 'sweater-popis' || productos[i]['tag'] == 'sweater-mari') {
             productosEl.innerHTML += `
                 <li class="lista__item">
-                    <a class="item__link descuento" href="./producto/${productos[producto]['tag']}.html">
-                        <img class="item__link--img fimg" src="${productos[producto]['principal']}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${productos[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${productos[producto]['nombre']}</h3>
+                    <a class="item__link descuento" href="./producto/${productos[i]['tag']}.html">
+                        <img class="item__link--img fimg" src="${productos[i]['principal']}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${productos[i]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${productos[i]['nombre']}</h3>
                         <div class="link__precio">
-                            <span class="link__precio--precio descuento">$${productos[producto]['preciodescuento']}</span>
-                            <span class="link__precio--precio">$${productos[producto]['precio']}</span>
+                            <span class="link__precio--precio descuento">$${productos[i]['preciodescuento']}</span>
+                            <span class="link__precio--precio">$${productos[i]['precio']}</span>
                             <p class="link__precio--iva">- IVA Incluido</p>
                         </div>
                     </a>
@@ -83,12 +90,12 @@ function cargarMas() {
         } else {
             productosEl.innerHTML += `
                 <li class="lista__item">
-                    <a class="item__link" href="./producto/${productos[producto]['tag']}.html">
-                        <img class="item__link--img fimg" src="${productos[producto]['principal']}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${productos[producto]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${productos[producto]['nombre']}</h3>
+                    <a class="item__link" href="./producto/${productos[i]['tag']}.html">
+                        <img class="item__link--img fimg" src="${productos[i]['principal']}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${productos[i]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${productos[i]['nombre']}</h3>
                         <div class="link__precio">
-                            <span class="link__precio--precio">$${productos[producto]['precio']}</span>
+                            <span class="link__precio--precio">$${productos[i]['precio']}</span>
                             <p class="link__precio--iva">- IVA Incluido</p>
                         </div>
                     </a>
