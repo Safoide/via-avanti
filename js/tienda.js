@@ -49,18 +49,6 @@ const productos = [
     }
 ];
 
-function compare(a, b) {
-    if ( a.precio < b.precio ) {
-        return -1;
-    }
-    if ( a.precio > b.precio ) {
-        return 1;
-    }
-    return 0;
-}
-  
-productos.sort(compare);
-
 cargarMasEl.addEventListener('click', function (err) {
     if (clicks < 5)
         cargarMas();
@@ -70,40 +58,51 @@ function cargarMas() {
     clicks++;
     const productosEl = document.getElementById('productosUl');
     
-    for(let i = 0; i < 5; i++) {
+    for(let i = 0; i < 8; i++) {
 
-        if (productos[i]['tag'] == 'sweater-popis' || productos[i]['tag'] == 'sweater-mari') {
-            productosEl.innerHTML += `
-                <li class="lista__item">
-                    <a class="item__link descuento" href="./producto/${productos[i]['tag']}.html">
-                        <img class="item__link--img fimg" src="${productos[i]['principal']}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${productos[i]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${productos[i]['nombre']}</h3>
-                        <div class="link__precio">
-                            <span class="link__precio--precio descuento">$${productos[i]['preciodescuento']}</span>
-                            <span class="link__precio--precio">$${productos[i]['precio']}</span>
-                            <p class="link__precio--iva">- IVA Incluido</p>
-                        </div>
-                    </a>
-                </li>
+        let randomItem = Math.floor(Math.random() * 6);
+
+        if (productos[randomItem].preciodescuento != undefined) {
+
+            let newItem = document.createElement('li');
+
+            newItem.classList.add('lista__item');
+
+            newItem.innerHTML = `
+                <a class="item__link descuento" href="./producto/${productos[randomItem].tag}.html">
+                    <img class="item__link--img fimg" src="${productos[randomItem].principal}" alt="FOTO DEL PRODUCTO">
+                    <img class="item__link--img simg" src="${productos[randomItem].secundaria}" alt="FOTO DEL PRODUCTO">
+                    <h3 class="item__link--title">${productos[randomItem].nombre}</h3>
+                    <div class="link__precio">
+                        <span class="link__precio--precio descuento">$${productos[randomItem].preciodescuento}</span>
+                        <span class="link__precio--precio">$${productos[randomItem].precio}</span>
+                        <p class="link__precio--iva">- IVA Incluido</p>
+                    </div>
+                </a>
             `;
-        } else {
-            productosEl.innerHTML += `
-                <li class="lista__item">
-                    <a class="item__link" href="./producto/${productos[i]['tag']}.html">
-                        <img class="item__link--img fimg" src="${productos[i]['principal']}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${productos[i]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${productos[i]['nombre']}</h3>
-                        <div class="link__precio">
-                            <span class="link__precio--precio">$${productos[i]['precio']}</span>
-                            <p class="link__precio--iva">- IVA Incluido</p>
-                        </div>
-                    </a>
-                </li>
+
+            productosEl.appendChild(newItem);
+            
+        } else if (productos[randomItem].preciodescuento == undefined) {
+
+            let newItem = document.createElement('li');
+
+            newItem.classList.add('lista__item');
+            
+            newItem.innerHTML += `
+                <a class="item__link" href="./producto/${productos[randomItem]['tag']}.html">
+                    <img class="item__link--img fimg" src="${productos[randomItem]['principal']}" alt="FOTO DEL PRODUCTO">
+                    <img class="item__link--img simg" src="${productos[randomItem]['secundaria']}" alt="FOTO DEL PRODUCTO">
+                    <h3 class="item__link--title">${productos[randomItem]['nombre']}</h3>
+                    <div class="link__precio">
+                        <span class="link__precio--precio">$${productos[randomItem]['precio']}</span>
+                        <p class="link__precio--iva">- IVA Incluido</p>
+                    </div>
+                </a>
             `;
+
+            productosEl.appendChild(newItem);
         }
-
-        
     }
 
     if(clicks >= 5) {
