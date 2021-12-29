@@ -49,10 +49,10 @@ const productos = [
     }
 ];
 
-cargarMasEl.addEventListener('click', function (err) {
+$('#cargarMas').click(function(){
     if (clicks < 5)
         cargarMas();
-});
+})
 
 function cargarMas() {
     clicks++;
@@ -62,11 +62,11 @@ function cargarMas() {
 
         let randomItem = Math.floor(Math.random() * 6);
 
-        if (productos[randomItem].preciodescuento != undefined) {
+        let newItem = document.createElement('li');
 
-            let newItem = document.createElement('li');
+        newItem.classList.add('lista__item');
 
-            newItem.classList.add('lista__item');
+        productos[randomItem].preciodescuento != undefined ? (
 
             newItem.innerHTML = `
                 <a class="item__link descuento" href="./producto/${productos[randomItem].tag}.html">
@@ -79,30 +79,25 @@ function cargarMas() {
                         <p class="link__precio--iva">- IVA Incluido</p>
                     </div>
                 </a>
-            `;
+            `
 
-            productosEl.appendChild(newItem);
-            
-        } else if (productos[randomItem].preciodescuento == undefined) {
+        ) : (
 
-            let newItem = document.createElement('li');
-
-            newItem.classList.add('lista__item');
-            
             newItem.innerHTML += `
-                <a class="item__link" href="./producto/${productos[randomItem]['tag']}.html">
-                    <img class="item__link--img fimg" src="${productos[randomItem]['principal']}" alt="FOTO DEL PRODUCTO">
-                    <img class="item__link--img simg" src="${productos[randomItem]['secundaria']}" alt="FOTO DEL PRODUCTO">
-                    <h3 class="item__link--title">${productos[randomItem]['nombre']}</h3>
+                <a class="item__link" href="./producto/${productos[randomItem].tag}.html">
+                    <img class="item__link--img fimg" src="${productos[randomItem].principal}" alt="FOTO DEL PRODUCTO">
+                    <img class="item__link--img simg" src="${productos[randomItem].secundaria}" alt="FOTO DEL PRODUCTO">
+                    <h3 class="item__link--title">${productos[randomItem].nombre}</h3>
                     <div class="link__precio">
-                        <span class="link__precio--precio">$${productos[randomItem]['precio']}</span>
+                        <span class="link__precio--precio">$${productos[randomItem].precio}</span>
                         <p class="link__precio--iva">- IVA Incluido</p>
                     </div>
                 </a>
-            `;
+            `
+            
+        );
 
-            productosEl.appendChild(newItem);
-        }
+        productosEl.appendChild(newItem);
     }
 
     if(clicks >= 5) {
