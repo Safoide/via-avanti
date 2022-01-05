@@ -42,9 +42,9 @@ $colors: (
     "fucsia": #FF00FF
 );
 
-@mixin flex-center($direction) {
+@mixin flex($dr, $jc, $ai) {
     display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
+    flex-direction: $dr;
+    justify-content: $jc;
+    align-items: $ai;
 }

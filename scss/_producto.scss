@@ -53,7 +53,7 @@
             .nav--link {
                 text-decoration: none;
                 color: #777777;
-                @include flex-center(row);
+                @include flex(row, center, center);
                 gap: 5px;
                 transition: all .3s ease 0s;
 
@@ -132,7 +132,7 @@
                 width: 25px;
                 height: 25px;
                 position: relative;
-                @include flex-center(row);
+                @include flex(row, center, center);
 
                 .color--input {
                     position: absolute;
@@ -149,7 +149,7 @@
                     border-radius: 50%;
                     transition: $transition-4s;
                     pointer-events: none;
-                    @include flex-center(row);
+                    @include flex(row, center, center);
                     font-size: 18px;
                 }
                 
@@ -214,7 +214,7 @@
                 position: relative;
                 color: black;
                 border-radius: 50%;
-                @include flex-center(row);
+                @include flex(row, center, center);
                 text-align: center;
 
                 .talle--input {
@@ -238,7 +238,7 @@
                     font-weight: 700;
                     font-size: 14px;
                     transition: all .2s ease 0s;
-                    @include flex-center(row);
+                    @include flex(row, center, center);
                 }
                 
                 .talle__nombre {
@@ -284,7 +284,7 @@
                 width: 90px;
 
                 &--boton {
-                    @include flex-center(row);
+                    @include flex(row, center, center);
                     width: 30px;
                     height: 30px;
                     outline: none;

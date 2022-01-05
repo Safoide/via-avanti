@@ -512,7 +512,8 @@ h5 {
   align-items: center;
   max-width: 100vw;
   background: #fff;
-  color: #000; }
+  color: #000;
+  transition: all .4s ease 0s; }
   body.dark .main {
     background: #242424;
     color: #fff; }

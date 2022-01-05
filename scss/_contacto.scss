@@ -125,7 +125,7 @@
         width: 500px;
         height: 300px;
         background-color: #EDEDED;
-        @include flex-center(column);
+        @include flex(column, center, center);
         gap: 40px;
         border-radius: 5px;
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, .45);

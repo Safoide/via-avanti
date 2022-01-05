@@ -60,7 +60,7 @@
                 position: absolute;
                 width: 100%;
                 height: 25px;
-                @include flex-center(row);
+                @include flex(row, center, center);
 
                 .input--input {
                     position: absolute;
@@ -84,7 +84,7 @@
                     border-radius: 50%;
                     background: #eaecee;
                     color: #999;
-                    @include flex-center(row);
+                    @include flex(row, center, center);
                     transition: $transition-4s;
                     position: absolute;
                     pointer-events: none;
@@ -160,7 +160,7 @@
                         position: absolute;
                         top: 10px;
                         left: 10px;
-                        @include flex-center(row);
+                        @include flex(row, center, center);
                         font-size: 1em;
                         font-weight: 700;
                         color: #fff;
@@ -239,7 +239,7 @@
         }
 
         .productos__bottom {
-            @include flex-center(row);
+            @include flex(row, center, center);
             margin-top: 10px;
             width: 100%;
             min-height: 30px;
