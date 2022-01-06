@@ -12,7 +12,6 @@ const dropdownEl = document.getElementById('mydropdown');
 const burguerDropdownEl = document.getElementById('burguerDropdown');
 const burguerEl = document.getElementById('burguerToggle');
 const burguerMenu = document.getElementById('burguerMenu');
-const burguerElDiv = document.getElementById('burguerToggleDiv');
 let active = false;
 
 dropdownEl.addEventListener('click', toggleActive);
@@ -38,7 +37,6 @@ function documentClick(e) {
 
     if(e.target.id != 'burguerToggle' && e.target.id != 'burguerMenu' && e.target.id != 'burguerDropdown') {
         burguerMenu.classList.remove('active');
-        burguerElDiv.classList.remove('active');
 
         setTimeout(() => {
             burguerEl.classList.remove('bxs-x-circle');
@@ -50,7 +48,22 @@ function documentClick(e) {
 }
 
 function burguerToggleActive() {
-    burguerElDiv.classList.toggle('active');
+    
+    $('#burguerToggle').css('borderSpacing', 1).animate({
+        borderSpacing: .3
+    }, {
+        step: function(now) {
+            $(this).css('transform', `scale(${now})`);  
+        }, duration: 200
+    });
+
+    $('#burguerToggle').css('borderSpacing', 1).animate({
+        borderSpacing: 1
+    }, {
+        step: function(now) {
+            $(this).css('transform', `scale(${now})`);
+        }, duration: 200
+    });
 
     setTimeout(() => {
         !active ? (

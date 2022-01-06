@@ -119,16 +119,6 @@
         color: #fff;
         font-size: 32px;
         display: none;
-
-        .bx {
-            animation: changeIcon2 backwards;
-            animation-duration: .4s;
-        }
-
-        &.active .bx {
-            animation: changeIcon forwards;
-            animation-duration: .4s;
-        }
     }
  
     &__logo {
@@ -400,7 +390,7 @@
         transition: max-height .4s ease 0s, transform .2s ease 0s;
 
         .nav__lista {
-            animation: moveList .3s forwards;
+            animation: moveList .2s forwards;
         }
     }
 
@@ -537,33 +527,5 @@
 
     to {
         transform: translateY(-200px);
-    }
-}
-
-@keyframes changeIcon2 {
-    0% {
-        transform: scale(1);
-    }  
-
-    50% {
-        transform: scale(.3);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes changeIcon {
-    0% {
-        transform: scale(1);
-    }  
-
-    50% {
-        transform: scale(.3);
-    }
-
-    100% {
-        transform: scale(1);
     }
 }

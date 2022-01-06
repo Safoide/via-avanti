@@ -100,12 +100,6 @@ h5 {
     color: #fff;
     font-size: 32px;
     display: none; }
-    .header__burguer .bx {
-      animation: changeIcon2 backwards;
-      animation-duration: .4s; }
-    .header__burguer.active .bx {
-      animation: changeIcon forwards;
-      animation-duration: .4s; }
   .header__logo {
     max-width: 220px;
     height: 80px;
@@ -305,7 +299,7 @@ h5 {
     max-height: 276px;
     transition: max-height .4s ease 0s, transform .2s ease 0s; }
     .burguerMenu.active .nav__lista {
-      animation: moveList .3s forwards; }
+      animation: moveList .2s forwards; }
   .burguerMenu .nav__lista {
     list-style-type: none;
     padding: 15px 0;
@@ -409,22 +403,6 @@ h5 {
     transform: translateY(0); }
   to {
     transform: translateY(-200px); } }
-
-@keyframes changeIcon2 {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.3); }
-  100% {
-    transform: scale(1); } }
-
-@keyframes changeIcon {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.3); }
-  100% {
-    transform: scale(1); } }
 
 .footer {
   height: 60px;
@@ -1474,6 +1452,18 @@ h5 {
           transition: all 0.4s ease 0s; }
           .main__content.cart .content__resumen .resumen__bottom .resumen--boton:hover {
             opacity: 1; }
+  .main__content .content__admin {
+    max-width: 100%; }
+    .main__content .content__admin .admin__table {
+      border-collapse: collapse; }
+      .main__content .content__admin .admin__table .table__head tr th {
+        border-bottom: 1px solid #eee; }
+      .main__content .content__admin .admin__table .table__body .body__row th {
+        padding: .5rem; }
+        .main__content .content__admin .admin__table .table__body .body__row th .row__carousel {
+          overflow: hidden; }
+          .main__content .content__admin .admin__table .table__body .body__row th .row__carousel .carousel__inner .inner__item img {
+            max-height: 200px; }
 
 @media only screen and (min-width: 1441px) and (max-width: 1600px) {
   body {
