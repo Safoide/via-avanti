@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "principal": "./imgs/popis/popis1.jpg",
+        "secundaria": "./imgs/popis/popis2.jpg",
+        "nombre": "SWEATER POPIS",
+        "preciodescuento": 2600,
+        "precio": 2340,
+        "tag": "sweater-popis"
+    },
+    {
+        "id": 2,
+        "principal": "./imgs/chicago/chicago1.jpg",
+        "secundaria": "./imgs/chicago/chicago2.jpg",
+        "nombre": "PANTALON CHICAGO",
+        "precio": 3280,
+        "tag": "pantalon-chicago"
+    },
+    {
+        "id": 3,
+        "principal": "./imgs/mari/mari1.jpg",
+        "secundaria": "./imgs/mari/mari2.jpg",
+        "nombre": "SWEATER MARI",
+        "preciodescuento": 3290,
+        "precio": 2960,
+        "tag": "sweater-mari"
+    },
+    {
+        "id": 4,
+        "principal": "./imgs/leonardo/leonardo1.jpg",
+        "secundaria": "./imgs/leonardo/leonardo2.jpg",
+        "nombre": "BABUCHA LEONARDO",
+        "precio": 3021,
+        "tag": "babucha-leonardo"
+    },
+    {
+        "id": 5,
+        "principal": "./imgs/female/female1.jpg",
+        "secundaria": "./imgs/female/female2.jpg",
+        "nombre": "REMERA FEMALE",
+        "precio": 1690,
+        "tag": "remera-female"
+    },
+    {
+        "id": 6,
+        "principal": "./imgs/rembrandt/rembrandt1.jpg",
+        "secundaria": "./imgs/rembrandt/rembrandt2.jpg",
+        "nombre": "REMERA REMBRANDT",
+        "precio": 2070,
+        "tag": "remera-rembrandt"
+    }
+]

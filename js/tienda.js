@@ -1,53 +1,49 @@
-const cargarMasEl = document.getElementById('cargarMas');
+const APIURL = "./data/data.json";
 
 let clicks = 0;
 
-const productos = [
-    {
-        'principal': './imgs/popis/popis1.jpg',
-        'secundaria': './imgs/popis/popis2.jpg',
-        'nombre': 'SWEATER POPIS',
-        'preciodescuento': 2600,
-        'precio': 2340,
-        'tag': 'sweater-popis'
-    },
-    {
-        'principal': './imgs/chicago/chicago1.jpg',
-        'secundaria': './imgs/chicago/chicago2.jpg',
-        'nombre': 'PANTALON CHICAGO',
-        'precio': 3280,
-        'tag': 'pantalon-chicago'
-    },
-    {
-        'principal': './imgs/mari/mari1.jpg',
-        'secundaria': './imgs/mari/mari2.jpg',
-        'nombre': 'SWEATER MARI',
-        'preciodescuento': 3290,
-        'precio': 2960,
-        'tag': 'sweater-mari'
-    },
-    {
-        'principal': './imgs/leonardo/leonardo1.jpg',
-        'secundaria': './imgs/leonardo/leonardo2.jpg',
-        'nombre': 'BABUCHA LEONARDO',
-        'precio': 3021,
-        'tag': 'babucha-leonardo'
-    },
-    {
-        'principal': './imgs/female/female1.jpg',
-        'secundaria': './imgs/female/female2.jpg',
-        'nombre': 'REMERA FEMALE',
-        'precio': 1690,
-        'tag': 'remera-female'
-    },
-    {
-        'principal': './imgs/rembrandt/rembrandt1.jpg',
-        'secundaria': './imgs/rembrandt/rembrandt2.jpg',
-        'nombre': 'REMERA REMBRANDT',
-        'precio': 2070,
-        'tag': 'remera-rembrandt'
+const productos = [];
+
+$.ajax({
+    method: 'GET',
+    url: APIURL,
+    success: (response) => {
+        console.log(response)
+        for(const product of response) {
+            const productHTML = document.createElement('li');
+            productHTML.classList.add('lista__item');
+
+            product.preciodescuento ? (
+                productHTML.innerHTML = `
+                    <a class="item__link descuento" href="./producto/${product.tag}.html">
+                        <img class="item__link--img fimg" src="${product.principal}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${product.secundaria}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${product.nombre.toUpperCase()}</h3>
+                        <div class="link__precio">
+                            <span class="link__precio--precio descuento">$${product.precio}</span>
+                            <span class="link__precio--precio">$${product.preciodescuento}</span>
+                            <p class="link__precio--iva">- IVA Incluido</p>
+                        </div>
+                    </a>
+                `
+            ) : (
+                productHTML.innerHTML = `
+                    <a class="item__link" href="./producto/${product.tag}.html">
+                        <img class="item__link--img fimg" src="${product.principal}" alt="FOTO DEL PRODUCTO">
+                        <img class="item__link--img simg" src="${product.secundaria}" alt="FOTO DEL PRODUCTO">
+                        <h3 class="item__link--title">${product.nombre.toUpperCase()}</h3>
+                        <div class="link__precio">
+                            <span class="link__precio--precio">$${product.precio}</span>
+                            <p class="link__precio--iva">- IVA Incluido</p>
+                        </div>
+                    </a>
+                `
+            )
+
+            $('#productosUl').append(productHTML);
+        }
     }
-];
+})
 
 $('#cargarMas').click(function(){
     if (clicks < 5)
@@ -97,6 +93,6 @@ function cargarMas() {
     }
 
     if(clicks >= 5) {
-        cargarMasEl.classList.remove('show');
+        $('#cargarMas').removeClass('show');
     }
 }
