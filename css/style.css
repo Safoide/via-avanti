@@ -1247,10 +1247,12 @@ h5 {
               font-weight: 700;
               color: #fff;
               opacity: .7;
-              transition: all 0.4s ease 0s; }
+              transition: all 0.4s ease 0s;
+              pointer-events: none; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img {
               width: 100%;
-              height: 80%; }
+              height: 80%;
+              pointer-events: none; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img.fimg {
                 transition: all 0.3s ease 0s; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link--img.simg {
@@ -1262,13 +1264,17 @@ h5 {
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link--title {
               font-size: 1.2em;
               color: #000;
-              font-weight: bold; }
+              font-weight: bold;
+              max-width: 90%;
+              text-align: center;
+              pointer-events: none; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio {
               display: flex;
               align-items: center;
               gap: 5px;
               margin: 0 0 10px 0;
-              font-size: 1em; }
+              font-size: 1em;
+              pointer-events: none; }
               .main__tienda .tienda__productos .productos__lista .lista__item .item__link .link__precio--precio {
                 display: inline-block;
                 font-weight: 600;
@@ -1452,14 +1458,6 @@ h5 {
           transition: all 0.4s ease 0s; }
           .main__content.cart .content__resumen .resumen__bottom .resumen--boton:hover {
             opacity: 1; }
-  .main__content .admin__table {
-    border-collapse: collapse; }
-    .main__content .admin__table .table__head tr th {
-      border-bottom: 1px solid #eee; }
-    .main__content .admin__table .table__body .body__row th {
-      padding: .5rem; }
-      .main__content .admin__table .table__body .body__row th .imagen {
-        max-width: 150px; }
 
 @media only screen and (min-width: 1441px) and (max-width: 1600px) {
   body {
