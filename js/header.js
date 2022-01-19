@@ -16,10 +16,6 @@ function LoadCartItems() {
     if(cartItems) {
         const items = JSON.parse(cartItems);
 
-        console.log(items);
-
-        console.log(items.length)
-
         if(items.length >= 1) {
             $('#cartUnidades').text(items.length);
             $('#cartUnidades').addClass('show');
