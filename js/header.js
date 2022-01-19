@@ -8,6 +8,25 @@ if(localStorage.getItem('dark-mode') === 'true') {
     themeEl.classList.remove('active');
 }
 
+LoadCartItems();
+
+function LoadCartItems() {
+    var cartItems = localStorage.getItem('cart-items');
+
+    if(cartItems) {
+        const items = JSON.parse(cartItems);
+
+        console.log(items);
+
+        console.log(items.length)
+
+        if(items.length >= 1) {
+            $('#cartUnidades').text(items.length);
+            $('#cartUnidades').addClass('show');
+        }
+    }
+}
+
 const dropdownEl = document.getElementById('mydropdown');
 const burguerDropdownEl = document.getElementById('burguerDropdown');
 const burguerEl = document.getElementById('burguerToggle');

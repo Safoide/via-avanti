@@ -91,8 +91,32 @@ function disableButtons() {
 }
 
 function AddToCart() {
-    cartUnidadesEl.innerText = unidades;
-    cartUnidadesEl.classList.add('show');
+
+    if(localStorage.getItem('cart-items')) {
+        const items = JSON.parse(localStorage.getItem('cart-items'));
+
+        const newitem = {
+            "id": 1,
+            "precio": 2000,
+            "producto": "Sweater Popis"
+        };
+
+        items.push(newitem);
+
+        localStorage.setItem('cart-items', JSON.stringify(items));
+    } else {
+        localStorage.setItem('cart-items', '[]');
+
+        const newitem = [{
+            "id": 1,
+            "precio": 2000,
+            "producto": "Sweater Popis"
+        }];
+
+        localStorage.setItem('cart-items', JSON.stringify(newitem));
+    }
+
+    LoadCartItems();
 }
 
 function recargarColor(event) {

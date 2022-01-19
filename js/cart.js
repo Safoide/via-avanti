@@ -31,7 +31,7 @@ function restarUnidad(e) {
     }
 
     sibling.innerText = unidades;
-    recargarBoton(target, sibling, unidades);
+    recargarBoton(sibling, unidades);
     recargarTotal();
 };
 

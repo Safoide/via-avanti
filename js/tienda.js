@@ -1,85 +1,45 @@
+// DEFINE VARIABLES //
 const APIURL = "./data/data.json";
 
 let clicks = 0;
 let productsTotal = 0;
 let productsNow = 0;
 
-$.ajax({
-    method: 'GET',
-    url: APIURL,
-    success: (response) => {
-        response = response.filter(p => p.imagenes != undefined);
+// MAIN LOAD //
 
-        productsTotal = response.length;
+loadProducts();
 
-        for(let i = productsNow; i < productsNow + 16; i++) {
-            const product = response[i];
+// MORE LOAD //
 
-            const productHTML = document.createElement('li');
-            productHTML.classList.add('lista__item');
+$('#cargarMas').click(() => {
+    if (clicks < productsTotal / 16) {
 
-            product.precio_rebajado ? (
-                productHTML.innerHTML = `
-                    <a class="item__link descuento" data-producto="${product.id}">
-                        <img class="item__link--img fimg" src="${product.imagenes.split(', ')[0]}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${product.imagenes.split(', ')[1]}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${product.nombre.toUpperCase()}</h3>
-                        <div class="link__precio">
-                            <span class="link__precio--precio descuento">$${product.precio_normal}</span>
-                            <span class="link__precio--precio">$${product.precio_rebajado}</span>
-                            <p class="link__precio--iva">- IVA Incluido</p>
-                        </div>
-                    </a>
-                `
-            ) : (
-                productHTML.innerHTML = `
-                    <a class="item__link" data-producto="${product.id}">
-                        <img class="item__link--img fimg" src="${product.imagenes.split(', ')[0]}" alt="FOTO DEL PRODUCTO">
-                        <img class="item__link--img simg" src="${product.imagenes.split(', ')[1]}" alt="FOTO DEL PRODUCTO">
-                        <h3 class="item__link--title">${product.nombre.toUpperCase()}</h3>
-                        <div class="link__precio">
-                            <span class="link__precio--precio">$${product.precio_normal}</span>
-                            <p class="link__precio--iva">- IVA Incluido</p>
-                        </div>
-                    </a>
-                `
-            )
+        clicks++;
 
-            if (product.imagenes.split(', ')[1] == undefined) {
-                console.log(product);
-            }
+        loadProducts();
 
-            $('#productosUl').append(productHTML);
+        if(clicks >= productsTotal / 16) {
+            $('#cargarMas').removeClass('show');
         }
-
-        productsNow += 16;
-
-        $(".item__link").click((e) => {
-            console.log(e.target.getAttribute('data-producto'));
-        })
     }
 })
 
-$('#cargarMas').click(function(){
-    if (clicks < productsTotal / 16)
-        cargarMas();
-})
+// MAIN FUNCTION //
+ 
+function loadProducts() {
+    $.ajax({
+        method: 'GET',
+        url: APIURL,
+        success: (response) => {
+            response = response.filter(p => p.imagenes != undefined);
 
-function cargarMas() {
-    clicks++;
-    
-    for(let i = productsNow; i < productsNow + 16; i++) {
-        $.ajax({
-            method: 'GET',
-            url: APIURL,
-            success: (response) => {
+            productsTotal = response.length;
 
-                response = response.filter(p => p.imagenes != undefined);
-
+            for(let i = productsNow; i < productsNow + 16; i++) {
                 if (i >= productsTotal) return $('#cargarMas').removeClass('show');
 
                 const product = response[i];
-                
+            
                 const productHTML = document.createElement('li');
                 productHTML.classList.add('lista__item');
 
@@ -113,19 +73,15 @@ function cargarMas() {
                 if (product.imagenes.split(', ')[1] == undefined) {
                     console.log(product);
                 }
-                
+            
                 $('#productosUl').append(productHTML);
             }
-        })
-    }
 
-    productsNow += 16;
+            productsNow += 16;
 
-    if(clicks >= productsTotal / 16) {
-        $('#cargarMas').removeClass('show');
-    }
-
-    $(".item__link").click((e) => {
-        console.log(e.target.getAttribute('data-producto'));
+            $(".item__link").click((e) => {
+                console.log(e.target.getAttribute('data-producto'));
+            })
+        }
     })
 }

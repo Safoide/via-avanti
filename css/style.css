@@ -1396,6 +1396,8 @@ h5 {
               position: absolute; }
             .main__content.cart .content__table .table__body .body__row .row__item .item__unidades--boton.sumar::before {
               transform: rotate(90deg); }
+            .main__content.cart .content__table .table__body .body__row .row__item .item__unidades--boton:disabled::after, .main__content.cart .content__table .table__body .body__row .row__item .item__unidades--boton:disabled::before {
+              background-color: gray; }
           .main__content.cart .content__table .table__body .body__row .row__item .item__unidades--cantidad {
             width: 30px;
             height: 30px;

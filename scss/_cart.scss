@@ -99,6 +99,11 @@
                             &.sumar::before {
                                 transform: rotate(90deg);
                             }
+
+                            &:disabled::after,
+                            &:disabled::before {
+                                background-color: gray;
+                            }
                         }
                         
                         &--cantidad {
