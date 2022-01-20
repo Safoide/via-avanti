@@ -4,25 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: $main-light-background;
+    background-color: #ededed;
     z-index: 99;
-
-    body.dark & {
-        background-color: $main-dark-background;
-
-        &__texto .headerTop__texto--text {
-            color: #ffffff99;
-        }
-
-        &__redes .headerTop__redes--link {
-            color: #ffffff99;
-
-            &:hover,
-            &:focus {
-                color: #fff;
-            }
-        }
-    }
 
     &__texto .headerTop__texto--text {
         margin: 0;
@@ -58,7 +41,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $header-light-background;
+    background-color: #1a1a1a;
     position: sticky;
     top: 0;
     max-width: 100vw;
@@ -66,50 +49,6 @@
     z-index: 99;
     gap: 5px;
     transition: background-color .4s ease 0s;
-
-    body.dark & {
-        background-color: $header-dark-background;
-
-        &__logo {
-            color: $header-dark-colorhvr;
-        }
-
-        &__navbar .navbar__menu .menu__item {
-            .menu__item__link {
-                color: $header-dark-color;
-
-                &.active,
-                &:hover,
-                &:focus {
-                    color: $header-dark-colorhvr;
-                }
-            }
-
-            .menu__item__dropdown {
-                .dropdown--arrow {
-                    color: $header-dark-color;
-                }
-
-                &:hover .dropdown--arrow,
-                &.active .dropdown--arrow,
-                &:focus .dropdown--arrow {
-                    color: $header-dark-colorhvr;
-                }
-            }
-        }
-
-        &__cart {
-            &__link {
-                color: $header-dark-color;
-
-                &:hover,
-                &:focus,
-                &.active {
-                    color: $header-dark-colorhvr;
-                }
-            }
-        }
-    }
 
     &__burguer {
         width: 40px;
@@ -129,7 +68,7 @@
         align-items: center;
         text-align: center;
         text-decoration: none;
-        color: $header-light-colorhvr;
+        color: #fff;
         cursor: pointer;
         gap: 10px;
 
@@ -172,7 +111,7 @@
                 &__link {
                     display: inline-block;
                     text-decoration: none;
-                    color: $header-light-color;
+                    color: #cacaca;
                     width: 100%;
                     height: 100%;
                     letter-spacing: 1px;
@@ -197,7 +136,7 @@
                     &.active,
                     &:hover,
                     &:focus {
-                        color: $header-light-colorhvr;
+                        color: #fff;
 
                         .menu__item__link--linea {
                             opacity: 1;
@@ -237,7 +176,7 @@
                         position: relative;
 
                         .dropdown--arrow {
-                            color: $header-light-color;
+                            color: #cacaca;
                             font-weight: 600;
                             transition: $transition-4s;
                             pointer-events: none;
@@ -248,7 +187,7 @@
                         &:hover .dropdown--arrow,
                         &.active .dropdown--arrow,
                         &:focus .dropdown--arrow {
-                            color: $header-light-colorhvr;
+                            color: #fff;
                             transform: rotate(90deg);
                         }
 
@@ -316,7 +255,7 @@
 
         &__link {
             text-decoration: none;
-            color: $header-light-color;
+            color: #cacaca;
             padding: .5rem .5rem;
             letter-spacing: 1px;
             font-weight: 600;
@@ -338,7 +277,7 @@
             &.active,
             &:hover,
             &:focus {
-                color: $header-light-colorhvr;
+                color: #fff;
 
                 .header__cart__link--linea {
                     opacity: 1;

@@ -62,7 +62,8 @@
 
 &__content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     padding: 40px 80px;
     text-align: center;

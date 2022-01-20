@@ -9,14 +9,6 @@
 .main {
     @include flex(column, center, center);
     max-width: 100vw;
-    background: $main-light-background;
-    color: $main-light-color;
-    transition: all .4s ease 0s;
-
-    body.dark & {
-        background: $main-dark-background;
-        color: $main-dark-color;
-    }
     
     @import "index";
     @import "producto";

@@ -1,3 +1,11 @@
+const cartItems = localStorage.getItem('cart-items');
+
+if(cartItems) {
+    console.log(JSON.parse(cartItems));
+} else {
+    alert('NO HAY PRODUCTOS!');
+}
+
 const totalEl = document.getElementById('total');
 const subtotalEl = document.getElementById('subtotal');
 const preciosEl = document.querySelectorAll('[data-precio]');
