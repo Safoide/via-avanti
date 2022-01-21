@@ -13,7 +13,6 @@
 
     .content__table {
         width: 70%;
-        height: 100%;
         border-collapse: collapse;
 
         .table__head {
@@ -29,95 +28,124 @@
         }
 
         .table__body {
-            
-            .body__row {
 
-                .row__item {
-                    border-top: 1px solid #ededed;
+            .row__vacio {
+                padding: 20px 5px;
+                height: 100px;
+
+                h4 {
+                    font-size: 1.5em;
+                }
+
+                a {
+                    display: inline-block;
+                    border: 0;
+                    border-radius: 10px;
+                    background-color: #0f700d;
+                    opacity: .5;
+                    color: #fff;
+                    transition: $transition-4s;
+                    font-size: 1.25em;
+                    font-weight: 600;
+                    padding: 0;
+                    cursor: pointer;
+                    text-align: center;
+                    width: 200px;
+                    height: 40px;
                     padding: 5px 5px;
+                    text-decoration: none;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            .row__item {
+                border-top: 1px solid #ededed;
+                padding: 5px 5px;
+                
+                .item__productoInfo {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: 10px;
+
+                    .bx::before {
+                        font-size: 1.25rem;
+                        color: red;
+                        cursor: pointer;
+                    }
+
+                    .productoInfo__link {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+
+                        &--img {
+                            height: 140px;
+                            margin: 0 10px;
+                        }
+
+                        &--title {
+                            color: black;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                &--precio {
+                    font-weight: 700;
+                }
+
+                .item__unidades {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &--boton {
+                        height: 30px;
+                        width: 30px;
+                        @include flex(row, center, center);
+                        padding: 0;
+                        border: 1px solid rgba(0, 0, 0, 0.15);
+                        transition: $transition-4s;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: lightgray;
+                        }
+
+                        &::after,
+                        &::before {
+                            content: '';
+                            width: 12px;
+                            height: 4px;
+                            background-color: black;
+                            position: absolute;
+                        }
+
+                        &.sumar::before {
+                            transform: rotate(90deg);
+                        }
+
+                        &:disabled::after,
+                        &:disabled::before {
+                            background-color: gray;
+                        }
+                    }
                     
-                    .item__productoInfo {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        margin-left: 10px;
-
-                        .bx::before {
-                            font-size: 1.25rem;
-                            color: red;
-                            cursor: pointer;
-                        }
-
-                        .productoInfo__link {
-                            display: flex;
-                            align-items: center;
-                            text-decoration: none;
-
-                            &--img {
-                                height: 140px;
-                                margin: 0 10px;
-                            }
-
-                            &--title {
-                                color: black;
-                                font-weight: 700;
-                            }
-                        }
+                    &--cantidad {
+                        width: 30px;
+                        height: 30px;
+                        @include flex(row, center, center);
+                        border-top: 1px solid rgba(0, 0, 0, 0.15);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
                     }
+                }
 
-                    &--precio {
-                        font-weight: 700;
-                    }
-
-                    .item__unidades {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-    
-                        &--boton {
-                            height: 30px;
-                            width: 30px;
-                            @include flex(row, center, center);
-                            padding: 0;
-                            border: 1px solid rgba(0, 0, 0, 0.15);
-                            transition: $transition-4s;
-                            cursor: pointer;
-    
-                            &:hover {
-                                background-color: lightgray;
-                            }
-    
-                            &::after,
-                            &::before {
-                                content: '';
-                                width: 12px;
-                                height: 4px;
-                                background-color: black;
-                                position: absolute;
-                            }
-    
-                            &.sumar::before {
-                                transform: rotate(90deg);
-                            }
-
-                            &:disabled::after,
-                            &:disabled::before {
-                                background-color: gray;
-                            }
-                        }
-                        
-                        &--cantidad {
-                            width: 30px;
-                            height: 30px;
-                            @include flex(row, center, center);
-                            border-top: 1px solid rgba(0, 0, 0, 0.15);
-                            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-                        }
-                    }
-
-                    &--subtotal {
-                        font-weight: 700;
-                    }
+                &--subtotal {
+                    font-weight: 700;
                 }
             }
         }
@@ -126,7 +154,7 @@
     .content__resumen {
         margin-top: 1rem;
         width: 30%;
-        height: 50%;
+        gap: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;

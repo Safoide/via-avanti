@@ -121,6 +121,7 @@
         flex-direction: column;
         align-items: center;
         font-size: 16px;
+        position: relative;
 
         .productos__lista {
             display: grid;
@@ -151,6 +152,7 @@
                     background-color: rgb(236, 236, 236);
                     position: relative;
                     transition: $transition-4s;
+                    gap: 20px;
 
                     &.descuento::after {
                         content: 'OFERTA';
@@ -164,14 +166,13 @@
                         font-size: 1em;
                         font-weight: 700;
                         color: #fff;
-                        opacity: .7;
+                        opacity: .8;
                         transition: $transition-4s;
                         pointer-events: none;
                     }
     
                     &--img {
                         width: 100%;
-                        height: 80%;
                         pointer-events: none;
 
                         &.fimg {
@@ -200,7 +201,6 @@
                         display: flex;
                         align-items: center;
                         gap: 5px;
-                        margin: 0 0 10px 0;
                         font-size: 1em;
                         pointer-events: none;
             
@@ -220,6 +220,25 @@
                             color: #000;
                             margin: 0;
                             font-weight: 500;
+                        }
+                    }
+
+                    .link--boton {
+                        border: 0;
+                        border-radius: 5px;
+                        background-color: #0f700d;
+                        opacity: .5;
+                        color: #fff;
+                        transition: $transition-4s;
+                        font-size: 1em;
+                        font-weight: 600;
+                        padding: 7px 10px;
+                        cursor: pointer;
+                        text-align: center;
+                        margin-bottom: 10px;
+
+                        &:hover {
+                            opacity: 1;
                         }
                     }
 
@@ -286,5 +305,81 @@
                 }
             }
         }
+
+        .productos__message {
+            position: fixed;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            @include flex(column, space-around, center);
+            width: 500px;
+            background-color: #1a1a1a;
+            color: #fff;
+            height: 300px;
+            max-width: 90%;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, .45);
+            transform: translateY(-200%);
+            display: none;
+
+            &.show {
+                display: flex;
+                animation: formMessage_Appear .4s forwards;
+            }
+
+            h4 {
+                font-size: 1.25em;
+            }
+
+            button {
+                border: 0;
+                border-radius: 7px;
+                font-size: 1em;
+                font-weight: 700;
+                padding: 10px;
+                background: rgb(200, 200, 200);
+                opacity: .7;
+                transition: $transition-4s;
+
+                &:hover {
+                    opacity: 1;
+                    background: #fff;
+                }
+            }
+
+            a {
+                display: inline-block;
+                border: 0;
+                border-radius: 10px;
+                background-color: #0f700d;
+                opacity: .7;
+                color: #fff;
+                transition: $transition-4s;
+                font-size: 1.25em;
+                font-weight: 600;
+                padding: 0;
+                cursor: pointer;
+                text-align: center;
+                width: 200px;
+                height: 40px;
+                padding: 5px 5px;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes formMessage_Appear {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
     }
 }

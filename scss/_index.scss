@@ -62,14 +62,13 @@
 
 &__content {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     padding: 40px 80px;
     text-align: center;
     width: 100%;
     max-width: 100vw;
-    gap: 15px;
+    gap: 20px;
 
     &.error {
         align-items: center;
@@ -142,10 +141,27 @@
                     position: relative;
                     background-color: rgb(236, 236, 236);
                     transition: $transition-4s;
+                    gap: 20px;
+
+                    &.descuento::after {
+                        content: 'OFERTA';
+                        background-color: #008000;
+                        padding: 0 7px;
+                        height: 30px;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        @include flex(row, center, center);
+                        font-size: 1em;
+                        font-weight: 700;
+                        color: #fff;
+                        opacity: .7;
+                        transition: $transition-4s;
+                        pointer-events: none;
+                    }
 
                     &--img {
                         width: 100%;
-                        height: 80%;
                         
                         &.fimg {
                             transition: all 0.3s ease 0s;
