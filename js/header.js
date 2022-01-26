@@ -9,7 +9,11 @@ function reloadCartCount() {
         if(items.length >= 1) {
             $('#cartUnidades').text(items.length);
             $('#cartUnidades').addClass('show');
+        } else {
+            $('#cartUnidades').removeClass('show');
         }
+    } else {
+        $('#cartUnidades').removeClass('show');
     }
 }
 

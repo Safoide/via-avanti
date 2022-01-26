@@ -38,7 +38,8 @@
                 }
 
                 a {
-                    display: inline-block;
+                    @include flex(row, center, center);
+                    margin: 0 auto;
                     border: 0;
                     border-radius: 10px;
                     background-color: #0f700d;
@@ -47,7 +48,6 @@
                     transition: $transition-4s;
                     font-size: 1.25em;
                     font-weight: 600;
-                    padding: 0;
                     cursor: pointer;
                     text-align: center;
                     width: 200px;

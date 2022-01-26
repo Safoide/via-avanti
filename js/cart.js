@@ -69,7 +69,8 @@ function loadItems() {
             localStorage.setItem('cart-items', JSON.stringify(cartItems));
             loadItems();
         }
-    
+
+        reloadCartCount();
     })
 
     for(let i = 0; i < cartItems.length; i++) {

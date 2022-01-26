@@ -480,6 +480,14 @@
                 font-size: 12px;
                 padding: 10px;
 
+                .productos__top .top--title {
+                    display: none;
+                }
+
+                .productos__top .top--orden {
+                    max-width: 100%;
+                }
+
                 .productos__lista {
                     grid-template-columns: repeat(1, 1fr);
                 }

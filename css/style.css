@@ -221,7 +221,8 @@ h5 {
       transition: all 0.4s ease 0s;
       pointer-events: all;
       cursor: pointer;
-      position: relative; }
+      position: relative;
+      line-height: 1.5; }
       .header__cart__link--linea {
         height: 3px;
         background-color: #1e73be;
@@ -752,11 +753,10 @@ h5 {
       top: 90px; }
       .main__tienda .tienda__filtros .filtros--subtitle {
         width: 100%;
-        margin: 10px 0;
+        margin: 0 0 10px 0;
         font-weight: 500;
         color: #686868;
-        text-align: left; }
-      .main__tienda .tienda__filtros .filtros--subtitle {
+        text-align: left;
         font-size: 1rem; }
       .main__tienda .tienda__filtros .filtros__categoria,
       .main__tienda .tienda__filtros .filtros__color,
@@ -831,21 +831,41 @@ h5 {
         border: 1px solid #c9c9c9;
         padding: 5px 10px;
         background: #f7f7f7;
-        color: #999;
+        color: #000;
         transition: all 0.4s ease 0s; }
-        .main__tienda .tienda__filtros .filtros__color .color__select:hover {
-          background-color: #e0e0e0;
-          color: #000; }
         .main__tienda .tienda__filtros .filtros__color .color__select:focus {
           outline: none; }
     .main__tienda .tienda__productos {
       width: 80%;
       padding: 10px 20px;
       display: flex;
+      gap: 10px;
       flex-direction: column;
       align-items: center;
       font-size: 16px;
       position: relative; }
+      .main__tienda .tienda__productos .productos__top {
+        width: 100%;
+        max-width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px; }
+        .main__tienda .tienda__productos .productos__top .top--title {
+          margin: 0; }
+        .main__tienda .tienda__productos .productos__top .top--orden {
+          height: 30px;
+          display: block;
+          border: 1px solid #c9c9c9;
+          padding: 5px 10px;
+          background: #f7f7f7;
+          color: #000;
+          transition: all 0.4s ease 0s;
+          font-size: 1em;
+          max-width: 50%; }
+          .main__tienda .tienda__productos .productos__top .top--orden:focus {
+            outline: none; }
       .main__tienda .tienda__productos .productos__lista {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -873,7 +893,7 @@ h5 {
             background-color: #ececec;
             position: relative;
             transition: all 0.4s ease 0s;
-            gap: 20px; }
+            gap: 15px; }
             .main__tienda .tienda__productos .productos__lista .lista__item .item__link.descuento::after {
               content: 'OFERTA';
               background-color: #008000;
@@ -956,35 +976,25 @@ h5 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
         width: 100%;
         min-height: 30px; }
         .main__tienda .tienda__productos .productos__bottom .bottom--linea {
           height: 2px;
           width: 50%;
           background: #c9c9c9; }
-        .main__tienda .tienda__productos .productos__bottom .bottom--boton {
-          min-width: 130px;
-          height: 100%;
-          outline: none;
-          border: 0;
-          font-size: 14px;
-          border-radius: 5px;
-          display: none;
-          align-items: center;
-          justify-content: space-between;
-          background-color: transparent;
-          margin: 0 5px;
-          font-weight: 600;
-          font-family: 'Poppins', sans-serif;
-          transition: all 0.4s ease 0s; }
-          .main__tienda .tienda__productos .productos__bottom .bottom--boton:hover {
-            background-color: rgba(0, 0, 0, 0.15); }
-          .main__tienda .tienda__productos .productos__bottom .bottom--boton .bx {
-            font-size: 20px;
-            margin-bottom: 3px; }
-          .main__tienda .tienda__productos .productos__bottom .bottom--boton.show {
-            display: flex; }
+        .main__tienda .tienda__productos .productos__bottom .bottom--cargar {
+          border: 5px solid #f3f3f3;
+          /* Light grey */
+          border-top: 5px solid #3498db;
+          /* Blue */
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          margin: 0 10px;
+          display: none; }
+          .main__tienda .tienda__productos .productos__bottom .bottom--cargar.show {
+            display: block;
+            animation: spin 1s linear infinite; }
       .main__tienda .tienda__productos .productos__message {
         position: fixed;
         margin: auto;
@@ -1022,7 +1032,10 @@ h5 {
             opacity: 1;
             background: #fff; }
         .main__tienda .tienda__productos .productos__message a {
-          display: inline-block;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
           border: 0;
           border-radius: 10px;
           background-color: #0f700d;
@@ -1031,13 +1044,13 @@ h5 {
           transition: all 0.4s ease 0s;
           font-size: 1.25em;
           font-weight: 600;
-          padding: 0;
           cursor: pointer;
           text-align: center;
           width: 200px;
           height: 40px;
           padding: 5px 5px;
-          text-decoration: none; }
+          text-decoration: none;
+          margin: 0 auto; }
           .main__tienda .tienda__productos .productos__message a:hover {
             opacity: 1; }
 
@@ -1046,6 +1059,12 @@ h5 {
     transform: translateY(-200%); }
   to {
     transform: translateY(0%); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
   .main--title {
     margin: 1rem 0;
     font-size: 1.5rem; }
@@ -1069,7 +1088,11 @@ h5 {
         .main__content.cart .content__table .table__body .row__vacio h4 {
           font-size: 1.5em; }
         .main__content.cart .content__table .table__body .row__vacio a {
-          display: inline-block;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
           border: 0;
           border-radius: 10px;
           background-color: #0f700d;
@@ -1078,7 +1101,6 @@ h5 {
           transition: all 0.4s ease 0s;
           font-size: 1.25em;
           font-weight: 600;
-          padding: 0;
           cursor: pointer;
           text-align: center;
           width: 200px;
@@ -1461,6 +1483,10 @@ h5 {
     .main__tienda .tienda__productos {
       font-size: 12px;
       padding: 10px; }
+      .main__tienda .tienda__productos .productos__top .top--title {
+        display: none; }
+      .main__tienda .tienda__productos .productos__top .top--orden {
+        max-width: 100%; }
       .main__tienda .tienda__productos .productos__lista {
         grid-template-columns: repeat(1, 1fr); } }
 
