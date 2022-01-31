@@ -5,13 +5,14 @@ if(cartItems) {
 
     loadItems();
 } else {
-    $('#tableBody').html(`
-        <tr>
-            <th class="row__vacio" colspan="4"><h4>Tu carrito está vacío.</h4></th>
-        </tr>
-        <th class="row__vacio" colspan="4">
-            <a class="tiendaButton" href="./tienda.html">IR A LA TIENDA</a>
-        </th>
+    $('#section').empty();
+    $('#section').html(`
+        <div class="content__cartvacio">
+            <div class="cartvacio__barra">
+                <h3>Tu carrito está vacío.</h3>
+            </div>
+            <a class="cartvacio--button" href="./tienda.html">VOLVER A LA TIENDA</a>
+        </div>
     `);
 }
 
@@ -52,24 +53,30 @@ function loadItems() {
 
     $('.bxs-x-circle').click((e) => {
         let producto = parseInt(e.target.getAttribute('data-producto'));
+
+        const productoEliminado = cartItems.filter(p => p.id == producto);
+        console.log(productoEliminado);
     
         cartItems = cartItems.filter(p => p.id != producto);
 
         if(cartItems.length == 0) {
             localStorage.removeItem('cart-items');
-            $('#tableBody').html(`
-                <tr>
-                    <th class="row__vacio" colspan="4"><h4>Tu carrito está vacío.</h4></th>
-                </tr>
-                <th class="row__vacio" colspan="4">
-                    <a class="tiendaButton" href="./tienda.html">IR A LA TIENDA</a>
-                </th>
+            $('#section').empty();
+            $('#section').html(`
+                <div class="content__cartvacio">
+                    <div class="cartvacio__barra">
+                        <h3>Tu carrito está vacío.</h3>
+                    </div>
+                    <a class="cartvacio--button" href="./tienda.html">VOLVER A LA TIENDA</a>
+                </div>
             `);
         } else {
             localStorage.setItem('cart-items', JSON.stringify(cartItems));
             loadItems();
         }
 
+        $('#cartBarra').text(`“${productoEliminado[0].producto}” ha sido eliminado del carrito.`);
+        $('#cartBarraDiv').addClass('show');
         reloadCartCount();
     })
 

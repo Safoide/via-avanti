@@ -4,6 +4,10 @@
     }
 
     .main {
+        &__barra {
+            width: 70vw;
+        }
+
         &__content {
             padding: 40px 100px;
             justify-content: flex-start;
@@ -34,6 +38,10 @@
     }
 
     .main {
+        &__barra {
+            width: 75vw;
+        }
+
         &__content {
             justify-content: flex-start;
 
@@ -77,6 +85,10 @@
     }
 
     .main {
+        &__barra {
+            width: 85vw;
+        }
+
         &__content {
             justify-content: flex-start;
 
@@ -131,6 +143,10 @@
     }
 
     .main {
+        &__barra {
+            width: 80vw;
+        }
+
         &__content {
             justify-content: flex-start;
 
@@ -204,6 +220,10 @@
 
     .main {
         justify-content: flex-start;
+
+        &__barra {
+            width: 90vw;
+        }
 
         &__content {
             padding: 40px;
@@ -298,6 +318,10 @@
 
     .main {
         justify-content: flex-start;
+
+        &__barra {
+            width: 90vw;
+        }
 
         &__content {
             padding: 40px 110px;
@@ -404,6 +428,10 @@
             font-size: 14px;
         }
 
+        &__barra {
+            width: 90vw;
+        }
+
         &__content {
             padding: 40px 80px;
 
@@ -486,6 +514,10 @@
 
                 .productos__top .top--orden {
                     max-width: 100%;
+                }
+
+                .productos__agregado {
+                    padding: 0 5px;
                 }
 
                 .productos__lista {

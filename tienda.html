@@ -101,7 +101,6 @@
         <main class="main">
             <section class="main__tienda">
                 <aside class="tienda__filtros">
-
                     <div class="filtros__categoria">
                         <h4 class="filtros--subtitle">FILTRAR POR CATEGORIA</h4>
                         <div class="categoria__input">
@@ -178,16 +177,15 @@
                             <option value="preciomayor">Ordenar por precio: alto a bajo</option>
                         </select>
                     </div>
+                    <div class="productos__agregado" id="productoAgregadoDiv">
+                        <p class="agregado--title" id="productoAgregado"></p>
+                        <a href="./cart.html" class="agregado--carrito">VER CARRITO</a>
+                    </div>
                     <ul id="productosUl" class="productos__lista"></ul>
                     <div class="productos__bottom">
                         <div class="bottom--linea"></div>
                         <div class="bottom--cargar" id="circleCargar"></div>
                         <div class="bottom--linea"></div>
-                    </div>
-                    <div class="productos__message" id="cartMessage">
-                        <h4>UN PRODUCTO FUE AGREGADO AL CARRITO.</h4>
-                        <button id="seguirComprando">Seguir comprando</button>
-                        <a href="./cart.html">IR AL CARRITO</a>
                     </div>
                 </div>
             </section>

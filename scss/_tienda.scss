@@ -128,6 +128,7 @@
 
             .top--title {
                 margin: 0;
+                font-size: 0.8em;
             }
 
             .top--orden {
@@ -138,12 +139,50 @@
                 background: #f7f7f7;
                 color: #000;
                 transition: $transition-4s;
-                font-size: 1em;
+                font-size: 0.8em;
                 max-width: 50%;
 
                 &:focus {
                     outline: none;
                 }
+            }
+        }
+
+        .productos__agregado {
+            border-top: 3px solid #8fae1b;
+            width: 100%;
+            height: 75px;
+            background-color: #f7f6f7;
+            color: #515151;
+            margin: 0 0 1em 0;
+            @include flex(row, space-between, center);
+            padding: 0 2em;
+            font-size: 0.9em;
+            display: none;
+
+            .agregado--title {
+                margin: 0;
+                font-size: 1.1em;
+            }
+
+            .agregado--carrito {
+                background-color: #333333;
+                color: #fff;
+                border: 0;
+                text-decoration: none;
+                font-weight: 600;
+                display: inline-block;
+                padding: 10px 10px;
+                text-align: center;
+                transition: $transition-4s;
+
+                &:hover {
+                    background-color: #000;
+                }
+            }
+
+            &.show {
+                display: flex;
             }
         }
 
@@ -310,72 +349,6 @@
                 &.show {
                     display: block;
                     animation: spin 1s linear infinite;
-                }
-            }
-        }
-
-        .productos__message {
-            position: fixed;
-            margin: auto;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            @include flex(column, space-around, center);
-            width: 500px;
-            background-color: #1a1a1a;
-            color: #fff;
-            height: 300px;
-            max-width: 90%;
-            box-shadow: 0 0 10px 1px rgba(0, 0, 0, .45);
-            transform: translateY(-200%);
-            display: none;
-
-            &.show {
-                display: flex;
-                animation: formMessage_Appear .4s forwards;
-            }
-
-            h4 {
-                font-size: 1.25em;
-            }
-
-            button {
-                border: 0;
-                border-radius: 7px;
-                font-size: 1em;
-                font-weight: 700;
-                padding: 10px;
-                background: rgb(200, 200, 200);
-                opacity: .7;
-                transition: $transition-4s;
-
-                &:hover {
-                    opacity: 1;
-                    background: #fff;
-                }
-            }
-
-            a {
-                @include flex(row, center, center);
-                border: 0;
-                border-radius: 10px;
-                background-color: #0f700d;
-                opacity: .7;
-                color: #fff;
-                transition: $transition-4s;
-                font-size: 1.25em;
-                font-weight: 600;
-                cursor: pointer;
-                text-align: center;
-                width: 200px;
-                height: 40px;
-                padding: 5px 5px;
-                text-decoration: none;
-                margin: 0 auto;
-
-                &:hover {
-                    opacity: 1;
                 }
             }
         }

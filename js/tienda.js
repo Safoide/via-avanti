@@ -67,29 +67,27 @@ function loadProducts(orden) {
         url: APIURL,
         success: (response) => {
 
+            function precio(varb) {
+                return varb.precio_rebajado ? varb.precio_rebajado : varb.precio_normal;
+            }
+
             // ORDENAR PRODUCTOS DEPENDIENDO EL SELECT //
             if(orden == 'preciomenor') {
                 response.sort((a, b) => {
-                    let a_precio = a.precio_rebajado ? a.precio_rebajado : a.precio_normal;
-                    let b_precio = b.precio_rebajado ? b.precio_rebajado : b.precio_normal;
-
-                    if ( a_precio < b_precio ) {
+                    if (precio(a) < precio(b)) {
                         return -1;
                     }
-                    if ( a_precio > b_precio ) {
+                    if (precio(a) > precio(b)) {
                         return 1;
                     }
                     return 0;
                 })
             } else if(orden == 'preciomayor') {
                 response.sort((a, b) => {
-                    let a_precio = a.precio_rebajado ? a.precio_rebajado : a.precio_normal;
-                    let b_precio = b.precio_rebajado ? b.precio_rebajado : b.precio_normal;
-
-                    if ( a_precio > b_precio ) {
+                    if (precio(b) < precio(a)) {
                         return -1;
                     }
-                    if ( a_precio < b_precio ) {
+                    if (precio(b) > precio(a)) {
                         return 1;
                     }
                     return 0;
@@ -155,7 +153,7 @@ function loadProducts(orden) {
                 
                 let itemId = item[0].id;
                 let itemImg = item[0].imagenes[0];
-                let itemPrecio = item[0].precio_rebajado ? item[0].precio_rebajado : item[0].precio_normal;
+                let itemPrecio = precio(item[0]);
                 let itemName = item[0].nombre.toUpperCase();
 
                 if(localStorage.getItem('cart-items')) {
@@ -192,12 +190,9 @@ function loadProducts(orden) {
                 }
             
                 reloadCartCount();
-                $('#cartMessage').addClass('show');
+                $('#productoAgregado').text(`“${itemName}” se ha añadido a tu carrito.`);
+                $('#productoAgregadoDiv').addClass('show');
             })
         }
     })
 }
-
-$('#seguirComprando').click(() => {
-    $('#cartMessage').removeClass('show');
-})

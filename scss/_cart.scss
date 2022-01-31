@@ -3,6 +3,29 @@
     font-size: 1.5rem;
 }
 
+&__barra {
+    border-top: 3px solid #8fae1b;
+    width: 60vw;
+    max-width: 1200px;
+    height: 75px;
+    background-color: #f7f6f7;
+    color: #515151;
+    margin: 0 0 1em 0;
+    @include flex(row, space-between, center);
+    padding: 0 2em;
+    font-size: 0.9em;
+    display: none;
+
+    .barra--title {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
+    &.show {
+        display: flex;
+    }
+}
+
 &__content.cart {
     width: 60vw;
     max-width: 1200px;
@@ -227,5 +250,39 @@
                 }
             }
         }      
+    }
+
+    .content__cartvacio {
+        width: 100%;
+        @include flex(column, center, center);
+        gap: 20px;
+
+        .cartvacio__barra {
+            border-top: 3px solid #1e85be;
+            width: 100%;
+            height: 75px;
+            background-color: #f7f6f7;
+            color: #515151;
+            margin: 0 0 1em 0;
+            padding: 0 2em;
+            font-size: 0.9em;
+            @include flex(row, center, center);
+        }
+
+        .cartvacio--button {
+            background-color: #333333;
+            color: #fff;
+            border: 0;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            padding: 10px 10px;
+            text-align: center;
+            transition: $transition-4s;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
     }
 }
